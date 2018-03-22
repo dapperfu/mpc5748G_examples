@@ -1,0 +1,20 @@
+"./Project_Settings/Startup_Code/startup.o"
+"./src/pit.o"
+"./src/intc_sw_handlers.o"
+"./src/intc_SW_mode_isr_vectors_MPC5748G.o"
+"./src/hello+pll+interrupt_Z2_3.o"
+"./src/gpio.o"
+"./src/Vector.o"
+"./src/MPC57xx__Interrupt_Init.o"
+-T
+"C:/Users/B55457/workspace.s32DS.DEVKIT-MPC5748G Rev-B/hello+pll+interrupt/hello+pll+interrupt_Z2_3/Project_Settings/Linker_Files/mem.ld"
+-T
+"C:/Users/B55457/workspace.s32DS.DEVKIT-MPC5748G Rev-B/hello+pll+interrupt/hello+pll+interrupt_Z2_3/Project_Settings/Linker_Files/sections.ld"
+-T
+"C:/Users/B55457/workspace.s32DS.DEVKIT-MPC5748G Rev-B/hello+pll+interrupt/hello+pll+interrupt_Z2_3/Project_Settings/Linker_Files/libs.ld"
+-Wl,-Map,"hello+pll+interrupt_Z2_3.map"
+-Xlinker
+--gc-sections
+-mcpu=e200z2
+-specs=ewl_c.specs
+--sysroot="C:/Freescale/S32_Power_v1.1/S32DS/e200_ewl2"

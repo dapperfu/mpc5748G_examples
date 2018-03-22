@@ -1,0 +1,16 @@
+core=MPC5748G_Z4_2
+coreType=MPC5748G_Z4
+eclipse.preferences.version=1
+flashSize=1d0000
+flashStart=11d0000
+fpu=None
+groupName=flexcan_dma_receive
+io=
+language=c
+library=ewl_c9x
+pinSet=
+processor=MPC5748G
+productVersion=v1.1 b160520 
+ramSize=40000
+ramStart=40040000
+toolchainVersion=

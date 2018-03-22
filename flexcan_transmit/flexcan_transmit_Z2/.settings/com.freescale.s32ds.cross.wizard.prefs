@@ -1,0 +1,16 @@
+core=MPC5748G_Z2_3
+coreType=MPC5748G_Z2
+eclipse.preferences.version=1
+flashSize=1d0000
+flashStart=13a0000
+fpu=None
+groupName=flexcan_transmit
+io=
+language=c
+library=ewl_c9x
+pinSet=
+processor=MPC5748G
+productVersion=v1.1 b160520 
+ramSize=40000
+ramStart=40080000
+toolchainVersion=

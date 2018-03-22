@@ -1,0 +1,2555 @@
+!SESSION 2016-08-23 16:52:58.559 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.7.0_02
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product com.freescale.s32ds.e200.ide -product com.freescale.s32ds.e200.ide -product com.freescale.s32ds.e200.ide -product com.freescale.s32ds.e200.ide -product com.freescale.s32ds.e200.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.freescale.s32ds.e200.ide -product com.freescale.s32ds.e200.ide -product com.freescale.s32ds.e200.ide -product com.freescale.s32ds.e200.ide -data C:\Users\B55457\workspace.s32DS.DEVKIT-MPC5748G Rev-B -product com.freescale.s32ds.e200.ide
+
+This is a continuation of log file C:\Users\B55457\workspace.s32DS.DEVKIT-MPC5748G Rev-B\.metadata\.bak_0.log
+Created Time: 2016-08-24 10:22:56.514
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 10:22:56.514
+!MESSAGE Resource '/linflexd_uart_Z2_3' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/linflexd_uart_Z2_3' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 10:22:56.514
+!MESSAGE Resource '/linflexd_uart_Z2_3' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 10:22:56.514
+!MESSAGE Resource '/linflexd_uart_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/linflexd_uart_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 10:22:56.514
+!MESSAGE Resource '/linflexd_uart_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 10:22:56.514
+!MESSAGE Resource '/linflexd_uart_Z4_2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/linflexd_uart_Z4_2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 10:22:56.514
+!MESSAGE Resource '/linflexd_uart_Z4_2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 10:22:56.514
+!MESSAGE Resource '/lp_stop_Z2_3' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/lp_stop_Z2_3' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 10:22:56.514
+!MESSAGE Resource '/lp_stop_Z2_3' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 10:22:56.514
+!MESSAGE Resource '/lp_stop_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/lp_stop_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 10:22:56.514
+!MESSAGE Resource '/lp_stop_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 10:22:56.514
+!MESSAGE Resource '/lp_stop_Z4_2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/lp_stop_Z4_2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 10:22:56.514
+!MESSAGE Resource '/lp_stop_Z4_2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 10:22:56.514
+!MESSAGE Resource '/reg_protection_Z2_3' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/reg_protection_Z2_3' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 10:22:56.514
+!MESSAGE Resource '/reg_protection_Z2_3' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 10:22:56.514
+!MESSAGE Resource '/reg_protection_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/reg_protection_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 10:22:56.514
+!MESSAGE Resource '/reg_protection_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 10:22:56.514
+!MESSAGE Resource '/reg_protection_Z4_2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/reg_protection_Z4_2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 10:22:56.514
+!MESSAGE Resource '/reg_protection_Z4_2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 10:22:56.514
+!MESSAGE Resource '/sema4_Z2_3' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/sema4_Z2_3' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 10:22:56.514
+!MESSAGE Resource '/sema4_Z2_3' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 10:22:56.514
+!MESSAGE Resource '/sema4_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/sema4_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 10:22:56.514
+!MESSAGE Resource '/sema4_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 10:22:56.514
+!MESSAGE Resource '/sema4_Z4_2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/sema4_Z4_2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 10:22:56.514
+!MESSAGE Resource '/sema4_Z4_2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 10:22:56.514
+!MESSAGE Resource '/smpu_Z2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/smpu_Z2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 10:22:56.530
+!MESSAGE Resource '/smpu_Z2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 10:22:56.530
+!MESSAGE Resource '/smpu_Z4_0' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/smpu_Z4_0' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 10:22:56.530
+!MESSAGE Resource '/smpu_Z4_0' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 10:22:56.530
+!MESSAGE Resource '/smpu_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/smpu_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 10:22:56.530
+!MESSAGE Resource '/smpu_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 10:22:56.530
+!MESSAGE Resource '/spi_Z2_3' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/spi_Z2_3' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 10:22:56.530
+!MESSAGE Resource '/spi_Z2_3' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 10:22:56.530
+!MESSAGE Resource '/spi_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/spi_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 10:22:56.530
+!MESSAGE Resource '/spi_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 10:22:56.530
+!MESSAGE Resource '/spi_Z4_2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/spi_Z4_2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 10:22:56.530
+!MESSAGE Resource '/spi_Z4_2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 10:22:56.530
+!MESSAGE Resource '/spi_dma_Z2_3' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/spi_dma_Z2_3' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 10:22:56.530
+!MESSAGE Resource '/spi_dma_Z2_3' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 10:22:56.530
+!MESSAGE Resource '/spi_dma_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/spi_dma_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 10:22:56.530
+!MESSAGE Resource '/spi_dma_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 10:22:56.530
+!MESSAGE Resource '/spi_dma_Z4_2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/spi_dma_Z4_2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 10:22:56.530
+!MESSAGE Resource '/spi_dma_Z4_2' is not open.
+!SESSION 2016-08-24 12:08:41.807 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.7.0_02
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product com.freescale.s32ds.e200.ide -product com.freescale.s32ds.e200.ide -product com.freescale.s32ds.e200.ide -product com.freescale.s32ds.e200.ide -product com.freescale.s32ds.e200.ide -product com.freescale.s32ds.e200.ide -product com.freescale.s32ds.e200.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.freescale.s32ds.e200.ide -product com.freescale.s32ds.e200.ide -product com.freescale.s32ds.e200.ide -product com.freescale.s32ds.e200.ide -product com.freescale.s32ds.e200.ide -product com.freescale.s32ds.e200.ide -data C:\Users\B55457\workspace.s32DS.DEVKIT-MPC5748G Rev-B -product com.freescale.s32ds.e200.ide
+
+!ENTRY org.eclipse.ui.navigator 2 0 2016-08-24 12:08:45.257
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jdt.java.ui.javaContent
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-08-24 12:08:50.623
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-08-24 12:08:50.623
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\B55457'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.212
+!MESSAGE Resource '/adc_Z2_3' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/adc_Z2_3' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/adc_Z2_3' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/adc_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/adc_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/adc_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/adc_Z4_2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/adc_Z4_2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/adc_Z4_2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/bctu_pit_adc_Z2_3' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/bctu_pit_adc_Z2_3' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/bctu_pit_adc_Z2_3' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/bctu_pit_adc_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/bctu_pit_adc_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/bctu_pit_adc_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/bctu_pit_adc_Z4_2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/bctu_pit_adc_Z4_2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/bctu_pit_adc_Z4_2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/edma_Z2_3' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/edma_Z2_3' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/edma_Z2_3' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/edma_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/edma_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/edma_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/edma_Z4_2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/edma_Z4_2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/edma_Z4_2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/emios_Z2_3' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/emios_Z2_3' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/emios_Z2_3' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/emios_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/emios_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/emios_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/emios_Z4_2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/emios_Z4_2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/emios_Z4_2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/enet_rmii_udp_Z2_3' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/enet_rmii_udp_Z2_3' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/enet_rmii_udp_Z2_3' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/enet_rmii_udp_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/enet_rmii_udp_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/enet_rmii_udp_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/enet_rmii_udp_Z4_2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/enet_rmii_udp_Z4_2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/enet_rmii_udp_Z4_2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/flash_rw_Z2_3' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/flash_rw_Z2_3' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/flash_rw_Z2_3' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/flash_rw_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/flash_rw_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/flash_rw_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/flash_rw_Z4_2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/flash_rw_Z4_2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/flash_rw_Z4_2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/flexcan_dma_receive_Z2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/flexcan_dma_receive_Z2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/flexcan_dma_receive_Z2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/flexcan_dma_receive_Z4_0' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/flexcan_dma_receive_Z4_0' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/flexcan_dma_receive_Z4_0' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/flexcan_dma_receive_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/flexcan_dma_receive_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/flexcan_dma_receive_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/flexcan_receive_Z2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/flexcan_receive_Z2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/flexcan_receive_Z2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/flexcan_receive_Z4_0' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/flexcan_receive_Z4_0' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/flexcan_receive_Z4_0' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/flexcan_receive_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/flexcan_receive_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/flexcan_receive_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.228
+!MESSAGE Resource '/flexcan_transmit_Z2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/flexcan_transmit_Z2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.228
+!MESSAGE Resource '/flexcan_transmit_Z2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/flexcan_transmit_Z4_0' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/flexcan_transmit_Z4_0' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/flexcan_transmit_Z4_0' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/flexcan_transmit_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/flexcan_transmit_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/flexcan_transmit_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/hello+pll+interrupt_Z2_3' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/hello+pll+interrupt_Z2_3' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/hello+pll+interrupt_Z2_3' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/hello+pll+interrupt_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/hello+pll+interrupt_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/hello+pll+interrupt_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/hello+pll+interrupt_Z4_2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/hello+pll+interrupt_Z4_2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/hello+pll+interrupt_Z4_2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/hello+pll_Z2_3' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/hello+pll_Z2_3' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/hello+pll_Z2_3' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/hello+pll_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/hello+pll_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/hello+pll_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/hello+pll_Z4_2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/hello+pll_Z4_2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/hello+pll_Z4_2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/hello_Z2_3' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/hello_Z2_3' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/hello_Z2_3' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/hello_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/hello_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/hello_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/hello_Z4_2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/hello_Z4_2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/hello_Z4_2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/i2c_Z2_3' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/i2c_Z2_3' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/i2c_Z2_3' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/i2c_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/i2c_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/i2c_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/i2c_Z4_2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/i2c_Z4_2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/i2c_Z4_2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/linflexd_lin_Z2_3' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/linflexd_lin_Z2_3' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/linflexd_lin_Z2_3' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/linflexd_lin_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/linflexd_lin_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/linflexd_lin_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/linflexd_lin_Z4_2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/linflexd_lin_Z4_2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/linflexd_lin_Z4_2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/linflexd_uart_Z2_3' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/linflexd_uart_Z2_3' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/linflexd_uart_Z2_3' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/linflexd_uart_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/linflexd_uart_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/linflexd_uart_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/linflexd_uart_Z4_2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/linflexd_uart_Z4_2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/linflexd_uart_Z4_2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/lp_stop_Z2_3' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/lp_stop_Z2_3' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/lp_stop_Z2_3' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/lp_stop_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/lp_stop_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/lp_stop_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/lp_stop_Z4_2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/lp_stop_Z4_2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/lp_stop_Z4_2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/reg_protection_Z2_3' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/reg_protection_Z2_3' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/reg_protection_Z2_3' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/reg_protection_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/reg_protection_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/reg_protection_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/reg_protection_Z4_2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/reg_protection_Z4_2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/reg_protection_Z4_2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/sema4_Z2_3' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/sema4_Z2_3' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/sema4_Z2_3' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/sema4_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/sema4_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/sema4_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.243
+!MESSAGE Resource '/sema4_Z4_2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/sema4_Z4_2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.243
+!MESSAGE Resource '/sema4_Z4_2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.259
+!MESSAGE Resource '/smpu_Z2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/smpu_Z2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.259
+!MESSAGE Resource '/smpu_Z2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.259
+!MESSAGE Resource '/smpu_Z4_0' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/smpu_Z4_0' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.259
+!MESSAGE Resource '/smpu_Z4_0' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.259
+!MESSAGE Resource '/smpu_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/smpu_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.259
+!MESSAGE Resource '/smpu_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.259
+!MESSAGE Resource '/spi_Z2_3' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/spi_Z2_3' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.259
+!MESSAGE Resource '/spi_Z2_3' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.259
+!MESSAGE Resource '/spi_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/spi_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.259
+!MESSAGE Resource '/spi_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.259
+!MESSAGE Resource '/spi_Z4_2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/spi_Z4_2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.259
+!MESSAGE Resource '/spi_Z4_2' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.259
+!MESSAGE Resource '/spi_dma_Z2_3' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/spi_dma_Z2_3' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.259
+!MESSAGE Resource '/spi_dma_Z2_3' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.259
+!MESSAGE Resource '/spi_dma_Z4_1' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/spi_dma_Z4_1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.259
+!MESSAGE Resource '/spi_dma_Z4_1' is not open.
+
+!ENTRY com.freescale.s32ds.cdt 4 0 2016-08-24 12:35:12.259
+!MESSAGE Resource '/spi_dma_Z4_2' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/spi_dma_Z4_2' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at com.freescale.s32ds.cross.sdk.internal.S32DSTester.checkCNature(S32DSTester.java:33)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.storeProjectLocalSDKs(SDKUtils.java:868)
+	at com.freescale.s32ds.cross.sdk.SDKUtils.shutdown(SDKUtils.java:159)
+	at com.freescale.s32ds.cross.sdk.SDKSupportPlugin.stop(SDKSupportPlugin.java:63)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2016-08-24 12:35:12.259
+!MESSAGE Resource '/spi_dma_Z4_2' is not open.
