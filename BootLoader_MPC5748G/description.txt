@@ -1,0 +1,23 @@
+Bootloader example project...
+
+From the 'RAppID BL Tool' product drop the bootloader application (.rbf file) onto the board
+
+The board needs to run the proper OpenSDA software, this provided a serial link to the device.
+
+The appropriate flash algorithm from RappID BL /rbf folder needs to be dragged onto the board
+once it's been replugged to be out of bootloader mode.
+
+To launch the RappID BL application from the IDE the bootloader.rbl file needs to be revised to
+match the COM port and the .srec application file. On a first run the simplest way is to
+configure the bootloading via the application and save the .rbl in the project. On subsequent
+runs the external tool can be used, do not forget to drag'n drop the flash algo (.rbf) onto
+the board each time (it uses RAM space overwritten by your application).
+
+The bootloaded application resides in low memory, this impacts the memroy map of the target
+application, for a typical project the interrupt vector needs to be move up and the RCHW
+placed in the correct address ranges for the bootloader. This project linker file has been
+modified to meet these constraints and rchw.c is added to populate that region. 
+
+With the application succesfully loaded and launched it's possible to attach to the running
+device with a modified Debug config that attaches without loading the executable (Startup tab),
+once that debug config is launch breaking the application will provide symbolic debugging.
