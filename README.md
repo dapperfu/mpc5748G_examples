@@ -1,35 +1,23 @@
-No license found when downloading or with included files. I'm sure I'm violating some NXP clause somewhere. Automotive is quite a bit behind when it comes to understanding and leveraging open source.
+# DEVKIT-MPC5748G Lab Examples
 
-All source code from the initial commit is copyright ~~Motorola~~, ~~Freescale~~, NXP, Qualcomm?, ~~Broadcom~~. [2018-03-21]
+[DEVKIT Evaluation Board for MPC574xG|NXP](
+https://www.nxp.com/products/processors-and-microcontrollers/power-architecture-processors/mpc5xxx-55xx-32-bit-mcus/ultra-reliable-mpc57xx-32-bit-automotive-and-industrial-microcontrollers-mcus/development-board-for-mpc5748g:DEVKIT-MPC5748G) Lab Examples.
 
-All other stuff:
+Downloaded from [Software & Tools](https://www.nxp.com/products/processors-and-microcontrollers/power-architecture-processors/mpc5xxx-55xx-32-bit-mcus/ultra-reliable-mpc57xx-32-bit-automotive-and-industrial-microcontrollers-mcus/development-board-for-mpc5748g:DEVKIT-MPC5748G?tab=Design_Tools_Tab) tab.
 
-BSD 3-Clause License
+```
+Lab and Test Software (1)
+DEVKIT-MPC5748G Lab Examples (REV 0)
+ZIP 12.6
+MBDEVKIT-MPC5748G-LAB
+09/30/2016
+````
 
-Copyright (c) 2017, Jed Frey
-All rights reserved.
+# Requirements.
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
+> **S32 Design Studio IDE for Power Architecture® based MCUs**
+> Targeted to support Power Architecture Automotive MCUs, the S32 Design Studio IDE for Power Architecture is a complimentary integrated development environment that enables editing, compiling and debugging of your designs.
 
-* Redistributions of source code must retain the above copyright notice, this
-  list of conditions and the following disclaimer.
+https://www.nxp.com/support/developer-resources/run-time-software/s32-design-studio-ide/s32-design-studio-ide-for-power-architecture-based-mcus:S32DS-PA
 
-* Redistributions in binary form must reproduce the above copyright notice,
-  this list of conditions and the following disclaimer in the documentation
-  and/or other materials provided with the distribution.
-
-* Neither the name of the copyright holder nor the names of its
-  contributors may be used to endorse or promote products derived from
-  this software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+[Technically just the ```powerpc-eabivle-4_9``` binaries.

@@ -1,0 +1,3 @@
+[submodule "DEVKIT-Makefile"]
+	path = DEVKIT-Makefile
+	url = git@github.com:jed-frey/DEVKIT-Makefile.git
