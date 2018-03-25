@@ -51,3 +51,9 @@ Module.symvers
 Mkfile.old
 dkms.conf
 powerpc-eabivle-4_9
+
+*.o.in
+*.bin
+*.S19
+**/e200_ewl2/*
+**/freertos-9.0.0*
