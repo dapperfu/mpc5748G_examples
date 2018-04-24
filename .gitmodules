@@ -1,15 +1,3 @@
 [submodule "DEVKIT-Makefile"]
 	path = DEVKIT-Makefile
 	url = git@github.com:jed-frey/DEVKIT-Makefile.git
-[submodule "bootstrap_MinGW"]
-	path = bootstrap_MinGW
-	url = git@github.com:jed-frey/bootstrap_MinGW.git
-[submodule "bootstrap_WinPython"]
-	path = bootstrap_WinPython
-	url = git@github.com:jed-frey/bootstrap_WinPython.git
-[submodule "bootstrap_LLVM"]
-	path = bootstrap_LLVM
-	url = git@github.com:jed-frey/bootstrap_LLVM.git
-[submodule "bootstrap_CMake"]
-	path = bootstrap_CMake
-	url = git@github.com:jed-frey/bootstrap_CMake.git
