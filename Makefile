@@ -13,5 +13,5 @@ clean: $(SUBCLEAN)
 $(SUBMAKE): force
 	-@$(MAKE) -C $(@D)
 
-$(SUBCLEAN): %.clean : force
-	-@$(MAKE) -C $(@D) clean
+clean:
+	git clean -xfd
