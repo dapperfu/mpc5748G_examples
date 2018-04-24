@@ -1,15 +1,17 @@
-#**************************************************************************/-
-#* FILE NAME: intc_sw_handlers.s            COPYRIGHT (c) Freescale 2012  */
-#*                                                All Rights Reserved     */
-#* DESCRIPTION:                                                           */
-#*        This file creates prolog, epilog for C ISR and enables nested   */
-#*        interrupts. This file starts in memory at the beginning of the  */
-#*        ".xcptn" section designated by the label "IVOR4Handler".        */
-#* WARNING:  This stack frame does not save the SPEs Accumulator, which   */
-#*           is required if SPE instructions are used in ISRs.   If SPE   */
-#*           instructions are used, the stack frame must include the      */
-#*           accumulator, and prologue and epilogue must be modified.     */
-#=========================================================================*/
+#* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * \
+    * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * / -
+#* FILE NAME : intc_sw_handlers.s COPYRIGHT(c) Freescale 2012 * /
+#* All Rights Reserved * /
+#* DESCRIPTION : * /
+#* This file creates prolog, epilog for C ISR and enables nested * /
+#* interrupts.This file starts in memory at the beginning of the * /
+#* ".xcptn" section designated by the label "IVOR4Handler".* /
+#* WARNING : This stack frame does not save the SPEs Accumulator, which * /
+#* is required if SPE instructions are used in ISRs.If SPE * /
+#* instructions are used, the stack frame must include the * /
+#* accumulator, and prologue and epilogue must be modified.* /
+#== == == == == == == == == == == == == == == == == == == == == == == == == == \
+    == == == == == == == == == == = * /
     .globl   IVOR4_Handler
     
     .equ  INTC_IACKR, 0xfc040020  # Interrupt Acknowledge Register address
@@ -38,7 +40,7 @@ epilogue:
     mbar                                # Ensure prior clearing of interrupt flag conmpleted.
     wrteei      0                       # Disable interrupts
     e_stw       r3, INTC_EOIR@l(r3)     # Load lower half of INTC_EOIR address to r3 and
-                                        # write contents of r3 to INTC_EOIR
+#write contents of r3 to INTC_EOIR
     se_lwz      r3, 0x08 (r1)           # Restore working register (r3) (original value)
     e_lmvsrrw       0x0c (r1)           # Restore SRR[0-1]
     e_add16i    r1, r1, 0x50            # Reclaim stack space
