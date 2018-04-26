@@ -21,7 +21,7 @@ clean:
 # Base URL. Set to local host for faster CI builds
 BASE_URL?=http://172.16.0.35/e200
 
-TOOLS:=AMMCLIB e200_ewl2 powerpc-eabivle-4_9 S32_SDK_MPC574xx_BETA_0.9.0
+TOOLS:=AMMCLIB powerpc-eabivle-4_9 S32_SDK_MPC574xx_BETA_0.9.0
 
 TOOL_ARCHIVES:=$(foreach TOOL,${TOOLS},${TOOL}.tar.xz)
 LOCAL_TOOL_ARCHIVES:=$(foreach TOOL,${TOOL_ARCHIVES},.env/${TOOL})

@@ -1,3 +1,6 @@
 [submodule "DEVKIT-Makefile"]
 	path = DEVKIT-Makefile
 	url = git@github.com:jed-frey/DEVKIT-Makefile.git
+[submodule ".env/e200_ewl2"]
+	path = .env/e200_ewl2
+	url = https://github.com/jed-frey/e200_ewl2.git

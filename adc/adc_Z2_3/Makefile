@@ -24,8 +24,8 @@ WARNINGS=all
 PROJ_DIR:=$(realpath $(dir $(realpath ${firstword ${MAKEFILE_LIST}})))
 E200MK_DIR:=$(realpath $(dir $(realpath $(lastword $(MAKEFILE_LIST))))/../..)
 
-VLE_TOOLCHAIN_DIR := ${E200MK_DIR}/powerpc-eabivle-4_9
-VLE_EWL_DIR:=${E200MK_DIR}/e200_ewl2
+VLE_TOOLCHAIN_DIR := ${E200MK_DIR}/.env/powerpc-eabivle-4_9
+VLE_EWL_DIR:=${E200MK_DIR}/.env/e200_ewl2
 
 # Prefix for cross compiler
 CROSS_PREFIX:=powerpc-eabivle-
