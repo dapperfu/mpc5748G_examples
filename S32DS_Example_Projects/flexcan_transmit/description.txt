@@ -1,0 +1,4 @@
+DEVKIT-MPC5748G board: CAN0 Transmit Example
+*Continuously transmits the message to CAN0 port
+*Can be used with receive project on another board
+*Or observe the waveforms on pins of port P5 on board

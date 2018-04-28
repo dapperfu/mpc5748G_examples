@@ -1,0 +1,4 @@
+DEVKIT-MPC5748G board: Second Program for beginers
+*Includes functionality of "hello+pll" project
+*Plus introduces to the Interrupts
+*Project uses PIT and Software interrupts

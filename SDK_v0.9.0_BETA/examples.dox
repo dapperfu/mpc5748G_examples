@@ -1,0 +1,8 @@
+/*!
+ * @page examples_mpc5748g MPC5748G Examples
+ * @brief Demo applications and driver examples for MPC5748G
+ *
+ * Examples for MPC5748G are separated into two groups:
+ *  - @subpage demo_apps_mpc5748g
+ *  - @subpage driver_examples_mpc5748g
+ */

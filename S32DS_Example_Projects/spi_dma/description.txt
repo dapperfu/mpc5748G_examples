@@ -1,0 +1,3 @@
+DEVKIT-MPC5748G board: SPI + DMA transfer example
+*In Master DMA sends data to DSPI transfer register
+*And Slave receives it and saves it into RAM using DMA

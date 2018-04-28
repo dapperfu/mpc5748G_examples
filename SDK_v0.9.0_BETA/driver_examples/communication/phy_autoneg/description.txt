@@ -1,0 +1,2 @@
+Shows the usage of the PHY driver by implementing an application which controls user LEDs according to link up/down and autonegotiation complete/failed events.
+The example documentation can be found in the S32 SDK documentation at Examples and Demos section. (<SDK_PATH>/doc/Start_Here.html)

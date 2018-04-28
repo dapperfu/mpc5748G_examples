@@ -1,0 +1,20 @@
+/*!
+    @page system_examples_mpc5748g System Driver Examples
+    @brief Applications that show the user how to initialize the system peripherals
+
+    There are currently driver examples with the following modules:\n
+    <i>Click on one of the module to see the available projects</i>\n
+    - @subpage crc_checksum_mpc5748g_group \n
+    - @subpage edma_transfer_mpc5748g_group \n
+    - @subpage fccu_fault_injection_mpc5748g_group \n
+    - @subpage flash_program_erase_mpc5748g_group \n
+    - @subpage interrupt_control_multicore_mpc5748g_group \n
+    - @subpage power_mode_switch_mpc5748g_group \n
+    - @subpage sema42_multicore_mpc5748g_group \n
+    - @subpage smpu_protection_mpc5748g_group \n
+    - @subpage swt_interrupt_mpc5748g_group \n
+    - @subpage wkpu_interrupt_mpc5748g_group \n
+    - @subpage wdg_pal_interrupt_mpc5748g_group \n
+    - @subpage pass_lock_unlock_mpc5748g_group \n
+
+*/

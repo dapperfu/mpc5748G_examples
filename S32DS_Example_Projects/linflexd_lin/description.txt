@@ -1,0 +1,3 @@
+DEVKIT-MPC5748G board: LINFlexD Example
+*Continuously transfers data on LIN0 port
+*Using oscilloscope one can observe transmitted waveforms

@@ -1,0 +1,96 @@
+/*!
+    @page pass_lock_unlock_mpc5748g_group PASS MPC5748G
+    @brief Driver example showing the PASS functionalities
+
+    ## Application description ##
+    _____
+    The purpose of this driver example is to show you the usage of the PASS module from the MPC5748G CPU using the S32 SDK API.
+
+    @note: To be able to run this example, the lifecycle of the device must be OEM or later. This example uses the default values configured for the password, provided the chip DCF entries haven't been modified. If you want to run on the device configured with specific DCF entries, please change the passwords in the following lines in source code to your own passwords:
+
+            /* Password to unlock passgroup 0. This password must be consistent with the password stored in "PASS Password Group 0" area in UTEST memory */
+            uint32_t passwordGroup0[] = { 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU };
+
+            /* Password to unlock passgroup 1. This password must be consistent with the password stored in "PASS Password Group 1" area in UTEST memory */
+            uint32_t passwordGroup1[] = { 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU };
+
+            /* Password to unlock passgroup 2. This password must be consistent with the password stored in "PASS Password Group 2" area in UTEST memory */
+            uint32_t passwordGroup2[] = { 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU };
+
+            /* Password to unlock passgroup 3. This password must be consistent with the password stored in "PASS Password Group 3" area in UTEST memory */
+            uint32_t passwordGroup3[] = { 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU };
+
+    ## How to test this example ##:
+    - This example will configure the clock, pins, linflexd and initialize the flash driver for the device. After configuring is finished, the following strings will be printed on the terminal:
+
+             PASS EXAMPLE
+
+             Initialization is successful.
+             Press SW3 to unlock for the write operation
+             and then test the accessing the flash memory
+             Press SW4 to test the accessing the flash memory without unlocking
+
+    - When the user presses SW3 on mother board, example will unlock the write and erase operation using PASS driver and then it will do the testing for erase/write/verify the flash memory. Terminal will display the status of the operation as the following:
+
+             Unlocking for write operation... SUCCESS
+             Erasing all blocks in MIDDLE area... SUCCESS
+             Writing to the flash... SUCCESS
+             Verifying the written data... SUCCESS
+
+    - When the user presses SW4 on mother board, example will lock the write and erase operation using PASS driver and then it will do the testing for erase/write/verify the flash memory. In this case, the verification will be unsuccessful because flash memory has been locked. So, the "ERROR" message will be printed on the terminal as the following:
+
+             Locking for write operation... SUCCESS
+             Erasing all blocks in MIDDLE area... ERROR
+
+    - This example will erase and write the flash memory at address 0x00F90000, the buffer size is 256 bytes. You can also view the memory at that address to verify the operation manually.
+
+    ## Prerequisites ##
+    _____
+    To run the example you will need to have the following items:
+    - 1 MPC5748G mother board
+    - 1 MPC5748G mini board
+    - 1 Power Adapter 12V (if the board cannot be powered from the USB port)
+    - 1 Personal Computer
+    - 1 Lauterbach and Trace32 for PowerPC software.
+
+    ## Boards supported ##
+    _____
+    The following boards are supported by this application:
+    - MPC574xG-MB
+
+    ## Hardware Wiring ##
+    This example print the message through the LINFlexD_2, which is internally connected to the serial-to-USB module on the board.
+    For validation board, the USB type-B cable must be connected to P17 port and J16 must be connected.
+    A terminal interface (termite/putty etc) needs to be opened on the host computer and connected to the USB port communicating with the board.
+    Configuration for LINFlexD is: 9600 baudrate, 8 data bits, no parity, 1 stop bits.
+
+    ## How to run ##
+    _____
+    #### 1. Importing the project into the workspace ####
+    After opening S32 Design Studio, go to \b File -> \b New \b S32DS \b Project \b From... and select \b pass_lock_unlock_mpc5748g. Then click on \b Finish. \n
+    The project should now be copied into you current workspace.
+    #### 2. Generating the Processor Expert configuration ####
+    First go to \b Project \b Explorer View in S32 DS and select the current project(\b pass_lock_unlock_mpc5748g). Then go to \b Project and click on \b Generate \b Processor \b Expert \b Code \n
+    Wait for the code generation to be completed before continuing to the next step.
+    #### 3. Building the project ####
+    Select the configuration to be built \b FLASH (Debug_FLASH) or \b RAM (Debug_RAM) by left clicking on the downward arrow corresponding to the \b build button(@image hammer.png).
+    Wait for the build action to be completed before continuing to the next step.
+    #### 4. Running the project ####
+    There was an issue related to the connecting to secured devices from S32DS, so you won't be able to run the debug from S32DS. Please use Trace32 sofware and Lauterbach to download the elf file to the device and run the debug. Folowing steps will show you how to use Trace32 and Lauterbach to debug the example:
+
+    - Running with Debug_RAM configuration:
+        - Install Trace32 for PowerPC (T32_ppc)
+        - Connect Lauterbach with the MPC5748G board and then power on the board and lauterbach
+        - Set the password for JTAG: This example is tested on the device that JTAG password is disabled. If JTAG password is enabled, please change the password for JTAG in the mpc_load.cmm file as the following line:
+                SYStem.Option.KEYCODE <your JTAG password>
+          For example:
+                SYStem.Option.KEYCODE 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF
+
+        - Open T32 at the path: <your path>\T32_ppc\bin\windows64\t32mppc.exe
+        - Go to File->Run Batchfile... and select the mpc_load_to_ram.cmm file in the "Debug_Configurations" folder of this example
+        - If everything is OK, the program will stop at "main" function and you can click "go" to run the example or "step" to run step by step.
+
+    - Running with Debug_FLASH configuration:
+        By default, flash memory will be locked after in OEM life cycle. So, we cannot download the source code to flash using debugger. To be able to download the source code to flash, the user have to write a script to unlock the flash first and then follow above steps to program and debug the example. The demo script to unlock flash is provided in the unlock_flash.cmm file.
+*/
+

@@ -1,0 +1,1 @@
+This project combines initialization and support for all cores built into a single ELF executable.

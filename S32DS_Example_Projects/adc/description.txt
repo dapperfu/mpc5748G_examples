@@ -1,0 +1,3 @@
+DEVKIT-MPC5748G board: ADC configured for Polling
+*Converts the potentiometer voltage value to Digital value
+*Lights up the user LEDs with conversion result

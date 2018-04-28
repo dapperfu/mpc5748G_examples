@@ -1,0 +1,55 @@
+/*!
+    @page emios_ic_mpc5748g_group eMIOS Input Capture MPC5748G
+    @brief Example application showing the usage of the eMIOS module
+
+    ## Application description ##
+    ______
+    The purpose of this demo application is to show you how to use the input capture mode of the MPC57xx MCU with this SDK.
+    - The application is configured to generate a PWM signal with duty cycle count = '5000' which will be measured eMIOS_IC
+    - The measurement result displays on the host PC terminal via LINFLEXD_UART a value input capture which enter character 'c'.
+
+    The examples use eMIOS 1
+    - Initialize the eMIOS module.
+    - Initialize the eMIOS 1 channel 23( counter bus A) and start counting.
+    - Initialize the eMIOS 1 channel 30 as PWM mode.
+    - Initialize the eMIOS 1 channel 3 as Input capture mode.
+    - Pin PF11(eMIOS1, channel 3) is configured as input pins.
+    - Pin PE10(eMIOS1, channel 30) is configured as output pin.
+    ## Prerequisites ##
+    ______
+    The run the example you will need to have the following items:
+    - 1 MPC5748G board
+    - 1 Power Adapter 12V (if the board cannot be powered from the USB port)
+    - 1 Personal Computer
+    - 1 PEMicro Debugger (optional, users can use Open SDA)
+    - Connect PE10 pin with PF11 pulse width measurement
+
+    ## Boards supported ##
+    ______
+    The following boards are supported by this application:
+    - MPC574xG-MB
+    - DEVKIT - MPC5748G
+
+    ## How to run ##
+    ______
+
+    #### 1. Importing the project into the workspace ####
+    After opening S32 Design Studio, go to \b File -> \b New \b S32DS \b Project \b From... and select \b emios_ic_mpc5748g. Then click on \b Finish. \n
+    The project should now be copied into you current workspace.
+    #### 2. Generating the Processor Expert configuration ####
+    First go to \b Project \b Explorer View in S32 DS and select the current project(\b emios_ic_mpc5748g). Then go to \b Project and click on \b Generate \b Processor \b Expert \b Code \n
+    Wait for the code generation to be completed before continuing to the next step.
+    #### 3. Building the project ####
+    Select the configuration to be built \b FLASH (Debug_FLASH) or \b RAM (Debug_RAM) by left clicking on the downward arrow corresponding to the \b build button(@image hammer.png).
+    Wait for the build action to be completed before continuing to the next step.
+    #### 4. Running the project ####
+    Go to \b Run and select \b Debug \b Configurations. There will be four debug configurations for this project:
+     Configuration Name | Description
+     -------------------|------------
+     \b emios_ic_mpc5748g_debug_ram_pemicro | Debug the RAM configuration using PEMicro debuggers
+     \b emios_ic_mpc5748g_debug_flash_pemicro | Debug the FLASH configuration using PEMicro debuggers
+    \n Select the desired debug configuration and click on \b Launch. Now the perspective will change to the \b Debug \b Perspective. \n
+    Use the controls to control the program flow.
+
+    @note For more detailed information related to S32 Design Studio usage please consult the available documentation.
+*/

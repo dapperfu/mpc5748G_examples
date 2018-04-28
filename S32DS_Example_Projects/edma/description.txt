@@ -1,0 +1,3 @@
+DEVKIT-MPC5748G board: Simple DMA Transfer
+*Moves string from one RAM location to the other
+*Compliments Writing to port pin

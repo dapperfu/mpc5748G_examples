@@ -1,0 +1,3 @@
+DEVKIT-MPC5748G board: Semaphore Example
+*Shows how raising semaphore locks the other cores
+ when required by the application

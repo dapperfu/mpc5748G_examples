@@ -1,0 +1,3 @@
+DEVKIT-MPC5748G board: First program for beginers
+*Turns on the the DS4, DS6 and DS8 LEDs using different cores
+*Also outputs FIRC clock on port pin

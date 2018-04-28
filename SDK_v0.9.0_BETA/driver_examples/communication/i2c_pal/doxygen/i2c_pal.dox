@@ -1,0 +1,61 @@
+/*!
+    @page i2c_pal_mpc5748g_group I2C Tansfer MPC5748G
+    @brief Basic application that presents the project scenarios for S32 SDK
+
+## Application description ##
+    ______
+    The purpose of this application is to show you how to use the I2C PAL driver on the MPC574x platform using the S32 SDK API.
+
+    The application uses two instances of I2C, one configured as master and one as slave, to communicate data via the I2C bus using interrupts.
+
+    To check if the transmission is successful the user has to verify that the isTransferOk variable is true, which means that the master rx buffer has
+    the same elements as slave tx buffer and slave rx buffer has the same element as master tx buffer.
+
+    ## Prerequisites ##
+    ______
+    The run the example you will need to have the following items:
+    - 1 MPC5748G board
+    - 1 Power Adapter 12V (if the board cannot be powered from the USB port)
+    - 4 Dupont cables (male to male or female to female depending on the boards)
+    - 2 pull-up resistors for SDA and SCL lines
+    - 1 Personal Computer
+    - 1 PEMicro Debugger (optional, users can use Open SDA)
+
+    ## Boards supported ##
+    ______
+    The following boards are supported by this application:
+    - MPC574xG-MB
+    - DEVKIT
+
+    ## Hardware Wiring ##
+    ______
+    The following connections must be done to for this example application to work:
+
+    PIN FUNCTION |   MPC574xG-MB    |   DEVKIT
+    -------------|------------------|---------------
+        SCL      |  P24.19 - P24.33 |  J2.8 - J2.12
+        SDA      |  P24.21 - P24.35 |  J2.6 - J2.10
+
+    ## How to run ##
+    ______
+
+    #### 1. Importing the project into the workspace ####
+    After opening S32 Design Studio, go to \b File -> \b New \b S32DS \b Project \b From... and select \b i2c_pal_mpc5748g. Then click on \b Finish. \n
+    The project should now be copied into you current workspace.
+    #### 2. Generating the Processor Expert configuration ####
+    First go to \b Project \b Explorer View in S32 DS and select the current project(\b i2c_transfer_mpc5746c). Then go to \b Project and click on \b Generate \b Processor \b Expert \b Code \n
+    Wait for the code generation to be completed before continuing to the next step.
+    #### 3. Building the project ####
+    Select the configuration to be built \b FLASH (Debug_FLASH) or \b RAM (Debug_RAM) by left clicking on the downward arrow corresponding to the \b build button(@image hammer.png).
+    Wait for the build action to be completed before continuing to the next step.
+    #### 4. Running the project ####
+    Go to \b Run and select \b Debug \b Configurations. There will be four debug configurations for this project:
+     Configuration Name | Description
+     -------------------|------------
+     \b i2c_pal_mpc5748g_ram_pemicro | Debug the RAM configuration using PEMicro debuggers
+     \b i2c_pal_mpc5748g_debug_flash_pemicro | Debug the FLASH configuration using PEMicro debuggers
+    \n Select the desired debug configuration and click on \b Launch. Now the perspective will change to the \b Debug \b Perspective. \n
+    Use the controls to control the program flow.
+
+    @note For more detailed information related to S32 Design Studio usage please consult the available documentation.
+*/

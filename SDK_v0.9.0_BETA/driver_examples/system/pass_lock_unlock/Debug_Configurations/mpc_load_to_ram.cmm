@@ -1,0 +1,16 @@
+
+DO .\mpc_cmd.cmm RAM ../Debug_RAM/pass_lock_unlock_mpc5748g.elf JTAG_INIT
+
+;display source
+Data.List
+
+;clear all breakpoints
+Break.delete /ALL
+
+R.S IP Reset_Handler
+
+;set breakpoint at main
+mode
+Break.SET main
+Go
+

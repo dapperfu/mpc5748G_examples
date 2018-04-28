@@ -1,0 +1,3 @@
+MPC5748G-LCEVB board: ENet RMII UDP example
+* Example continuously transmits the UDP packets of length 2
+* and listens to the input packets using receive interrupt

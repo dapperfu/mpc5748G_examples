@@ -1,0 +1,80 @@
+/*!
+    @page edma_transfer_mpc5748g_group eDMA MPC5748G
+    @brief Example application showing a subset of the eDMA functionalities.
+
+    ## Application description ##
+    _____
+    The purpose of this driver example is to show you how to use the eDMA in the following transfer scenarios for the MPC5748G MCU using the S32 SDK API.
+
+    - Single block memory-to-memory transfer
+    - Loop memory-to-memory transfer
+    - Scatter/gather memory-to-memory transfer
+    - Memory-to-peripheral transfer (this feature is implicitly used with the LINFlexD driver)
+    - Peripheral-to-memory transfer (this feature is implicitly used with the LINFlexD driver)
+
+    If the application works correctly, the board should send the available options to the console; the user can then select one of the available options,
+    which will trigger the appropriate eDMA transfer on the MCU. Upon each selection, the source and destination buffers of the DMA transfer are displayed
+    to the console (if the transfer is done correctly they should be identical).
+
+    ## Prerequisites ##
+    _____
+    The run the example you will need to have the following items:
+    - 1 MPC5748G board (validation board / EVB)
+    - 1 Power Adapters 12V (only for validation board, EVB is powered through OpenSDA USB connection)
+    - 1 microUSB cable (for EVB) / 1 USB type B cable (for validation board)
+    - 1 Personal Computer
+    - 1 PEmicro Debugger (for validation board, OpenSDA used for EVB)
+
+    ## Boards supported ##
+    _____
+    The following boards are supported by this application:
+    - DEVKIT-MPC5748G (EVB)
+    - MPC574xG-MB (validation board)
+
+    ## Hardware Wiring ##
+    _____
+    LINFlexD_1 tx/rx pins (PC6 & PC7) must be connected to LINFlexD_3 rx/tx pins (PE11 & PE10). On EVB, these pins are routed to J2 & J4 pads; for validation board, the LINFlexD_1 pins (C6/C7) are routed to J12 jumpers, while LINFlexD_3 pins (E11/E10) are available on P24 pad (pins 19 & 21, respectively):
+
+        PIN FUNCTION      |    MPC574xG-MB    | DEVKIT-MPC5748G
+    ----------------------|-------------------------------------
+     LINFlexD_1_TX (PC6)  |  J12-3 -> P24-19  |  J4-15 -> J2-12
+     LINFlexD_1_RX (PC7)  |  J12-1 -> P24-21  |  J4-13 -> J2-10
+     LINFlexD_3_TX (PE10) |  P24-19 -> J12-3  |  J2-10 -> J4-13
+     LINFlexD_3_RX (PE11) |  P24-21 -> J12-1  |  J2-12 -> J4-15
+
+    For validation board, the USB type-B cable must be connected to P17 port, while for EVB the uUSB cable will be connected to J1 OpenSDA connector.
+    A terminal interface (termite/putty etc) needs to be opened on the host computer and connected to the USB port communicating with the board.
+
+    ## How to run ##
+    _____
+    #### 1. Importing the project into the workspace ####
+    After opening S32 Design Studio, go to \b File -> \b New \b S32DS \b Project \b From... and select \b edma_transfer_mpc5748g. Then click on \b Finish. \n
+    The project should now be copied into you current workspace.
+    #### 2. Generating the Processor Expert configuration ####
+    First go to \b Project \b Explorer View in S32 DS and select the current project(\b edma_transfer_mpc5748g). Then go to \b Project and click on \b Generate \b Processor \b Expert \b Code \n
+    Wait for the code generation to be completed before continuing to the next step.
+    #### 3. Building the project ####
+    Select the configuration to be built \b FLASH (Debug_FLASH) or \b RAM (Debug_RAM) by left clicking on the downward arrow corresponding to the \b build button(@image hammer.png).
+    Wait for the build action to be completed before continuing to the next step.
+    #### 4. Running the project ####
+    Go to \b Run and select \b Debug \b Configurations. There will be four debug configurations for this project:
+     Configuration Name | Description
+     -------------------|------------
+     \b edma_transfer_mpc5748g_debug_ram_pemicro | Debug the RAM configuration using PEMicro debuggers
+     \b edma_transfer_mpc5748g_debug_flash_pemicro | Debug the FLASH configuration using PEMicro debuggers
+    \n Select the desired debug configuration and click on \b Launch. Now the perspective will change to the \b Debug \b Perspective. \n
+    Use the controls to control the program flow.
+
+    @note For more detailed information related to S32 Design Studio usage please consult the available documentation.
+
+    ## Notes ##
+    ______
+
+    For this example it is necessary to open a terminal emulator and configure it with:
+    -   9600 baud
+    -   One stop bit
+    -   No parity
+    -   No flow control
+    -   '\\n' line ending
+*/
+

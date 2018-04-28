@@ -1,0 +1,6 @@
+DEVKIT-MPC5748G board: I2C Master-Slave Example
+Initializes the I2C_1 in master mode and I2C_2 in slave mode
+Master sends the address and data and Slave receives both
+the address and the data
+Provide a pull-up of 3.3V via pull-up register(10k) to both
+SCL and SDA lines

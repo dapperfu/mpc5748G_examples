@@ -1,0 +1,3 @@
+DEVKIT-MPC5748G board: SPI Example
+*Configures DSPI and SPI in Master and slave mode respectively
+*Master continuously sends data to Slave and Slave replies

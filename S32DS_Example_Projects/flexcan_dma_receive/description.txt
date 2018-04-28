@@ -1,0 +1,3 @@
+DEVKIT-MPC5748G board: Transfer received data using CAN
+*Receives the data at CAN0 bus
+*Transfers the received data to RAM location using DMA transfer

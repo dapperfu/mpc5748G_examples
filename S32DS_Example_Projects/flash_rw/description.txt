@@ -1,0 +1,3 @@
+DEVKIT-MPC5748G board: Flash read/write example
+*Demonstrates how to Unlock, erase and program
+ flash mid-block 0x00FB_8000 - 0x00FB_FFFF

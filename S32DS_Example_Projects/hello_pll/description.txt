@@ -1,0 +1,4 @@
+DEVKIT-MPC5748G board: Second Program for beginers
+*Includes functionality of "hello" project
+*Plus Configures the system clock to 160 MHz
+*And also configures different clock groups

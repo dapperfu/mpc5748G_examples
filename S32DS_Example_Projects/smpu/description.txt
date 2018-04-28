@@ -1,0 +1,4 @@
+DEVKIT-MPC5748G board: SMPU module example
+*Locks the last 4kB of RAM to allow just read access
+*Any attempt to write to those locations will
+ generate the machine check exception

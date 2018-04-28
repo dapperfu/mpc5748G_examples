@@ -1,0 +1,72 @@
+/*!
+    @page bctu_trigger_mpc5748g_group BCTU MPC5748G
+    @brief Example application showing the basic usage of the BCTU Peripheral Driver
+
+    ## Application description ##
+    ______
+    The purpose of this demo application is to present basic usage
+    of the Body Cross Triggering Unit (BCTU) Peripheral Driver for the MPC57xx MCU.
+
+    The example uses BCTU to trigger sequences of ADC conversions.
+    For each sequence of conversions, an average conversion value is computed in SW, and depending on this value, an LED is turned on or off. \n
+    The example is divided in 2 parts:
+    - Part 1: The sequences of conversions are triggered using SW triggering of BCTU single conversion with loop mode enabled.
+    - Part 2: The sequences of conversions are triggered using SW triggering of a BCTU list. \n
+    Both parts of the example make use of BCTU interrupts.
+    - Enable BCTU IRQs in interrupt controller.
+    - Initialize the ADC.
+    - Configure BCTU.
+    - Part 1:  Use a BCTU single trigger with loop activated, for triggering a series of conversions. Compute the average value.
+    If average value is greater than ADC_THRESHOLD, turn an LED on, else turn the LED off. \n
+    Repeat until TOTAL_NUM_SERIES series of conversions have executed.
+    - Blink LED to signal transition between PART 1 and PART 2 of the example
+    - Part 2: Endless loop of series of conversion.
+    Use a BCTU list for triggering a series of conversions. Compute the average value. \n
+    If average value is greater than ADC_THRESHOLD, turn an LED on, else turn the LED off.
+
+    ## Prerequisites ##
+    ______
+    To run the example you will need to have the following items:
+    - 1 MPC5748G board
+    - 1 Power Adapter 12V (if the board cannot be powered from the USB port)
+    - 1 Personal Computer
+    - 1 PEMicro Debugger (optional, users can use Open SDA)
+
+    ## Boards supported ##
+    ______
+    The following boards are supported by this application:
+    - MPC574xG-MB
+    - DEVKIT - MPC5748G
+
+    ## Hardware Wiring ##
+    ______
+    The following connections must be done to for this example application to work:
+
+    PIN FUNCTION  |   DEVKIT-MPC5748G                     |   MPC574xG-MB
+    --------------|---------------------------------------|-------------------------------------
+        LED       | USER_LED1 (DS9) - wired on the board  | USER_LED1 (DS2) - wired on the board
+    Potentiometer | POT (PB4) - wired on the board        | POT (PB4) - wired on the board
+
+    ## How to run ##
+    ______
+
+    #### 1. Importing the project into the workspace ####
+    After opening S32 Design Studio, go to \b File -> \b New \b S32DS \b Project \b From... and select \b bctu_trigger_mpc5748g. Then click on \b Finish. \n
+    The project should now be copied into you current workspace.
+    #### 2. Generating the Processor Expert configuration ####
+    First go to \b Project \b Explorer View in S32 DS and select the current project(\b bctu_trigger_mpc5748g). Then go to \b Project and click on \b Generate \b Processor \b Expert \b Code \n
+    Wait for the code generation to be completed before continuing to the next step.
+    #### 3. Building the project ####
+    Select the configuration to be built \b FLASH (Debug_FLASH) or \b RAM (Debug_RAM) by left clicking on the downward arrow corresponding to the \b build button(@image hammer.png).
+    Wait for the build action to be completed before continuing to the next step.
+    #### 4. Running the project ####
+    Go to \b Run and select \b Debug \b Configurations. There will be four debug configurations for this project:
+     Configuration Name | Description
+     -------------------|------------
+     \b bctu_trigger_mpc5748g_debug_ram_pemicro | Debug the RAM configuration using PEMicro debuggers
+     \b bctu_trigger_mpc5748g_debug_flash_pemicro | Debug the FLASH configuration using PEMicro debuggers
+    \n Select the desired debug configuration and click on \b Launch. Now the perspective will change to the \b Debug \b Perspective. \n
+    Use the controls to control the program flow.
+
+    @note For more detailed information related to S32 Design Studio usage please consult the available documentation.
+*/

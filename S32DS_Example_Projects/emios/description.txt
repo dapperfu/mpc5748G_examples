@@ -1,0 +1,3 @@
+DEVKIT-MPC5748G board: eMIOS example
+*Shows how to configure and use eMIOS in
+ MCB, OPWMB, OPWFMB, IPM, IPWM modes

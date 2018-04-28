@@ -1,0 +1,89 @@
+/*!
+    @page adc_pal_example_mpc5748g_group ADC PAL example MPC5748G
+    @brief Example for ADC PAL usage
+
+    ## Application description ##
+    _____
+    The purpose of this demo application is to present the basic functionality of the Analog to Digital Converter Peripheral Abstraction Layer (ADC PAL) on MPC5748G MCU.
+
+    The application uses ADC PAL to trigger multiple executions of two groups of ADC conversions: first group configured for SW triggering and second group for HW triggering.
+    For each execution of a group of conversions, the converted values will be sent via UART to be printed on the user console. \n
+
+    \nThe example is divided in 2 parts:
+    - Part 1: SW triggered group of conversions \n
+    After each complete execution of the group, results are read and printed to console.
+    A delay is inserted and then the SW group is triggered again.
+    The process is repeated for a fixed number of iterations.
+
+    - Part 2: HW triggered group of conversions \n
+    PIT is configured to provide a trigger event with a fixed periodicity.
+    The selected HW group is enabled.
+    After each complete execution of the group, results are read and printed to console.
+    After a fixed number of iterations, the HW trigger group of conversions is disabled, and the PIT is stopped.
+
+    ______
+    Note: groups are configured to run conversions on multiple ADC channels, but only the first result in each group contains valid data,
+    because it is measured on the channel connected to the single potentiometer available on the development boards.
+    The rest of conversions in the group are not relevant and used only for demonstration purposes.
+
+    How the example works:
+    - Make sure the serial port is connected to the PC and terminal emulator launched - please see notes in Hardware Wiring section
+    - The terminal emulator should display an information text
+    - The terminal emulator should display an information text with "*** Part 1"
+    - The terminal emulator should display a series of measured voltage values, preceded by "ADC potentiometer result".
+      The values should be in accordance with the rotation of the potentiometer on the board.
+      The values displayed for unconnected ADC channels are irrelevant.
+    - The terminal emulator should display an information text with "*** Part 2"
+    - The terminal emulator should display a series of measured voltage values, preceded by "ADC potentiometer result".
+      The values should be in accordance with the rotation of the potentiometer on the board.
+    - The terminal emulator should display a message that the example execution has ended successfully
+
+    ## Prerequisites ##
+    ______
+    The run the example you will need to have the following items:
+    - 1 MPC5748G board
+    - 1 Power Adapter 12V (if the board cannot be powered from the USB port)
+    - 1 microUSB cable (for EVB) / 1 USB type B cable (for validation board)
+    - 1 Personal Computer
+    - 1 PEmicro Debugger (for validation board, OpenSDA used for EVB)
+
+    ## Boards supported ##
+    ______
+    The following boards are supported by this application:
+    - MPC574xG-MB
+    - DEVKIT - MPC5748G
+
+    ## Hardware Wiring ##
+    ______
+    The following connections must be done to for this example application to work:
+
+    PIN FUNCTION  |   DEVKIT-MPC5748G                    |   MPC574xG-MB
+    --------------|--------------------------------------|-------------------------------------
+    Potentiometer | POT (PB4) - wired on the board       | POT (PB4) - wired on the board
+
+    For validation board, the USB type-B cable must be connected to P17 port, while for EVB the uUSB cable is already connected to J1 OpenSDA connector.
+    A terminal interface (termite/putty etc) needs to be opened on the host computer and connected to the USB port communicating with the board.
+
+    ## How to run ##
+    ______
+
+    #### 1. Importing the project into the workspace ####
+    After opening S32 Design Studio, go to \b File -> \b New \b S32DS \b Project \b From... and select \b adc_pal_mpc5748g. Then click on \b Finish. \n
+    The project should now be copied into you current workspace.
+    #### 2. Generating the Processor Expert configuration ####
+    First go to \b Project \b Explorer View in S32 DS and select the current project(\b adc_pal_mpc5748g). Then go to \b Project and click on \b Generate \b Processor \b Expert \b Code \n
+    Wait for the code generation to be completed before continuing to the next step.
+    #### 3. Building the project ####
+    Select the configuration to be built \b FLASH (Debug_FLASH) or \b RAM (Debug_RAM) by left clicking on the downward arrow corresponding to the \b build button(@image hammer.png).
+    Wait for the build action to be completed before continuing to the next step.
+    #### 4. Running the project ####
+    Go to \b Run and select \b Debug \b Configurations. There will be four debug configurations for this project:
+     Configuration Name | Description
+     -------------------|------------
+     \b adc_pal_mpc5748g_debug_ram_pemicro | Debug the RAM configuration using PEMicro debuggers
+     \b adc_pal_mpc5748g_debug_flash_pemicro | Debug the FLASH configuration using PEMicro debuggers
+    \n Select the desired debug configuration and click on \b Launch. Now the perspective will change to the \b Debug \b Perspective. \n
+    Use the controls to control the program flow.
+
+    @note For more detailed information related to S32 Design Studio usage please consult the available documentation.
+*/

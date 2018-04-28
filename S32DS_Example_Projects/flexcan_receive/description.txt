@@ -1,0 +1,3 @@
+DEVKIT-MPC5748G board: CAN0 receive example
+*Continuously Listens on the CAN0 port for data
+*Can be used with transmit project on another board

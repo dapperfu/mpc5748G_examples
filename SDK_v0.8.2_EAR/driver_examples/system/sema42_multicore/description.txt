@@ -1,0 +1,1 @@
+The purpose of this demo application is to show you Semaphore module of MPC57xx MCU for guarding access to sections of code in a multicore application.

@@ -1,0 +1,3 @@
+DEVKIT-MPC5748G board: Body Cross Trigger Unit Example
+*When PIT timer crosses threshold, it signals the BCTU module
+*BCTU Triggers the ADC to start single conversion

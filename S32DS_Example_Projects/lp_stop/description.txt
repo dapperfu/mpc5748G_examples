@@ -1,0 +1,2 @@
+DEVKIT-MPC5748G board: Low Power Stop mode Example
+*Low power STOP mode is entered and exits based on RTC timeout

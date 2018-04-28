@@ -1,0 +1,2 @@
+Shows the usage of the SAI module by implementing an application in which an instance send data to another instance
+The example documentation can be found in the S32 SDK documentation at Examples and Demos section. (<SDK_PATH>/doc/Start_Here.html)

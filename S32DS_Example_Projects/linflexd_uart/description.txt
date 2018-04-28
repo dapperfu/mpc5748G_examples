@@ -1,0 +1,6 @@
+DEVKIT-MPC5748G board: LINFlexD UART example
+*FINFlexD_1 is configured in UART mode
+*Receives the message from TX pin and
+ sends the same data back to RX pin
+*openSDA micro-usb is used to connect
+ to computer terminal (e.g. Putty,Tera Term)

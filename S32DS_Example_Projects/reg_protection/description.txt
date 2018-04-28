@@ -1,0 +1,3 @@
+DEVKIT-MPC5748G board: Register Protection Example
+*Demonstrates the LOCKing mechanism on registers
+*Shows how register values can be protected from being modified

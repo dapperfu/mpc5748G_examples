@@ -1,0 +1,432 @@
+;
+; Script for programming of MPC574XG (Calypso) internal flash.
+;
+; $Author: Marius Rotaru $
+; $Date: 2014-06-13 $
+;
+
+;========================================================================
+LOCAL &load_to
+LOCAL &elf_file
+LOCAL &load_params
+LOCAL &core_no
+LOCAL &rchw
+
+ENTRY &load_to &elf_file &load_params &core_no
+
+&optimizeFLSMODE=1
+&optimizeRAM=1
+&optimizePLL=0
+
+
+;=========================================================================
+; Variables settings
+;=========================================================================
+&flashdriver="c55fm5746m.bin"
+
+; Identify running core
+&tmp_core=1.
+IF "&core_no"==""
+(
+   &tmp_core=1.
+   &rchw=0x005A0002
+)
+ELSE
+(
+   &tmp_core=&core_no.+1.
+   IF "&core_no"=="0"
+   (
+       &rchw=0x005A0002
+   )
+   ELSE
+   (
+      IF "&core_no"=="1"
+      (
+          &rchw=0x005A0008
+      )
+      ELSE
+      (
+          &rchw=0x005A0001
+      )
+   )
+)
+
+
+
+;=========================================================================
+; System settings
+;=========================================================================
+; CPU setup
+;wait 5s
+SYStem.RESet
+SYStem.BdmClock 4MHz
+SYStem.CPU MPC5748G
+SYStem.CONFIG.CORE 1. 1. ; select core 1
+SYStem.CONFIG.SLAVE OFF
+SYStem.Option.WATCHDOG OFF
+SYStem.OPTION DUALPORT ON
+SYStem.Option.SLOWRESET ON
+SYStem.Option.KEYCODE 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF
+SYStem.DETECT CPU
+;DIAG 3117 1
+SYStem.Up
+
+IF "&core_no"=="2"
+(
+    IF (CPU()=="MPC5746C")
+   (
+    ;On Calypso3M the ID of Core2 (according to RM) in Lauterbach is 2
+    ;in the previous Lauterbach patch the ID was 3
+    &tmp_core=2.
+   )
+)
+
+;**************************************
+; PLL initialization
+if &optimizePLL==1
+(
+   print "Starting PLL:"
+
+
+   ;MC_RGM.DES.R = 0xFFFF;
+   ;per.set ANC:0xFFFA8000 %LONG 0xFFFF
+   ;MC_RGM.FES.R = 0xFFFF;
+   per.set ANC:0xFFFA8300 %LONG 0xFFFF
+
+
+   ;/* Turn On XOSC - PLL's remain off */
+   ;MC_ME.DRUN_MC.R = 0x00030030;  /* Enable the XOSC */
+   per.set ANC:0xFFFB802C %LONG  0x00130030
+
+   ;MC_ME.ME.R = 0x000005E2; /* Enable all modes */
+   per.set ANC:0xFFFB8008 %LONG  0x000005E2
+
+   ;/* Trigger DRUN mode Transision with XOSC ON and SYSCLK= IRC*/
+   ;MC_ME.MCTL.R = 0x30005AF0;    /* Mode & Key */
+   per.set ANC:0xFFFB8004 %LONG  0x30005AF0
+   ;MC_ME.MCTL.R = 0x3000A50F;    /* Mode & Key inverted */
+   per.set ANC:0xFFFB8004 %LONG   0x3000A50F
+
+   ;while(MC_ME.GS.B.S_MTRANS == 1);  %LONG    27-27       /* Wait for mode entry to complete */
+   wait (Data.Long(ANC:0xFFFB8004)&0x08000000)==0
+
+   ;while(MC_ME.GS.B.S_CURRENT_MODE != 0x3);  %LONG 28-31  /* Check DRUN mode has been entered */
+   wait (Data.Long(ANC:0xFFFB8004)&0xf0000000)==0x30000000
+
+   ;MC_ME.IS.B.I_MTC = 1;  /* Clear Transition flag */
+   per.set.field ANC:0xFFFB800C %LONG 0x00000001 1.
+
+   ;/* Route XOSC to the PLL's - IRC is default */
+   ;MC_CGM.AC5_SC.B.SELCTL=1;         24-27                /* Connect XOSC to PLL0 */
+   PER.Set ANC:0xFFFB01C0 %LONG 0x01000000
+
+
+   ;/* set PLL divider - 80MHz from 40Mhx XOSC*/
+   ;PLLDIG.PLLDV.R = 0x6022020;
+   PER.Set ANC:0xFFFB00A8 %LONG 0x6022020
+
+   ;PLLDIG.PLLCR.B.LOLIE = 1;
+   per.set.field ANC:0xFFFB00A0 %LONG 0x00000008 1.
+   ;PLLDIG.PLLCAL3.R = 0x09C3C000;
+   per.Set ANC:0xFFFB0098 %LONG 0x09C3C000
+   ;PLLDIG.PLLFD.B.SMDEN = 1;
+   per.set.field ANC:0xFFFB00B0 %LONG 0x40000000 1.
+
+   ;/*Put PLL0 into Normal mode*/
+   ;PER.Set ANC:0xFFFB0100 %LONG 0x00000300
+
+   ;/* DRUN MODE with PLLs ON and SYSCLK=XOSC */
+   ;MC_ME.DRUN_MC.R = 0x000300F1;  ANC:0xFFFB802C %LONG
+   per.set ANC:0xFFFB802C %LONG 0x000300F1
+   ;MC_ME.MCTL.R = 0x30005AF0;    ANC:0xFFFB8004 %LONG                    /* Enter DRUN Mode & Key */
+   per.set ANC:0xFFFB8004 %LONG 0x30005AF0
+   ;MC_ME.MCTL.R = 0x3000A50F;    ANC:0xFFFB8004 %LONG                    /* Enter DRUN Mode & Inverted Key */
+   per.set ANC:0xFFFB8004 %LONG 0x3000A50F
+
+   ;while(MC_ME.GS.B.S_MTRANS == 1);  %LONG    27-27       /* Wait for mode entry to complete */
+   wait (Data.Long(ANC:0xFFFB8004)&0x08000000)==0
+   ;while(MC_ME.GS.B.S_CURRENT_MODE != 0x3);  %LONG 28-31  /* Check DRUN mode has been entered */
+   wait (Data.Long(ANC:0xFFFB8004)&0xf0000000)==0x30000000
+   ;MC_ME.IS.B.I_MTC = 1;  /* Clear Transition flag */
+   per.set.field ANC:0xFFFB800C %LONG 0x00000001 1.
+
+   ;/* PLL0 */    while ((PLLDIG.PLL0SR.R & 0x4) != 0x4){} ;  ANC:0xFFFB0104 %LONG  /* Wait for lock bit to set */
+   wait (Data.Long(ANC:0xFFFB00A4)&0x4)==0x4
+
+   ;/* DRUN MODE with PLLs ON and SYSCLK=PLL0 */
+   ;MC_ME.DRUN_MC.R = 0x000300F2;ANC:0xFFFB802C %LONG
+   per.set ANC:0xFFFB802C %LONG 0x000300F2
+   ;MC_ME.MCTL.R = 0x30005AF0;   ANC:0xFFFB8004 %LONG                   /* Enter DRUN Mode & Key */
+   per.set ANC:0xFFFB8004 %LONG 0x30005AF0
+   ;MC_ME.MCTL.R = 0x3000A50F;    ANC:0xFFFB8004 %LONG                   /* Enter DRUN Mode & Inverted Key */
+   per.set ANC:0xFFFB8004 %LONG 0x3000A50F
+
+   ;PFLASH.PFCR1.B.APC = 1;ANC:0xFC03_0000h %LONG   13-15?
+   per.set.field ANC:0xFC030000 %LONG 0x0000e000 1.
+   ;PFLASH.PFCR1.B.RWSC = 2;ANC:0xFC03_0000h %LONG      8-12
+   per.set.field ANC:0xFC030000 %LONG 0x001f00 2.
+
+   ;while(MC_ME.GS.B.S_MTRANS == 1);  %LONG    27-27       /* Wait for mode entry to complete */
+   wait (Data.Long(ANC:0xFFFB8004)&0x08000000)==0
+   ;while(MC_ME.GS.B.S_CURRENT_MODE != 0x3);  %LONG 28-31  /* Check DRUN mode has been entered */
+   wait (Data.Long(ANC:0xFFFB8004)&0xf0000000)==0x30000000
+   ;MC_ME.IS.B.I_MTC = 1;  /* Clear Transition flag */
+   per.set.field ANC:0xFFFB800C %LONG 0x00000001 1.
+
+   ; set JTAG clock to 10 MHz
+   SYStem.BdmClock 10MHz
+)
+
+;**************************************
+; RAM initialization
+if &optimizeRAM==1
+(
+    print "Starting RAM initialization:"
+    ; Initialize internal SRAM (16KB)
+    Data.Set A:0x40000000--0x40003FFF %Quad 0
+)
+else
+(
+   ; Initialize internal SRAM
+   if (CPU()=="MPC5746C")      ; Calypso3M
+   (
+      Data.Set EA:0x40000000--0x4007FFFF %quad 0
+   )
+   else
+   (
+      Data.Set EA:0x40000000--0x400BFFFF %quad 0
+   )
+)
+
+;=========================================================================
+; Flash declaration
+;=========================================================================
+  print "Starting FLASH sector creation:"
+
+   FLASH.RESet
+
+  ; Low address space
+  FLASH.Create 1. 0x00404000--0x00407FFF NOP    Quad 0x0001    ; BAF - read only
+  FLASH.Create 1. 0x00610000--0x0061FFFF TARGET Quad 0x0007    ; 16 KB HSM code block 2
+  FLASH.Create 1. 0x00620000--0x0062FFFF TARGET Quad 0x0009    ; 16 KB HSM code block 3
+  FLASH.Create 1. 0x00F8C000--0x00F8FFFF TARGET Quad 0x0000    ; 16 KB code block 0
+  FLASH.Create 1. 0x00FC0000--0x00FC7FFF TARGET Quad 0x0002    ; 32 KB code block 2
+  FLASH.Create 1. 0x00FC8000--0x00FCFFFF TARGET Quad 0x0003    ; 32 KB code block 3
+  FLASH.Create 1. 0x00FD0000--0x00FD7FFF TARGET Quad 0x0004    ; 32 KB code block 4
+  FLASH.Create 1. 0x00FD8000--0x00FDFFFF TARGET Quad 0x0005    ; 32 KB code block 5
+  FLASH.Create 1. 0x00FE0000--0x00FEFFFF TARGET Quad 0x0006    ; 64 KB code block 0
+  FLASH.Create 1. 0x00FF0000--0x00FFFFFF TARGET Quad 0x0008    ; 64 KB code block 1
+
+  ; Mid address space
+  FLASH.Create 2. 0x00F90000--0x00F93FFF TARGET Quad 0x0100    ; 16 KB code block 1
+  FLASH.Create 2. 0x00F94000--0x00F97FFF TARGET Quad 0x0101    ; 16 KB code block 2
+  FLASH.Create 2. 0x00F98000--0x00F9BFFF TARGET Quad 0x0102    ; 16 KB code block 3
+  FLASH.Create 2. 0x00F9C000--0x00F9FFFF TARGET Quad 0x0103    ; 16 KB code block 4
+  FLASH.Create 2. 0x00FA0000--0x00FA3FFF TARGET Quad 0x0104    ; 16 KB code block 5
+  FLASH.Create 2. 0x00FA4000--0x00FA7FFF TARGET Quad 0x0105    ; 16 KB code block 6
+  FLASH.Create 2. 0x00FA8000--0x00FABFFF TARGET Quad 0x0106    ; 16 KB code block 7
+  FLASH.Create 2. 0x00FAC000--0x00FAFFFF TARGET Quad 0x0107    ; 16 KB code block 8
+  FLASH.Create 2. 0x00FB0000--0x00FB7FFF TARGET Quad 0x0108    ; 32 KB code block 0
+  FLASH.Create 2. 0x00FB8000--0x00FBFFFF TARGET Quad 0x0109    ; 32 KB code block 1
+
+  ; High address space
+  FLASH.Create 3. 0x00F80000--0x00F83FFF TARGET Quad 0x0200    ; HSM data block 0
+  FLASH.Create 3. 0x00F84000--0x00F87FFF TARGET Quad 0x0201    ; HSM data block 1
+
+  ; Large (256k) address space
+  FLASH.Create 4. 0x01000000--0x0103FFFF TARGET Quad 0x0300    ; 256 KB Flash block 0
+  FLASH.Create 4. 0x01040000--0x0107FFFF TARGET Quad 0x0301    ; 256 KB Flash block 1
+  FLASH.Create 4. 0x01080000--0x010BFFFF TARGET Quad 0x0302    ; 256 KB Flash block 2
+  FLASH.Create 4. 0x010C0000--0x010FFFFF TARGET Quad 0x0303    ; 256 KB Flash block 3
+  FLASH.Create 4. 0x01100000--0x0113FFFF TARGET Quad 0x0304    ; 256 KB Flash block 4
+  FLASH.Create 4. 0x01140000--0x0117FFFF TARGET Quad 0x0305    ; 256 KB Flash block 5
+  FLASH.Create 4. 0x01180000--0x011BFFFF TARGET Quad 0x0306    ; 256 KB Flash block 6
+  FLASH.Create 4. 0x011C0000--0x011FFFFF TARGET Quad 0x0307    ; 256 KB Flash block 7
+  FLASH.Create 4. 0x01200000--0x0123FFFF TARGET Quad 0x0308    ; 256 KB Flash block 8
+  FLASH.Create 4. 0x01240000--0x0127FFFF TARGET Quad 0x0309    ; 256 KB Flash block 9
+  FLASH.Create 4. 0x01280000--0x012BFFFF TARGET Quad 0x030a    ; 256 KB Flash block 10
+  FLASH.Create 4. 0x012C0000--0x012FFFFF TARGET Quad 0x030b    ; 256 KB Flash block 11
+  FLASH.Create 4. 0x01300000--0x0133FFFF TARGET Quad 0x030c    ; 256 KB Flash block 12
+  FLASH.Create 4. 0x01340000--0x0137FFFF TARGET Quad 0x030d    ; 256 KB Flash block 13
+  FLASH.Create 4. 0x01380000--0x013BFFFF TARGET Quad 0x030e    ; 256 KB Flash block 14
+  FLASH.Create 4. 0x013C0000--0x013FFFFF TARGET Quad 0x030f    ; 256 KB Flash block 15
+  FLASH.Create 4. 0x01400000--0x0143FFFF TARGET Quad 0x0310    ; 256 KB Flash block 16
+  FLASH.Create 4. 0x01440000--0x0147FFFF TARGET Quad 0x0311    ; 256 KB Flash block 17
+  FLASH.Create 4. 0x01480000--0x014BFFFF TARGET Quad 0x0312    ; 256 KB Flash block 18
+  FLASH.Create 4. 0x014C0000--0x014FFFFF TARGET Quad 0x0313    ; 256 KB Flash block 19
+  FLASH.Create 4. 0x01500000--0x0153FFFF TARGET Quad 0x0314    ; 256 KB Flash block 20
+  FLASH.Create 4. 0x01540000--0x0157FFFF TARGET Quad 0x0315    ; 256 KB Flash block 21
+
+  ; UTEST address space
+  FLASH.Create 6. 0x00400000--0x00403FFF NOP    Quad 0x0500    ; UTEST - OTP
+
+  ; Overlay enabled mapping
+  FLASH.CreateALIAS 0x08A00000--0x08FFFFFF 0x00A00000   ; Small & medium flash blocks
+  FLASH.CreateALIAS 0x09000000--0x09FFFFFF 0x01000000   ; Large flash blocks
+
+  FLASH.TARGET E:0x40000000 E:0x40002000 0x1000 ~~/demo/powerpc/flash/quad/c55fm5746m.bin /STACKSIZE 0x0200
+
+;========================================================================
+; Flash programming example
+;
+; Flash programming speed is about three times faster when memory class E:
+; is used for data buffer (DUALPORT memory access). For DUALPORT access it
+; is required to setup MemAccess NEXUS for both, NEXUS and JTAG debugger.
+
+IF "&load_to"=="FLASH"
+(
+   if &optimizeFLSMODE==1
+   (
+      FLASH.Reprogram ALL
+
+      Data.Load.Elf &elf_file /Quad
+      ; owerrite the RCHW word
+      ; Data.Set SD:0x00F90000 %BE %LONG &rchw
+      FLASH.Reprogram OFF
+   )
+   ELSE
+   (
+      FLASH.Reprogram ALL /ERASE
+      Data.Load.Elf &elf_file /Quad
+      ; owerrite the RCHW word
+      ; Data.Set SD:0x00F90000 %BE %LONG &rchw
+      FLASH.Reprogram OFF
+   )
+)
+ELSE IF "&load_to"=="ERASE_ONLY"
+(
+   flash.unlock all
+   flash.auto off
+   flash.ERASE ALL
+   ENDDO
+)
+;========================================================================
+
+;Batch Job for debugging in internal FLASH on the MPC574XFP demo board
+
+;clear the TRACE32 screen
+WinCLEAR
+
+SYStem.RESet
+wait 1s
+SYStem.BdmClock 5MHz
+SYStem.CPU MPC5746C
+SYStem.CONFIG.CORE &tmp_core 1.
+SYStem.CONFIG.SLAVE OFF
+SYStem.Option.WATCHDOG OFF
+SYStem.OPTION DUALPORT ON
+SYStem.DETECT CPU
+System.Option LPMDEBUG ACTIVE
+;restart the CPU with debug mode enable
+SYStem.Option.SLOWRESET ON
+SYSTem.Up
+
+if (CPU()=="MPC5746C")      ; Calypso3M
+(
+    ;inform debugger about FLASH memory address range
+    Map.BOnchip 0x00F90000--0x0127FFFF
+)
+else
+(
+    ;inform debugger about FLASH memory address range
+    Map.BOnchip 0x00F90000--0x0157FFFF
+)
+
+IF "&load_params"=="NEXUS_INIT"
+(
+   ; configure the Nexus interface for LTB PowerTrace
+   ; Note: Looks like this is the only possibility to change the Nexus settings
+   SYSTem.MODE DOWN
+   SYStem.CONFIG.CORE &tmp_core 1.
+   ;SYSTem.OPTION NEXUS MDO12
+   ;SYStem.OPTION MCKO 1/2
+   SYStem.OPTION DUALPORT ON
+   System.Option LPMDEBUG ACTIVE
+   SYStem.Option.SLOWRESET ON
+   SYSTem.Up
+)
+
+;load program (if FLASH selected than load only debug symbols)
+IF "&load_to"=="FLASH"
+(
+   Data.Load.Elf &elf_file /GLOBTYPES /NOCODE
+)
+ELSE
+(
+   ; Initialize internal SRAM
+   if (CPU()=="MPC5746C")      ; Calypso3M
+   (
+      Data.Set EA:0x40000000--0x4007FFFF %quad 0
+   )
+   else
+   (
+      Data.Set EA:0x40000000--0x400BFFFF %quad 0
+   )
+
+   Data.Load.Elf &elf_file /GLOBTYPES
+)
+
+
+;=========================================================================
+; Log the Secure Lifecycle
+;=========================================================================
+&path_to_lifecycle_logfile=""
+&path_to_lifecycle_logdir=""
+&LifeCycle=""
+
+;Returns the name of the directory where the current PRACTICE program came from as a string.
+&path_to_lifecycle_logdir=OS.PPD()
+&path_to_lifecycle_logfile="&path_to_lifecycle_logdir"+"\"+"lifecycle.log"
+
+; Read PASS_LCSTAT register
+&PASS_LCSTAT_Value=data.long(ANC:0xFFFF4000)
+; Get LC value
+&PASS_LCSTAT_LC_Value=(&PASS_LCSTAT_Value&0x00000007)
+;Check system clock source
+
+IF (&PASS_LCSTAT_LC_Value==0x0)
+(
+    &LifeCycle="A"
+)
+ELSE
+(
+    IF (&PASS_LCSTAT_LC_Value==0x2)
+    (
+		&LifeCycle="O"
+    )
+    ELSE
+    (
+
+		IF (&PASS_LCSTAT_LC_Value==0x3)
+		(
+			&LifeCycle="C"
+		)
+		ELSE
+		(
+			IF (&PASS_LCSTAT_LC_Value==0x6)
+			(
+				&LifeCycle="P"
+			)
+			ELSE
+			(
+				IF (&PASS_LCSTAT_LC_Value==0x7)
+				(
+					&LifeCycle="F"
+				)
+				ELSE
+				(
+				   &LifeCycle="R"
+				)
+			)
+		)
+	)
+)
+
+
+
+;Open Trace Param Log to append the system params
+OPEN  #5  &path_to_lifecycle_logfile /Create
+WRITE #5  "&LifeCycle"
+CLOSE #5
+
+ENDDO
