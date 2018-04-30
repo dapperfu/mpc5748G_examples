@@ -15,7 +15,7 @@ DEBUG_LVL=3
 WARNINGS=all
 
 PROJ_DIR:=$(realpath $(dir $(realpath ${firstword ${MAKEFILE_LIST}})))
-E200MK_DIR:=$(realpath $(dir $(realpath $(lastword $(MAKEFILE_LIST))))/../../.env/)
+E200MK_DIR:=$(realpath $(dir $(realpath $(lastword $(MAKEFILE_LIST))))/../DEVKIT-Makefile/.env/)
 
 VLE_TOOLCHAIN_DIR := ${E200MK_DIR}/powerpc-eabivle-4_9
 VLE_EWL_DIR:=${E200MK_DIR}/e200_ewl2
