@@ -1,2 +1,0 @@
-Shows how to use PASS driver to lock and unlock the flash memory on MPC5748G.
-The example documentation can be found in the S32 SDK documentation at Examples and Demos section. (<SDK_PATH>/doc/Start_Here.html)

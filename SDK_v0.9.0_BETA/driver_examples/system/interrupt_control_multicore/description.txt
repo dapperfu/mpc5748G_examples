@@ -1,2 +1,0 @@
-The purpose of this demo application is to show you how to use the interrupt manager in a multi-core application.
-The application demonstrates installing and handling interrupt routines, and enabling, setting priority and triggering an interrupt routine on a different core.

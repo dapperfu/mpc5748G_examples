@@ -1,2 +1,0 @@
-This is a simple application created to show HSM functionality.
-FreeRTOS is used to create two tasks that send an encrypted message from one to the other.

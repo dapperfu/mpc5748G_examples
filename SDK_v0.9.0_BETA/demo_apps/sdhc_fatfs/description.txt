@@ -1,1 +1,0 @@
-This is a simple FATFS application created to access SD card via uSDHC interface

@@ -1,1 +1,0 @@
-This is a SDHC/FATFS example application on FreeRTOS
