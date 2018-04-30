@@ -1,0 +1,2 @@
+Demonstrates the following eDMA use cases: single block memory to memory transfer, a loop memory to memory transfer, memory to memory transfer using scatter/gather, UART transmission/reception over LINFlexD peripherals, using DMA requests.
+The example documentation can be found in the S32 SDK documentation at Examples and Demos section. (<SDK_PATH>/doc/Start_Here.html)

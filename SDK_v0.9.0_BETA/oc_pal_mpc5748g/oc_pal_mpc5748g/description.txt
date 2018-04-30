@@ -1,0 +1,2 @@
+Shows the Periodic Event Generation functionality of the OC_PAL on the MPC5748G using the S32 SDK API
+The example documentation can be found in the S32 SDK documentation at Examples and Demos section. (<SDK_PATH>/doc/Start_Here.html)
