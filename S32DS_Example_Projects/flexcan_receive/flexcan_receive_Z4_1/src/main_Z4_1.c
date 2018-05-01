@@ -7,15 +7,14 @@
 
 extern void xcptn_xmpl(void);
 
-int main(void)
-{
-	volatile int counter = 0;
-	AXBS_0.PORT[3].CRS.B.ARB = 1;  /* Round-robin (rotating) priority */
-	
-	xcptn_xmpl ();              /* Configure and Enable Interrupts */
+int main(void) {
+  volatile int counter = 0;
+  AXBS_0.PORT[3].CRS.B.ARB = 1; /* Round-robin (rotating) priority */
 
-	/* Loop forever */
-	for(;;) {	   
-	   	counter++;
-	}
+  xcptn_xmpl(); /* Configure and Enable Interrupts */
+
+  /* Loop forever */
+  for (;;) {
+    counter++;
+  }
 }

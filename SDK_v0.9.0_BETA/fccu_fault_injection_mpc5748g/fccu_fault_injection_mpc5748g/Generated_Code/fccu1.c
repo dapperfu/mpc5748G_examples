@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -46,9 +46,9 @@
  * flags for different actions
  *
  * @section [global]
- * Violates MISRA 2012 Required Rule 11.8, Attempt to cast away const/volatile from
- * a pointer or reference
- * The cast is required to initialize the pointer for EOUT configuration structure
+ * Violates MISRA 2012 Required Rule 11.8, Attempt to cast away const/volatile
+ * from a pointer or reference The cast is required to initialize the pointer
+ * for EOUT configuration structure
  *
  */
 
@@ -59,81 +59,65 @@
 /*! fccu1 configuration structure */
 /*! @brief Noncritical fault configuration 0 */
 /*! @brief Number 0 */
-const fccu_config_ncf_t fccu1_NcfConfig0_0 =
-{
-    .functionID    = 39,
-    .hwSwRecovery  = FCCU_NCF_SW_REC_FAULT,
-    .reset         = FCCU_NCFS_SHORT_RESET,
-    .timeoutEnable = false,
-    .reactionType  = 0U,
-    .callback      = NULL,
-    .callbackParam = NULL
-};
+const fccu_config_ncf_t fccu1_NcfConfig0_0 = {.functionID = 39,
+                                              .hwSwRecovery =
+                                                  FCCU_NCF_SW_REC_FAULT,
+                                              .reset = FCCU_NCFS_SHORT_RESET,
+                                              .timeoutEnable = false,
+                                              .reactionType = 0U,
+                                              .callback = NULL,
+                                              .callbackParam = NULL};
 /*! @brief Number 1 */
-const fccu_config_ncf_t fccu1_NcfConfig0_1 =
-{
-    .functionID    = 25,
-    .hwSwRecovery  = FCCU_NCF_HW_REC_FAULT,
-    .reset         = FCCU_NCFS_NO_RESET,
-    .timeoutEnable = false,
-    .reactionType  = 0U,
-    .callback      = NULL,
-    .callbackParam = NULL
-};
+const fccu_config_ncf_t fccu1_NcfConfig0_1 = {.functionID = 25,
+                                              .hwSwRecovery =
+                                                  FCCU_NCF_HW_REC_FAULT,
+                                              .reset = FCCU_NCFS_NO_RESET,
+                                              .timeoutEnable = false,
+                                              .reactionType = 0U,
+                                              .callback = NULL,
+                                              .callbackParam = NULL};
 /*! @brief Number 2 */
-const fccu_config_ncf_t fccu1_NcfConfig0_2 =
-{
-    .functionID    = 31,
-    .hwSwRecovery  = FCCU_NCF_SW_REC_FAULT,
-    .reset         = FCCU_NCFS_NO_RESET,
+const fccu_config_ncf_t fccu1_NcfConfig0_2 = {
+    .functionID = 31,
+    .hwSwRecovery = FCCU_NCF_SW_REC_FAULT,
+    .reset = FCCU_NCFS_NO_RESET,
     .timeoutEnable = true,
-    .reactionType  = (1<<FCCU_INT_ALARM),
-    .callback      = TestAlarm,
-    .callbackParam = NULL
-};
+    .reactionType = (1 << FCCU_INT_ALARM),
+    .callback = TestAlarm,
+    .callbackParam = NULL};
 /*! @brief Configuration 0 */
-const fccu_config_ncf_t * fccu1_NcfConfig0[] =
-{
-    &fccu1_NcfConfig0_0,
-    &fccu1_NcfConfig0_1,
-    &fccu1_NcfConfig0_2
-};
-
+const fccu_config_ncf_t *fccu1_NcfConfig0[] = {
+    &fccu1_NcfConfig0_0, &fccu1_NcfConfig0_1, &fccu1_NcfConfig0_2};
 
 /*! @brief EOUT configuration */
 /*! @brief Configuration 0 */
-const fccu_eout_config_t fccu1_EoutConfig0 =
-{
-    .toggleTime            = 100,
-    .activate              = true,
-    .control               = FCCU_FO_CONTROLLED_BY_FSM,
-    .extMode               = FCCU_FO_EXT_DEFAULT,
-    .openDrain             = false,
-    .switchMode            = true,
-    .mode                  = FCCU_FO_DUAL_RAIL,
-    .prescaler             = 2,
-    .phase                 = FCCU_FO_OPPOSITE_PHASE_10,
-    .polarity              = false,
-    .triggerTimeIRQDMA     = 0,
-    .deltaFaultInterval    = 0
-};
-
+const fccu_eout_config_t fccu1_EoutConfig0 = {
+    .toggleTime = 100,
+    .activate = true,
+    .control = FCCU_FO_CONTROLLED_BY_FSM,
+    .extMode = FCCU_FO_EXT_DEFAULT,
+    .openDrain = false,
+    .switchMode = true,
+    .mode = FCCU_FO_DUAL_RAIL,
+    .prescaler = 2,
+    .phase = FCCU_FO_OPPOSITE_PHASE_10,
+    .polarity = false,
+    .triggerTimeIRQDMA = 0,
+    .deltaFaultInterval = 0};
 
 /*! @brief Control configuration */
 /*! @brief Configuration 0 */
-const fccu_control_t fccu1_Control0 =
-{
-    .filterBypass     = false,
-    .filterWidth      = FCCU_FILTERWIDTH_UP_TO_50_US,
-    .debugEnable      = true,
-    .irqEnableType    = FCCU_IRQ_EN_EOUT,
-    .ncfTimeout       = 50000,
-    .configRun        = (fccu_eout_config_t *)&fccu1_EoutConfig0,
-    .lockType         = FCCU_LOCK_TYPE_NO_LOCK,
-    .ncfConfigNumber  = 3,
-    .callbackIsr      = NULL,
-    .callbackIsrParam = NULL
-};
+const fccu_control_t fccu1_Control0 = {
+    .filterBypass = false,
+    .filterWidth = FCCU_FILTERWIDTH_UP_TO_50_US,
+    .debugEnable = true,
+    .irqEnableType = FCCU_IRQ_EN_EOUT,
+    .ncfTimeout = 50000,
+    .configRun = (fccu_eout_config_t *)&fccu1_EoutConfig0,
+    .lockType = FCCU_LOCK_TYPE_NO_LOCK,
+    .ncfConfigNumber = 3,
+    .callbackIsr = NULL,
+    .callbackIsrParam = NULL};
 
 /* END fccu1. */
 /*!
@@ -147,4 +131,3 @@ const fccu_control_t fccu1_Control0 =
 **
 ** ###################################################################
 */
-

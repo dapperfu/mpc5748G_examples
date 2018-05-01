@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -40,19 +40,20 @@
  *
  * @section [global]
  * Violates MISRA 2012 Required Rule 8.1, types should be explicitly specified
- * This rule applies only for C90 standard. Defining other integer types that are
- * permitted in bit-field declarations is allowed in C99 standard.
+ * This rule applies only for C90 standard. Defining other integer types that
+ * are permitted in bit-field declarations is allowed in C99 standard.
  *
  * @section [global]
- * Violates MISRA 2012 Required Rule 8.4, external symbol defined without a prior declaration
- * This symbols are declared in the generated configuration structures.
+ * Violates MISRA 2012 Required Rule 8.4, external symbol defined without a
+ * prior declaration This symbols are declared in the generated configuration
+ * structures.
  *
  * @section [global]
  * Violates MISRA 2012 Required Rule 1.3, occurrence of undefined symbol
- * This module is used only with defined values based on no of can interfaces and features enabled.
+ * This module is used only with defined values based on no of can interfaces
+ * and features enabled.
  *
  */
-
 
 /*! @brief PAL instance information */
 const can_instance_t can_pal1_instance = {CAN_INST_TYPE_FLEXCAN, 0U};
@@ -64,20 +65,16 @@ const can_user_config_t can_pal1_Config0 = {
     .peClkSrc = CAN_CLK_SOURCE_OSC,
     .enableFD = false,
     .payloadSize = CAN_PAYLOAD_SIZE_8,
-    .nominalBitrate = {
-        .propSeg = 7,
-        .phaseSeg1 = 4,
-        .phaseSeg2 = 1,
-        .preDivider = 4,
-        .rJumpwidth = 1
-    },
-    .dataBitrate = {
-        .propSeg = 7,
-        .phaseSeg1 = 4,
-        .phaseSeg2 = 1,
-        .preDivider = 4,
-        .rJumpwidth = 1
-    },
+    .nominalBitrate = {.propSeg = 7,
+                       .phaseSeg1 = 4,
+                       .phaseSeg2 = 1,
+                       .preDivider = 4,
+                       .rJumpwidth = 1},
+    .dataBitrate = {.propSeg = 7,
+                    .phaseSeg1 = 4,
+                    .phaseSeg2 = 1,
+                    .preDivider = 4,
+                    .rJumpwidth = 1},
     .extension = NULL,
 };
 /* END can_pal1. */

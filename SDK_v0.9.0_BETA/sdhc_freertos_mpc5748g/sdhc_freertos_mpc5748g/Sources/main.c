@@ -44,24 +44,25 @@
 
 /* Including needed modules to compile this module/procedure */
 #include "Cpu.h"
-#include "clockMan1.h"
 #include "FreeRTOS.h"
 #include "FreeRTOSConfig.h"
-#include "usdhc1.h"
+#include "clockMan1.h"
 #include "pin_mux.h"
 #include "rtcTimer1.h"
+#include "usdhc1.h"
 
 volatile int exit_code = 0;
-/* User includes (#include below this line is not maintained by Processor Expert) */
-#include <stdint.h>
+/* User includes (#include below this line is not maintained by Processor
+ * Expert) */
 #include <stdbool.h>
+#include <stdint.h>
 #include <stdio.h>
 
-#include "project.h"
-#include "setup.h"
-#include "run.h"
-#include "console/uart.h"
 #include "console/echoEmulation.h"
+#include "console/uart.h"
+#include "project.h"
+#include "run.h"
+#include "setup.h"
 #include "usdhc/usdhc_impl.h"
 
 /*!
@@ -70,45 +71,47 @@ volatile int exit_code = 0;
  * - startup asm routine
  * - main()
 */
-int main(void)
-{
+int main(void) {
   /* Write your local variable definition here */
 
 /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
 #ifdef PEX_RTOS_INIT
-    PEX_RTOS_INIT();                   /* Initialization of the selected RTOS. Macro is defined by the RTOS component. */
+  PEX_RTOS_INIT(); /* Initialization of the selected RTOS. Macro is defined by
+                      the RTOS component. */
 #endif
   /*** End of Processor Expert internal initialization.                    ***/
 
-    SysClock_Init();
-    Gen_PadsInit();
-    Led_Init(IDLE_LED);
-    Led_Init(ERR_LED);
-    Led_Init(SD_RX_LED);
-    Led_Init(SD_TX_LED);
-    LINFlexD_PadsInit();
-    InitializeUART(UART_CONSOLE_DEFAULT_BAUD_RATE);
-    uSDHC_PadsInit();
-    uSDHC_fatfs_user_initialize();
+  SysClock_Init();
+  Gen_PadsInit();
+  Led_Init(IDLE_LED);
+  Led_Init(ERR_LED);
+  Led_Init(SD_RX_LED);
+  Led_Init(SD_TX_LED);
+  LINFlexD_PadsInit();
+  InitializeUART(UART_CONSOLE_DEFAULT_BAUD_RATE);
+  uSDHC_PadsInit();
+  uSDHC_fatfs_user_initialize();
 
-    /* Run SDHC/FreeRTOS tasks. */
-    run_tasks();
+  /* Run SDHC/FreeRTOS tasks. */
+  run_tasks();
 
-    while(1)
-    {
-    	Led_Blink(IDLE_LED);
-    }
+  while (1) {
+    Led_Blink(IDLE_LED);
+  }
 
-  /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
-  /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
-  #ifdef PEX_RTOS_START
-    PEX_RTOS_START();                  /* Startup of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
+/*** Don't write any code pass this line, or it will be deleted during code
+ * generation. ***/
+/*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component.
+ * DON'T MODIFY THIS CODE!!! ***/
+#ifdef PEX_RTOS_START
+  PEX_RTOS_START(); /* Startup of the selected RTOS. Macro is defined by the
+                       RTOS component. */
+#endif
   /*** End of RTOS startup code.  ***/
 
   /*** Processor Expert end of main routine. DON'T MODIFY THIS CODE!!! ***/
-  for(;;) {
-    if(exit_code != 0) {
+  for (;;) {
+    if (exit_code != 0) {
       break;
     }
   }

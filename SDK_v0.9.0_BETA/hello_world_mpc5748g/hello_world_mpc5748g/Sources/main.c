@@ -43,33 +43,33 @@
 */
 /* MODULE main */
 
-
 /* Including needed modules to compile this module/procedure */
 #include "Cpu.h"
 #include "pin_mux.h"
 
-  volatile int exit_code = 0;
-/* User includes (#include below this line is not maintained by Processor Expert) */
-#include <stdint.h>
+volatile int exit_code = 0;
+/* User includes (#include below this line is not maintained by Processor
+ * Expert) */
 #include <stdbool.h>
+#include <stdint.h>
 
-/* This example is setup to work by default with DEVKIT. To use it with other boards
-   please comment the following line
+/* This example is setup to work by default with DEVKIT. To use it with other
+   boards please comment the following line
 */
 #define DEVKIT
 
 #ifdef DEVKIT
-	#define PORT	PTJ
-    #define LED		4
+#define PORT PTJ
+#define LED 4
 #else
-	#define PORT	PTG
-    #define LED		2
+#define PORT PTG
+#define LED 2
 #endif
 
-void delay(volatile int cycles)
-{
-    /* Delay function - do nothing for a number of cycles */
-    while(cycles--);
+void delay(volatile int cycles) {
+  /* Delay function - do nothing for a number of cycles */
+  while (cycles--)
+    ;
 }
 
 /*!
@@ -78,37 +78,39 @@ void delay(volatile int cycles)
  * - startup asm routine
  * - main()
 */
-int main(void)
-{
-  /* Write your local variable definition here */
+int main(void) {
+/* Write your local variable definition here */
 
-  /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
-  #ifdef PEX_RTOS_INIT
-    PEX_RTOS_INIT();                   /* Initialization of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
+/*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
+#ifdef PEX_RTOS_INIT
+  PEX_RTOS_INIT(); /* Initialization of the selected RTOS. Macro is defined by
+                      the RTOS component. */
+#endif
   /*** End of Processor Expert internal initialization.                    ***/
 
   /* Initialize LED */
   PINS_DRV_Init(NUM_OF_CONFIGURED_PINS, g_pin_mux_InitConfigArr);
 
-  while(1)
-  {
-      /* Insert a small delay to make the blinking visible */
-      delay(720000);
+  while (1) {
+    /* Insert a small delay to make the blinking visible */
+    delay(720000);
 
-      /* Toggle output value LED1 */
-      PINS_DRV_TogglePins(PORT, (1 << LED));
+    /* Toggle output value LED1 */
+    PINS_DRV_TogglePins(PORT, (1 << LED));
   }
 
-  /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
-  /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
-  #ifdef PEX_RTOS_START
-    PEX_RTOS_START();                  /* Startup of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
+/*** Don't write any code pass this line, or it will be deleted during code
+ * generation. ***/
+/*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component.
+ * DON'T MODIFY THIS CODE!!! ***/
+#ifdef PEX_RTOS_START
+  PEX_RTOS_START(); /* Startup of the selected RTOS. Macro is defined by the
+                       RTOS component. */
+#endif
   /*** End of RTOS startup code.  ***/
   /*** Processor Expert end of main routine. DON'T MODIFY THIS CODE!!! ***/
-  for(;;) {
-    if(exit_code != 0) {
+  for (;;) {
+    if (exit_code != 0) {
       break;
     }
   }

@@ -22,7 +22,8 @@
 **     Compiler    : GNU C Compiler
 **     Date/Time   :
 **     Abstract    :
-**         This module contains uSDHC driver initialization/de-initialization sequence test.
+**         This module contains uSDHC driver initialization/de-initialization
+*sequence test.
 **     Settings    :
 **     Contents    :
 **
@@ -31,79 +32,75 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-#include "usdhc/usdhc_impl.h"
 #include "common/tasks/tasks.h"
+#include "usdhc/usdhc_impl.h"
 
 /**
  * @page misra_violations MISRA-C:2012 violations
  *
  * @section [global]
- * Violates MISRA 2012 Required Rule 21.6, The standard library input/output functions shall not be used.
- * This is required for printing messages.
+ * Violates MISRA 2012 Required Rule 21.6, The standard library input/output
+ * functions shall not be used. This is required for printing messages.
  *
  * @section [global]
- * Violates MISRA 2012 Required Rule 14.4, The controlling expression of an if statement and the controlling
- *  expression of an iteration-statement shall have essentially Boolean type.
- * This is required infinite loop.
+ * Violates MISRA 2012 Required Rule 14.4, The controlling expression of an if
+ * statement and the controlling expression of an iteration-statement shall have
+ * essentially Boolean type. This is required infinite loop.
  *
  * @section [global]
- * Violates MISRA 2012 Required Rule 10.8, The value of composite expression shall not be cast to a different
- *  essential type category or a wider essential type.
- * This is required casting randomized values.
+ * Violates MISRA 2012 Required Rule 10.8, The value of composite expression
+ * shall not be cast to a different essential type category or a wider essential
+ * type. This is required casting randomized values.
  *
  */
 
 /*******************************************************************************
-* Global variables
-*******************************************************************************/
+ * Global variables
+ *******************************************************************************/
 
 /*******************************************************************************
-* Constants and macros
-*******************************************************************************/
+ * Constants and macros
+ *******************************************************************************/
 
 /*******************************************************************************
-* Local types
-*******************************************************************************/
+ * Local types
+ *******************************************************************************/
 
 /*******************************************************************************
-* Local function prototypes
-*******************************************************************************/
+ * Local function prototypes
+ *******************************************************************************/
 
 /*******************************************************************************
-* Local variables
-*******************************************************************************/
+ * Local variables
+ *******************************************************************************/
 
 /*******************************************************************************
-* Local functions
-*******************************************************************************/
+ * Local functions
+ *******************************************************************************/
 
 /*******************************************************************************
-* Global functions
-*******************************************************************************/
+ * Global functions
+ *******************************************************************************/
 
 /*
  * Implements task_sdhc_init_deinit_Activity
  */
-void task_sdhc_init_deinit(void)
-{
-	common_status_t status;
-	(void)printf("uSDHC Init/Deinit test\r\n");
-    status = uSDHC_Init(true);
-    (void)printf("uSDHC/SD status: %ld\r\n", status);
-    if((common_status_t)STATUS_SUCCESS == status)
-    {
-    	(void)uSDHC_DeInit();
-    }
-	TEST_END
-    if((common_status_t)STATUS_SUCCESS == status)
-    {
-    	(void)printf("PASS\r\n");
-    }
-    else
-    {
-    	(void)printf("ERROR\r\n");
+void task_sdhc_init_deinit(void) {
+  common_status_t status;
+  (void)printf("uSDHC Init/Deinit test\r\n");
+  status = uSDHC_Init(true);
+  (void)printf("uSDHC/SD status: %ld\r\n", status);
+  if ((common_status_t)STATUS_SUCCESS == status) {
+    (void)uSDHC_DeInit();
+  }
+  TEST_END
+  if ((common_status_t)STATUS_SUCCESS == status) {
+    (void)printf("PASS\r\n");
+  } else {
+    (void)printf("ERROR\r\n");
 #ifndef ENABLE_TESTS
-    	while(1) {}
-#endif
+    while (1) {
     }
+#endif
+  }
 }

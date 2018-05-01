@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -46,82 +46,70 @@
  * segment.
  *
  * @section [global]
- * Violates MISRA 2012 Required Rule 8.4, external symbol defined without a prior
- * declaration.
- * The symbols are declared in the driver header as external; the header is not included
- * by this file.
+ * Violates MISRA 2012 Required Rule 8.4, external symbol defined without a
+ * prior declaration. The symbols are declared in the driver header as external;
+ * the header is not included by this file.
  *
  * @section [global]
  * Violates MISRA 2012 Advisory Rule 8.7, External could be made static.
  * Function is defined for usage by application code.
  *
  * @section [global]
- * Violates MISRA 2012 Advisory Rule 8.13, Pointer parameter 'ocState' could be declared as pointing to const.
- * This is a pointer to the driver context structure which is for internal use only, and the application
- * must make no assumption about the content of this structure. Therefore it is irrelevant for the application
- * whether the structure is changed in the function or not. The fact that in a particular implementation of some
- * functions there is no write in the context structure is an implementation detail and there is no reason to
- * propagate it in the interface. That would compromise the stability of the interface, if this implementation
- * detail is changed in later releases or on other platforms.
+ * Violates MISRA 2012 Advisory Rule 8.13, Pointer parameter 'ocState' could be
+ * declared as pointing to const. This is a pointer to the driver context
+ * structure which is for internal use only, and the application must make no
+ * assumption about the content of this structure. Therefore it is irrelevant
+ * for the application whether the structure is changed in the function or not.
+ * The fact that in a particular implementation of some functions there is no
+ * write in the context structure is an implementation detail and there is no
+ * reason to propagate it in the interface. That would compromise the stability
+ * of the interface, if this implementation detail is changed in later releases
+ * or on other platforms.
  *
  * @section [global]
- * Violates MISRA 2012 Required Rule 11.3, Cast performed between a pointer to object type
- * and a pointer to a different object type.
- * This is needed for the extension of the user configuration structure, for which the actual type
+ * Violates MISRA 2012 Required Rule 11.3, Cast performed between a pointer to
+ * object type and a pointer to a different object type. This is needed for the
+ * extension of the user configuration structure, for which the actual type
  * cannot be known.
  *
  * @section [global]
- * Violates MISRA 2012 Advisory Rule 11.5, Conversion from pointer to void to pointer to other type
- * This is needed for the extension of the user configuration structure, for which the actual type
- * cannot be known.
+ * Violates MISRA 2012 Advisory Rule 11.5, Conversion from pointer to void to
+ * pointer to other type This is needed for the extension of the user
+ * configuration structure, for which the actual type cannot be known.
  *
  */
 
 #include "oc_pal1.h"
 
-
-
 /*! @brief PAL instance information */
-const oc_instance_t oc_pal1_instance = { OC_INST_TYPE_EMIOS, 0U };
+const oc_instance_t oc_pal1_instance = {OC_INST_TYPE_EMIOS, 0U};
 
 /*! @brief The channel extension configuration for eMIOS */
-channel_extension_emios_for_oc_t oc_pal1_emiosChnExtension0 =
-{
-    .timebase         = OC_BUS_SEL_INTERNAL,
-    .period           = 8000,
-    .prescaler        = EMIOS_CLOCK_DIVID_BY_5
-};
+channel_extension_emios_for_oc_t oc_pal1_emiosChnExtension0 = {
+    .timebase = OC_BUS_SEL_INTERNAL,
+    .period = 8000,
+    .prescaler = EMIOS_CLOCK_DIVID_BY_5};
 
 /*! @brief IP specific extension configuration for eMIOS */
-extension_emios_for_oc_t oc_pal1_emiosExtension =
-{
-    .clkDivVal             = 244U,
+extension_emios_for_oc_t oc_pal1_emiosExtension = {
+    .clkDivVal = 244U,
     .enableGlobalPrescaler = true,
-    .enableGlobalTimeBase  = false
-};
-
+    .enableGlobalTimeBase = false};
 
 /*! @brief Channel configuration array */
-oc_output_ch_param_t oc_pal1_ChnConfig[1] =
-{
+oc_output_ch_param_t oc_pal1_ChnConfig[1] = {
     /* Channel configuration 0 */
-    {
-         .hwChannelId           = 4U,
-         .chMode                = OC_TOGGLE_ON_MATCH,
-         .comparedValue         = 4000,
-         .channelExtension      = &oc_pal1_emiosChnExtension0,
-         .channelCallbackParams = NULL,
-         .channelCallbacks      = oc_pal1_channel_callBack0
-    }
-};
+    {.hwChannelId = 4U,
+     .chMode = OC_TOGGLE_ON_MATCH,
+     .comparedValue = 4000,
+     .channelExtension = &oc_pal1_emiosChnExtension0,
+     .channelCallbackParams = NULL,
+     .channelCallbacks = oc_pal1_channel_callBack0}};
 
 /*! @brief Output compare configuration */
-oc_config_t oc_pal1_InitConfig =
-{
-    .nNumChannels    = 1U,
-    .outputChConfig  = oc_pal1_ChnConfig,
-    .extension       = &oc_pal1_emiosExtension
-};
+oc_config_t oc_pal1_InitConfig = {.nNumChannels = 1U,
+                                  .outputChConfig = oc_pal1_ChnConfig,
+                                  .extension = &oc_pal1_emiosExtension};
 
 /* END oc_pal1.c*/
 

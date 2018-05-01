@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -39,29 +39,27 @@
  * @page misra_violations MISRA-C:2012 violations
  *
  * @section [global]
- * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made static.
- * The external variable will be used in other source file that user initialize
- * to use this module.
+ * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made
+ * static. The external variable will be used in other source file that user
+ * initialize to use this module.
  */
 
 #include "swt1.h"
 
 /*! User configuration 0 */
-const swt_user_config_t swt1_Config0 =
-{
-    .mapConfig       = 0xFFU,             /*!< Master Access Protection        */
-    .invalidReset    = false,             /*!< Reset request on invalid access */
-    .stop            = false,             /*!< Stop mode                       */
-    .debug           = true,              /*!< Debug mode                      */
-    .winEnable       = false,             /*!< window mode                     */
-    .intEnable       = true,              /*!< Interrupt                       */
-    .serviceMode     = SWT_FS_SEQ_MODE,   /*!< Servicing mode                  */
-    .timeoutValue    = 128000U,           /*!< Timeout value                   */
-    .windowValue     = 0U,                /*!< Window value                    */
-    .initKey         = 0x00U,             /*!< Initial service key             */
-    .lockConfig      = SWT_UNLOCK         /*!< Lock configuration              */
+const swt_user_config_t swt1_Config0 = {
+    .mapConfig = 0xFFU,             /*!< Master Access Protection        */
+    .invalidReset = false,          /*!< Reset request on invalid access */
+    .stop = false,                  /*!< Stop mode                       */
+    .debug = true,                  /*!< Debug mode                      */
+    .winEnable = false,             /*!< window mode                     */
+    .intEnable = true,              /*!< Interrupt                       */
+    .serviceMode = SWT_FS_SEQ_MODE, /*!< Servicing mode                  */
+    .timeoutValue = 128000U,        /*!< Timeout value                   */
+    .windowValue = 0U,              /*!< Window value                    */
+    .initKey = 0x00U,               /*!< Initial service key             */
+    .lockConfig = SWT_UNLOCK        /*!< Lock configuration              */
 };
-
 
 /* END swt1. */
 

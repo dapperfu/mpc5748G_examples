@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -39,9 +39,9 @@
  * @page misra_violations MISRA-C:2012 violations
  *
  * @section [global]
- * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made static.
- * The external variables will be used in other source files that user initialize
- * to use this module.
+ * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made
+ * static. The external variables will be used in other source files that user
+ * initialize to use this module.
  */
 
 #include "security_pal1.h"

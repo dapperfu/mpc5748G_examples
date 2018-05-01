@@ -31,94 +31,81 @@
 #include "console/ringBuffer.h"
 
 /*******************************************************************************
-* Global variables
-*******************************************************************************/
+ * Global variables
+ *******************************************************************************/
 
 /*******************************************************************************
-* Constants and macros
-*******************************************************************************/
+ * Constants and macros
+ *******************************************************************************/
 
 /*******************************************************************************
-* Local types
-*******************************************************************************/
+ * Local types
+ *******************************************************************************/
 
 /*******************************************************************************
-* Local function prototypes
-*******************************************************************************/
+ * Local function prototypes
+ *******************************************************************************/
 
 /*******************************************************************************
-* Local variables
-*******************************************************************************/
+ * Local variables
+ *******************************************************************************/
 
 /*******************************************************************************
-* Local functions
-*******************************************************************************/
+ * Local functions
+ *******************************************************************************/
 
 /*******************************************************************************
-* Global functions
-*******************************************************************************/
+ * Global functions
+ *******************************************************************************/
 
-int32_t RBufferAdd(rBuffer_t *c, const char *data)
-{
-	int32_t state = -1;
-	uint8_t status = 1U;
-    int16_t next = (int16_t)(c->head + 1);
-    if(next >= c->maxSize)
-    {
-        next = 0;
-    }
-    if(next == c->tail)
-    {
-        status = 0U;
-    }
-    if(1U == status)
-    {
-    	c->bufferPtr[c->head] = *data;
-    	c->head = next;
-    }
-    if(1U == status)
-    {
-    	state = 0;
-    }
-    return state;
+int32_t RBufferAdd(rBuffer_t *c, const char *data) {
+  int32_t state = -1;
+  uint8_t status = 1U;
+  int16_t next = (int16_t)(c->head + 1);
+  if (next >= c->maxSize) {
+    next = 0;
+  }
+  if (next == c->tail) {
+    status = 0U;
+  }
+  if (1U == status) {
+    c->bufferPtr[c->head] = *data;
+    c->head = next;
+  }
+  if (1U == status) {
+    state = 0;
+  }
+  return state;
 }
 
-int32_t RBufferRemove(rBuffer_t *c, char *data)
-{
-	int32_t state = -1;
-	uint8_t status = 1U;
-    if(c->head == c->tail)
-    {
-        status = 0U;
+int32_t RBufferRemove(rBuffer_t *c, char *data) {
+  int32_t state = -1;
+  uint8_t status = 1U;
+  if (c->head == c->tail) {
+    status = 0U;
+  }
+  if (1U == status) {
+    int16_t next = (int16_t)(c->tail + 1);
+    if (next >= c->maxSize) {
+      next = 0;
     }
-    if(1U == status)
-    {
-    	int16_t next = (int16_t)(c->tail + 1);
-    	if(next >= c->maxSize)
-    	{
-    		next = 0;
-    	}
-    	*data = c->bufferPtr[c->tail];
-    	c->tail = next;
-    }
-    if(1U == status)
-    {
-    	state = 0;
-    }
-    return state;
+    *data = c->bufferPtr[c->tail];
+    c->tail = next;
+  }
+  if (1U == status) {
+    state = 0;
+  }
+  return state;
 }
 
-int16_t RBufferSize(const rBuffer_t *c)
-{
-	int16_t current = c->tail;
-	int16_t count = 0;
-	if(current >= c->maxSize)
-	{
-		current = 0;
-	}
-	if(c->head > current)
-	{
-		count = (int16_t)(c->head - current);
-	}
-	return count;
+int16_t RBufferSize(const rBuffer_t *c) {
+  int16_t current = c->tail;
+  int16_t count = 0;
+  if (current >= c->maxSize) {
+    current = 0;
+  }
+  if (c->head > current) {
+    count = (int16_t)(c->head - current);
+  }
+  return count;
 }

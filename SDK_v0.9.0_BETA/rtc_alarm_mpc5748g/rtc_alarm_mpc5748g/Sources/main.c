@@ -43,40 +43,40 @@
 */
 /* MODULE main */
 
-
 /* Including needed modules to compile this module/procedure */
 #include "Cpu.h"
-#include "rtcTimer1.h"
 #include "clockMan1.h"
 #include "pin_mux.h"
+#include "rtcTimer1.h"
 
 volatile int exit_code = 0;
-/* User includes (#include below this line is not maintained by Processor Expert) */
-#include <stdint.h>
+/* User includes (#include below this line is not maintained by Processor
+ * Expert) */
 #include <stdbool.h>
+#include <stdint.h>
 
-/* This example is setup to work by default with DEVKIT. To use it with other boards
-   please comment the following line
+/* This example is setup to work by default with DEVKIT. To use it with other
+   boards please comment the following line
 */
 #define DEVKIT
 
 #ifdef DEVKIT
-	#define ALARM 5	/* GPIO 117 - pin PH[5] - LED1 (DS8) on DEV-KIT */
-	#define ALARM_PORT PTH
-	#define BTN_PIN 12	/* GPIO 76 - pin PE[12] - USER SWITCH 2 (SW2) on DEV-KIT */
-	#define BTN_PORT PTE
+#define ALARM 5 /* GPIO 117 - pin PH[5] - LED1 (DS8) on DEV-KIT */
+#define ALARM_PORT PTH
+#define BTN_PIN 12 /* GPIO 76 - pin PE[12] - USER SWITCH 2 (SW2) on DEV-KIT */
+#define BTN_PORT PTE
 #else
-	#define ALARM 2	/* GPIO 98 - pin PG[2] - LED1 (DS2) on Motherboard */
-	#define ALARM_PORT PTG
-	#define BTN_PIN 11	/* GPIO 91 - pin PF[11] - USER SWITCH 3 (SW7) on Motherboard */
-	#define BTN_PORT PTF
+#define ALARM 2 /* GPIO 98 - pin PG[2] - LED1 (DS2) on Motherboard */
+#define ALARM_PORT PTG
+#define BTN_PIN                                                                \
+  11 /* GPIO 91 - pin PF[11] - USER SWITCH 3 (SW7) on Motherboard */
+#define BTN_PORT PTF
 #endif
 
 /* Alarm interrupt handler */
-void alarmISR(void)
-{
-    /* Toggle the alarm led */
-    PINS_DRV_TogglePins(ALARM_PORT, (1 << ALARM));
+void alarmISR(void) {
+  /* Toggle the alarm led */
+  PINS_DRV_TogglePins(ALARM_PORT, (1 << ALARM));
 }
 
 /*!
@@ -85,71 +85,74 @@ void alarmISR(void)
  * - startup asm routine
  * - main()
 */
-int main(void)
-{
+int main(void) {
   /* Write your local variable definition here */
-	uint32_t tempSeconds;
-	rtc_timedate_t tempTime;
-  /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
-  #ifdef PEX_RTOS_INIT
-    PEX_RTOS_INIT();                   /* Initialization of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
+  uint32_t tempSeconds;
+  rtc_timedate_t tempTime;
+/*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
+#ifdef PEX_RTOS_INIT
+  PEX_RTOS_INIT(); /* Initialization of the selected RTOS. Macro is defined by
+                      the RTOS component. */
+#endif
   /*** End of Processor Expert internal initialization.                    ***/
 
-	/* Initialize and configure clocks
-	 *  -   see clock manager component for details
-	 */
-    CLOCK_SYS_Init(g_clockManConfigsArr, CLOCK_MANAGER_CONFIG_CNT,
-    			g_clockManCallbacksArr, CLOCK_MANAGER_CALLBACK_CNT);
-    CLOCK_SYS_UpdateConfiguration(0U, CLOCK_MANAGER_POLICY_AGREEMENT);
+  /* Initialize and configure clocks
+   *  -   see clock manager component for details
+   */
+  CLOCK_SYS_Init(g_clockManConfigsArr, CLOCK_MANAGER_CONFIG_CNT,
+                 g_clockManCallbacksArr, CLOCK_MANAGER_CALLBACK_CNT);
+  CLOCK_SYS_UpdateConfiguration(0U, CLOCK_MANAGER_POLICY_AGREEMENT);
 
-    /* Initialize pins
-	 *  -   See PinSettings component for more info
-	 */
-    PINS_DRV_Init(NUM_OF_CONFIGURED_PINS, g_pin_mux_InitConfigArr);
-    /* Initialize RTC instance
-	 *  - See RTC configuration component for options
-	 */
-    /* Call the init function */
-    RTC_DRV_Init(RTCTIMER1, &rtcTimer1_State, &rtcTimer1_Config0);
+  /* Initialize pins
+   *  -   See PinSettings component for more info
+   */
+  PINS_DRV_Init(NUM_OF_CONFIGURED_PINS, g_pin_mux_InitConfigArr);
+  /* Initialize RTC instance
+   *  - See RTC configuration component for options
+   */
+  /* Call the init function */
+  RTC_DRV_Init(RTCTIMER1, &rtcTimer1_State, &rtcTimer1_Config0);
 
-	/* Set the time and date */
-	RTC_DRV_SetTimeDate(RTCTIMER1, &rtcTimer1_StartTime0);
+  /* Set the time and date */
+  RTC_DRV_SetTimeDate(RTCTIMER1, &rtcTimer1_StartTime0);
 
-	/* Start RTC counter */
-	RTC_DRV_StartCounter(RTCTIMER1);
+  /* Start RTC counter */
+  RTC_DRV_StartCounter(RTCTIMER1);
 
-	/* Configure an alarm every 2 second */
-	RTC_DRV_ConfigureAlarm(RTCTIMER1, &rtcTimer1_AlarmConfig0);
+  /* Configure an alarm every 2 second */
+  RTC_DRV_ConfigureAlarm(RTCTIMER1, &rtcTimer1_AlarmConfig0);
 
-	while(1)
-	{
-		/* Check if the button was pressed */
-		while((PINS_DRV_ReadPins(BTN_PORT) & (1 << BTN_PIN)) == 0);
+  while (1) {
+    /* Check if the button was pressed */
+    while ((PINS_DRV_ReadPins(BTN_PORT) & (1 << BTN_PIN)) == 0)
+      ;
 
-		 /* Clear interrupt flag */
-		PINS_DRV_ClearPins(BTN_PORT, BTN_PIN);
-		/* Get current time */
-		RTC_DRV_GetTimeDate(RTCTIMER1, &tempTime);
-		/* Add to current time 5 seconds */
-		RTC_DRV_ConvertTimeDateToSeconds(&tempTime, &tempSeconds);
-		tempSeconds += 5;
-		RTC_DRV_ConvertSecondsToTimeDate(&tempSeconds, &tempTime);
-		/* Set new alarm time and date */
-		rtcTimer1_AlarmConfig0.alarmTime = tempTime;
-		/* Configure the alarm */
-		RTC_DRV_ConfigureAlarm(RTCTIMER1, &rtcTimer1_AlarmConfig0);
-	}
+    /* Clear interrupt flag */
+    PINS_DRV_ClearPins(BTN_PORT, BTN_PIN);
+    /* Get current time */
+    RTC_DRV_GetTimeDate(RTCTIMER1, &tempTime);
+    /* Add to current time 5 seconds */
+    RTC_DRV_ConvertTimeDateToSeconds(&tempTime, &tempSeconds);
+    tempSeconds += 5;
+    RTC_DRV_ConvertSecondsToTimeDate(&tempSeconds, &tempTime);
+    /* Set new alarm time and date */
+    rtcTimer1_AlarmConfig0.alarmTime = tempTime;
+    /* Configure the alarm */
+    RTC_DRV_ConfigureAlarm(RTCTIMER1, &rtcTimer1_AlarmConfig0);
+  }
 
-	/*** Don't write any code pass this line, or it will be deleted during code generation. ***/
-  /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
-  #ifdef PEX_RTOS_START
-    PEX_RTOS_START();                  /* Startup of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
+  /*** Don't write any code pass this line, or it will be deleted during code
+   * generation. ***/
+/*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component.
+ * DON'T MODIFY THIS CODE!!! ***/
+#ifdef PEX_RTOS_START
+  PEX_RTOS_START(); /* Startup of the selected RTOS. Macro is defined by the
+                       RTOS component. */
+#endif
   /*** End of RTOS startup code.  ***/
   /*** Processor Expert end of main routine. DON'T MODIFY THIS CODE!!! ***/
-  for(;;) {
-    if(exit_code != 0) {
+  for (;;) {
+    if (exit_code != 0) {
       break;
     }
   }

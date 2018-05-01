@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -38,19 +38,17 @@
 /*! @brief Define external callbacks */
 extern void callback(i2s_event_t event, void *userData);
 /* Serial User Configurations */
-i2s_user_config_t i2s_pal1_Config0 = {
-    .baudRate         = 100000,
-    .mode             = I2S_MASTER,
-    .transferType     = I2S_USING_INTERRUPT,
-    .wordWidth        = 16,
-    .rxDMAChannel     = 0U,
-    .txDMAChannel     = 0U,
-    .callback         = callback,
-    .extension        = NULL
-};
+i2s_user_config_t i2s_pal1_Config0 = {.baudRate = 100000,
+                                      .mode = I2S_MASTER,
+                                      .transferType = I2S_USING_INTERRUPT,
+                                      .wordWidth = 16,
+                                      .rxDMAChannel = 0U,
+                                      .txDMAChannel = 0U,
+                                      .callback = callback,
+                                      .extension = NULL};
 
 /*! @brief Device instance number */
-const i2s_instance_t i2sOverSai0Instance = {I2S_INST_TYPE_SAI,0UL};
+const i2s_instance_t i2sOverSai0Instance = {I2S_INST_TYPE_SAI, 0UL};
 
 /* END i2s_pal1. */
 /*!

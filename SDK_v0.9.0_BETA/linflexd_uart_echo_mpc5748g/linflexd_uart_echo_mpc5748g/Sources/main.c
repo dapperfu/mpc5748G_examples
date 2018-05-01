@@ -43,7 +43,6 @@
 */
 /* MODULE main */
 
-
 /* Including needed modules to compile this module/procedure */
 #include "Cpu.h"
 #include "clockMan1.h"
@@ -52,13 +51,14 @@
 #include "pin_mux.h"
 
 volatile int exit_code = 0;
-/* User includes (#include below this line is not maintained by Processor Expert) */
+/* User includes (#include below this line is not maintained by Processor
+ * Expert) */
 #include <string.h>
 
 /* Message sent through UART interface */
-#define msg  "\nHello World!\n"
+#define msg "\nHello World!\n"
 /* Length of the message to be received from the console */
-#define RX_MSG_LEN  5U
+#define RX_MSG_LEN 5U
 
 /*!
   \brief The main function for the project.
@@ -66,19 +66,20 @@ volatile int exit_code = 0;
  * - startup asm routine
  * - main()
 */
-int main(void)
-{
+int main(void) {
   /* Write your local variable definition here */
 
   /* Buffer to store the received message */
   uint8_t rxBuff[RX_MSG_LEN + 1];
-  /* Last value should be 0 (string terminator); only 5 characters will be read from console */
+  /* Last value should be 0 (string terminator); only 5 characters will be read
+   * from console */
   rxBuff[RX_MSG_LEN] = 0;
 
-  /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
-  #ifdef PEX_RTOS_INIT
-    PEX_RTOS_INIT();                   /* Initialization of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
+/*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
+#ifdef PEX_RTOS_INIT
+  PEX_RTOS_INIT(); /* Initialization of the selected RTOS. Macro is defined by
+                      the RTOS component. */
+#endif
   /*** End of Processor Expert internal initialization.                    ***/
 
   /* Initialize and configure clocks
@@ -93,36 +94,41 @@ int main(void)
   PINS_DRV_Init(NUM_OF_CONFIGURED_PINS, g_pin_mux_InitConfigArr);
 
   /* Initialize LINFlexD module for UART usage */
-  LINFLEXD_UART_DRV_Init(INST_LINFLEXD_UART1, &linflexd_uart1_State, &linflexd_uart1_InitConfig0);
+  LINFLEXD_UART_DRV_Init(INST_LINFLEXD_UART1, &linflexd_uart1_State,
+                         &linflexd_uart1_InitConfig0);
 
   /* Send the greeting message to console */
-  LINFLEXD_UART_DRV_SendData(INST_LINFLEXD_UART1, (uint8_t*)msg, strlen(msg));
+  LINFLEXD_UART_DRV_SendData(INST_LINFLEXD_UART1, (uint8_t *)msg, strlen(msg));
 
   /* Infinite loop */
-  for( ;; )
-  {
-      /* Get the message sent by user from the console, using blocking method, each 300 ms */
-      LINFLEXD_UART_DRV_ReceiveDataBlocking(INST_LINFLEXD_UART1, rxBuff, RX_MSG_LEN, 300U);
+  for (;;) {
+    /* Get the message sent by user from the console, using blocking method,
+     * each 300 ms */
+    LINFLEXD_UART_DRV_ReceiveDataBlocking(INST_LINFLEXD_UART1, rxBuff,
+                                          RX_MSG_LEN, 300U);
 
-      /* If the user typed "Hello", reply with the "Hello world!" message again */
-      if(strcmp((char*)rxBuff, "Hello") == 0)
-      {
-          LINFLEXD_UART_DRV_SendDataBlocking(INST_LINFLEXD_UART1, (uint8_t*)msg, strlen(msg), 1000U);
+    /* If the user typed "Hello", reply with the "Hello world!" message again */
+    if (strcmp((char *)rxBuff, "Hello") == 0) {
+      LINFLEXD_UART_DRV_SendDataBlocking(INST_LINFLEXD_UART1, (uint8_t *)msg,
+                                         strlen(msg), 1000U);
 
-          /* Clear the buffer */
-          memset(rxBuff, 0 , RX_MSG_LEN);
-      }
+      /* Clear the buffer */
+      memset(rxBuff, 0, RX_MSG_LEN);
+    }
   }
 
-  /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
-  /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
-  #ifdef PEX_RTOS_START
-    PEX_RTOS_START();                  /* Startup of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
+/*** Don't write any code pass this line, or it will be deleted during code
+ * generation. ***/
+/*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component.
+ * DON'T MODIFY THIS CODE!!! ***/
+#ifdef PEX_RTOS_START
+  PEX_RTOS_START(); /* Startup of the selected RTOS. Macro is defined by the
+                       RTOS component. */
+#endif
   /*** End of RTOS startup code.  ***/
   /*** Processor Expert end of main routine. DON'T MODIFY THIS CODE!!! ***/
-  for(;;) {
-    if(exit_code != 0) {
+  for (;;) {
+    if (exit_code != 0) {
       break;
     }
   }

@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -39,28 +39,24 @@
  * @page misra_violations MISRA-C:2012 violations
  *
  * @section [global]
- * Violates MISRA 2012 Required Rule 8.4, external symbol defined without a prior
- * declaration.
- * The symbols are declared in the driver header as external; the header is not included
- * by this file.
+ * Violates MISRA 2012 Required Rule 8.4, external symbol defined without a
+ * prior declaration. The symbols are declared in the driver header as external;
+ * the header is not included by this file.
  *
  * @section [global]
- * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made static.
- * The external variable will be used in other source files in application code.
+ * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made
+ * static. The external variable will be used in other source files in
+ * application code.
  */
 
 #include "eMIOS2.h"
 
-
-
 /* eMIOS Input capture mode configuration structure for eMIOS2_ICChnConfig0 */
-emios_input_capture_param_t eMIOS2_ICChnConfig0 =
-{
-    EMIOS_MODE_IC,
-    EMIOS_BUS_SEL_A, /*!< Counter bus selected */
-    EMIOS_INPUT_FILTER_BYPASS, /*!< Filter Value */
-    false, /*!< Input capture filter state */
-    EMIOS_PERIOD_OFF_MEASUREMENT /*!< Input capture mode */
+emios_input_capture_param_t eMIOS2_ICChnConfig0 = {
+    EMIOS_MODE_IC, EMIOS_BUS_SEL_A, /*!< Counter bus selected */
+    EMIOS_INPUT_FILTER_BYPASS,      /*!< Filter Value */
+    false,                          /*!< Input capture filter state */
+    EMIOS_PERIOD_OFF_MEASUREMENT    /*!< Input capture mode */
 };
 
 /* END eMIOS2. */

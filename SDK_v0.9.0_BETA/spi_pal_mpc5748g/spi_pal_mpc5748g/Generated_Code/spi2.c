@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -45,27 +45,20 @@
  */
 
 /*! @brief SPI_PAL instance */
-spi_instance_t spi2Instance =
-{
-    .instType = SPI_INST_TYPE_DSPI,
-    .instIdx = 0U
-};
+spi_instance_t spi2Instance = {.instType = SPI_INST_TYPE_DSPI, .instIdx = 0U};
 
 /* SPI Master Configurations */
 
 /* SPI Slave Configurations */
-const spi_slave_t SlaveConfig0 =
-{
-    .ssPolarity     = SPI_ACTIVE_LOW,
-    .frameSize      = 8,
-    .clockPhase     = READ_ON_ODD_EDGE,
-    .clockPolarity  = SPI_ACTIVE_LOW,
-    .transferType   = SPI_USING_INTERRUPTS,
-    .rxDMAChannel   = 255U,
-    .txDMAChannel   = 255U,
-    .callback       = NULL,
-    .callbackParam  = NULL
-};
+const spi_slave_t SlaveConfig0 = {.ssPolarity = SPI_ACTIVE_LOW,
+                                  .frameSize = 8,
+                                  .clockPhase = READ_ON_ODD_EDGE,
+                                  .clockPolarity = SPI_ACTIVE_LOW,
+                                  .transferType = SPI_USING_INTERRUPTS,
+                                  .rxDMAChannel = 255U,
+                                  .txDMAChannel = 255U,
+                                  .callback = NULL,
+                                  .callbackParam = NULL};
 
 /* END spi2. */
 
@@ -80,4 +73,3 @@ const spi_slave_t SlaveConfig0 =
 **
 ** ###################################################################
 */
-

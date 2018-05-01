@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -38,38 +38,29 @@
  * @page misra_violations MISRA-C:2012 violations
  *
  * @section [global]
- * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made static.
- * The external variables will be used in other source files, with the same initialized values.
+ * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made
+ * static. The external variables will be used in other source files, with the
+ * same initialized values.
  */
 
 #include "wdg_pal1.h"
 #include "stddef.h"
 
 /*! @brief WDG PAL instance information */
-const wdg_instance_t wdg_pal1_Instance =
-{
-    .instType = WDG_INST_TYPE_SWT,
-    .instIdx  = 0U
-};
+const wdg_instance_t wdg_pal1_Instance = {.instType = WDG_INST_TYPE_SWT,
+                                          .instIdx = 0U};
 
 /* Serial User Configurations */
 
 /*! @brief User Configurations 0 */
-const wdg_config_t wdg_pal1_Config0 =
-{
-    .clkSource       = WDG_PAL_SIRC_CLOCK,
-    .opMode          =
-    {
-        .wait        = false,
-        .stop        = false,
-        .debug       = true
-    },
-    .timeoutValue    = 128000U,
-    .percentWindow   = 100U,
-    .intEnable       = true,
-    .winEnable       = true,
-    .prescalerEnable = false
-};
+const wdg_config_t wdg_pal1_Config0 = {
+    .clkSource = WDG_PAL_SIRC_CLOCK,
+    .opMode = {.wait = false, .stop = false, .debug = true},
+    .timeoutValue = 128000U,
+    .percentWindow = 100U,
+    .intEnable = true,
+    .winEnable = true,
+    .prescalerEnable = false};
 
 /* END wdg_pal1. */
 /*!

@@ -7,17 +7,15 @@
 
 extern void xcptn_xmpl(void);
 
-__attribute__ ((section(".text")))
-int main(void)
-{
-	int counter = 0;
-	AXBS_0.PORT[3].CRS.B.ARB = 1;  /* Round-robin (rotating) priority */
-	
-	xcptn_xmpl ();              /* Configure and Enable Interrupts */
+__attribute__((section(".text"))) int main(void) {
+  int counter = 0;
+  AXBS_0.PORT[3].CRS.B.ARB = 1; /* Round-robin (rotating) priority */
 
-	for(;;) {	   
-	   	counter++;
-	}
-	
-	return 0;
+  xcptn_xmpl(); /* Configure and Enable Interrupts */
+
+  for (;;) {
+    counter++;
+  }
+
+  return 0;
 }

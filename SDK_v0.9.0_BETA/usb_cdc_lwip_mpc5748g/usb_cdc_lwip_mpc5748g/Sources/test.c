@@ -42,13 +42,13 @@
  * @section [global]
  * Violates MISRA 2012 Required Rule 2.1, Unreachable code.
  * Statement is intented to be unreachable. If the line is executed,
- * then there was insufficient FreeRTOS heap memory available for the idle and/or
- * timer tasks to be created.
+ * then there was insufficient FreeRTOS heap memory available for the idle
+ * and/or timer tasks to be created.
  *
  * @section [global]
- * Violates MISRA 2012 Required Rule 8.2, old-style function definition for function
- * declaration.
- * This is done for compatibility with all hardware platforms.
+ * Violates MISRA 2012 Required Rule 8.2, old-style function definition for
+ * function declaration. This is done for compatibility with all hardware
+ * platforms.
  *
  * @section [global]
  * Violates MISRA 2012 Required Rule 8.4, A compatible declaration shall be
@@ -68,27 +68,29 @@
  * Variable is of essential boolean type
  *
  * @section [global]
- * Violates MISRA 2012 Required Rule 11.3, Cast performed between a pointer to object type
- * and a pointer to a different object type.
- * This is needed to respect the lwip API which requires argument to be passed as void *.
+ * Violates MISRA 2012 Required Rule 11.3, Cast performed between a pointer to
+ * object type and a pointer to a different object type. This is needed to
+ * respect the lwip API which requires argument to be passed as void *.
  *
  * @section [global]
- * Violates MISRA 2012 Advisory Rule 11.5, Conversion from pointer to void to pointer to other type
- * This is needed to respect the lwip API which requires argument to be passed as void *.
+ * Violates MISRA 2012 Advisory Rule 11.5, Conversion from pointer to void to
+ * pointer to other type This is needed to respect the lwip API which requires
+ * argument to be passed as void *.
  *
  * @section [global]
- * Violates MISRA 2012 Required Rule 14.3, Controlling expressions shall not be invariant
- * Constant value used in LWIP_ASSERT to easily stop the program in that point if
- * needed.
+ * Violates MISRA 2012 Required Rule 14.3, Controlling expressions shall not be
+ * invariant Constant value used in LWIP_ASSERT to easily stop the program in
+ * that point if needed.
  *
  * @section [global]
- * Violates MISRA 2012 Required Rule 14.4, Conditional expression should have essentially Boolean type.
- * This is required for macro constructs in form do {...} while(0).
+ * Violates MISRA 2012 Required Rule 14.4, Conditional expression should have
+ * essentially Boolean type. This is required for macro constructs in form do
+ * {...} while(0).
  *
  * @section [global]
- * Violates MISRA 2012 Advisory Rule 15.5, Return statement before end of function.
- * The return statement before end of function is used for simpler code
- * structure and better readability.
+ * Violates MISRA 2012 Advisory Rule 15.5, Return statement before end of
+ * function. The return statement before end of function is used for simpler
+ * code structure and better readability.
  *
  * @section [global]
  * Violates MISRA 2012 Mandatory Rule 17.3, Symbol undeclared, assumed
@@ -96,15 +98,16 @@
  * The symbol is defined in another file.
  *
  * @section [global]
- * Violates MISRA 2012 Required Rule 20.9, Undefined preprocessor variable, assumed 0
- * Preprocessor variable will be defined in further implementations or not defined intentionally.
+ * Violates MISRA 2012 Required Rule 20.9, Undefined preprocessor variable,
+ * assumed 0 Preprocessor variable will be defined in further implementations or
+ * not defined intentionally.
  *
  */
 
 /* C runtime includes */
+#include <stdint.h>
 #include <stdio.h>
 #include <string.h>
-#include <stdint.h>
 
 #if defined(USING_OS_FREERTOS)
 /* FreeRTOS kernel includes. */
@@ -117,21 +120,21 @@
 /* lwIP core includes */
 #include "lwip/opt.h"
 
-#include "lwip/sys.h"
-#include "lwip/timeouts.h"
-#include "lwip/debug.h"
-#include "lwip/stats.h"
-#include "lwip/init.h"
-#include "lwip/tcpip.h"
-#include "lwip/netif.h"
 #include "lwip/api.h"
 #include "lwip/arch.h"
+#include "lwip/debug.h"
+#include "lwip/init.h"
+#include "lwip/netif.h"
+#include "lwip/stats.h"
+#include "lwip/sys.h"
+#include "lwip/tcpip.h"
+#include "lwip/timeouts.h"
 
+#include "lwip/autoip.h"
+#include "lwip/dhcp.h"
+#include "lwip/dns.h"
 #include "lwip/tcp.h"
 #include "lwip/udp.h"
-#include "lwip/dns.h"
-#include "lwip/dhcp.h"
-#include "lwip/autoip.h"
 
 /* lwIP netif includes */
 #include "lwip/etharp.h"
@@ -193,8 +196,8 @@
 
 #if NO_SYS
 /* ... then we need information about the timer intervals: */
-#include "lwip/ip4_frag.h"
 #include "lwip/igmp.h"
+#include "lwip/ip4_frag.h"
 #endif /* NO_SYS */
 
 #include "enetif.h"
@@ -220,18 +223,17 @@ void vApplicationMallocFailedHook(void);
 void vApplicationStackOverflowHook(TaskHandle_t pxTask, char *pcTaskName);
 
 /* Priorities at which the tasks are created. */
-#define	mainQUEUE_SEND_TASK_PRIORITY         (tskIDLE_PRIORITY + 1)
+#define mainQUEUE_SEND_TASK_PRIORITY (tskIDLE_PRIORITY + 1)
 #endif /* defined(USING_OS_FREERTOS) */
 
 /*-----------------------------------------------------------*/
 
 #if LWIP_NETIF_STATUS_CALLBACK
-static void
-status_callback(struct netif *state_netif)
-{
+static void status_callback(struct netif *state_netif) {
   if (netif_is_up(state_netif)) {
 #if LWIP_IPV4
-    /* status_callback UP, local interface IP is ip4addr_ntoa(netif_ip4_addr(state_netif)) */
+    /* status_callback UP, local interface IP is
+     * ip4addr_ntoa(netif_ip4_addr(state_netif)) */
 #else
     /* status_callback UP */
 #endif
@@ -245,9 +247,7 @@ status_callback(struct netif *state_netif)
 #endif /* LWIP_NETIF_STATUS_CALLBACK */
 
 #if LWIP_NETIF_LINK_CALLBACK
-static void
-link_callback(struct netif *state_netif)
-{
+static void link_callback(struct netif *state_netif) {
   if (netif_is_link_up(state_netif)) {
     /* link_callback UP */
   } else {
@@ -259,8 +259,7 @@ link_callback(struct netif *state_netif)
 /* This function initializes all network interfaces
  * Implements enetif_init_Activity
  */
-static void enetif_init(void)
-{
+static void enetif_init(void) {
 #if LWIP_IPV4
   ip4_addr_t ipaddr, netmask, gw;
 #endif /* LWIP_IPV4 */
@@ -278,15 +277,17 @@ static void enetif_init(void)
   LWIP_PORT_INIT_IPADDR(&ipaddr);
   LWIP_PORT_INIT_NETMASK(&netmask);
 #endif /* (!LWIP_DHCP) && (!LWIP_AUTOIP) */
-#else /* LWIP_IPV4 */
+#else  /* LWIP_IPV4 */
 #define NETIF_ADDRS
   /* Starting lwIP, IPv4 disable */
 #endif /* LWIP_IPV4 */
 
 #if NO_SYS
-  netif_set_default(netif_add(&netif, NETIF_ADDRS NULL, enet_ethernetif_init, netif_input));
-#else /* NO_SYS */
-  netif_set_default(netif_add(&netif, NETIF_ADDRS NULL, enet_ethernetif_init, tcpip_input));
+  netif_set_default(
+      netif_add(&netif, NETIF_ADDRS NULL, enet_ethernetif_init, netif_input));
+#else  /* NO_SYS */
+  netif_set_default(
+      netif_add(&netif, NETIF_ADDRS NULL, enet_ethernetif_init, tcpip_input));
 #endif /* NO_SYS */
 
 #if LWIP_IPV6
@@ -320,9 +321,7 @@ static void enetif_init(void)
 }
 
 #if LWIP_DNS_APP && LWIP_DNS
-static void
-dns_found(const char *name, const ip_addr_t *addr, void *arg)
-{
+static void dns_found(const char *name, const ip_addr_t *addr, void *arg) {
   LWIP_UNUSED_ARG(arg);
 #if PRINTF_SUPPORT
   printf("%s: %s\n", name, addr ? ipaddr_ntoa(addr) : "<not found>");
@@ -332,10 +331,8 @@ dns_found(const char *name, const ip_addr_t *addr, void *arg)
 #endif
 }
 
-static void
-dns_dorequest(void *arg)
-{
-  const char* dnsname = "3com.com";
+static void dns_dorequest(void *arg) {
+  const char *dnsname = "3com.com";
   ip_addr_t dnsresp;
   LWIP_UNUSED_ARG(arg);
 
@@ -346,18 +343,20 @@ dns_dorequest(void *arg)
 #endif /* LWIP_DNS_APP && LWIP_DNS */
 
 #if LWIP_LWIPERF_APP
-static void
-lwiperf_report(void *arg, enum lwiperf_report_type report_type,
-  const ip_addr_t* local_addr, u16_t local_port, const ip_addr_t* remote_addr, u16_t remote_port,
-  u32_t bytes_transferred, u32_t ms_duration, u32_t bandwidth_kbitpsec)
-{
+static void lwiperf_report(void *arg, enum lwiperf_report_type report_type,
+                           const ip_addr_t *local_addr, u16_t local_port,
+                           const ip_addr_t *remote_addr, u16_t remote_port,
+                           u32_t bytes_transferred, u32_t ms_duration,
+                           u32_t bandwidth_kbitpsec) {
   LWIP_UNUSED_ARG(arg);
   LWIP_UNUSED_ARG(local_addr);
   LWIP_UNUSED_ARG(local_port);
 
 #if PRINTF_SUPPORT
-  printf("IPERF report: type=%d, remote: %s:%d, total bytes: %lu, duration in ms: %lu, kbits/s: %lu\n",
-    (int)report_type, ipaddr_ntoa(remote_addr), (int)remote_port, bytes_transferred, ms_duration, bandwidth_kbitpsec);
+  printf("IPERF report: type=%d, remote: %s:%d, total bytes: %lu, duration in "
+         "ms: %lu, kbits/s: %lu\n",
+         (int)report_type, ipaddr_ntoa(remote_addr), (int)remote_port,
+         bytes_transferred, ms_duration, bandwidth_kbitpsec);
 #else
   LWIP_UNUSED_ARG(report_type);
   LWIP_UNUSED_ARG(remote_addr);
@@ -370,20 +369,17 @@ lwiperf_report(void *arg, enum lwiperf_report_type report_type,
 #endif /* LWIP_LWIPERF_APP */
 
 #if LWIP_MDNS_RESPONDER && LWIP_HTTPD_APP
-static void srv_txt(struct mdns_service *service, void *txt_userdata)
-{
-   err_t res = mdns_resp_add_service_txtitem(service, "path=/", 6);
-   LWIP_ERROR("mdns add service txt failed\n", (res == (err_t)ERR_OK), return);
-   LWIP_UNUSED_ARG(txt_userdata);
+static void srv_txt(struct mdns_service *service, void *txt_userdata) {
+  err_t res = mdns_resp_add_service_txtitem(service, "path=/", 6);
+  LWIP_ERROR("mdns add service txt failed\n", (res == (err_t)ERR_OK), return );
+  LWIP_UNUSED_ARG(txt_userdata);
 }
 #endif
 
 /* This function initializes applications
  * Implements apps_init_Activity
  */
-static void
-apps_init(void)
-{
+static void apps_init(void) {
 #if LWIP_DNS_APP && LWIP_DNS
   /* wait until the netif is up (for dhcp, autoip or ppp) */
   sys_timeout(5000, dns_dorequest, NULL);
@@ -407,7 +403,7 @@ apps_init(void)
 #if LWIP_HTTPD_APP && LWIP_TCP
 #if LWIP_HTTPD_APP_NETCONN
   http_server_netconn_init();
-#else /* LWIP_HTTPD_APP_NETCONN */
+#else  /* LWIP_HTTPD_APP_NETCONN */
   httpd_init();
 #endif /* LWIP_HTTPD_APP_NETCONN */
 #endif /* LWIP_HTTPD_APP && LWIP_TCP */
@@ -420,7 +416,9 @@ apps_init(void)
   (void)mdns_resp_add_netif(netif_default, "lwip", 3600);
 #endif
 #if LWIP_HTTPD_APP
-  (void)mdns_resp_add_service(netif_default, "lwipweb", "_http", DNSSD_PROTO_TCP, (u16_t)HTTPD_SERVER_PORT, 3600, srv_txt, NULL);
+  (void)mdns_resp_add_service(netif_default, "lwipweb", "_http",
+                              DNSSD_PROTO_TCP, (u16_t)HTTPD_SERVER_PORT, 3600,
+                              srv_txt, NULL);
 #endif
 #endif
 
@@ -452,7 +450,7 @@ apps_init(void)
 #if LWIP_UDPECHO_APP
 #if LWIP_NETCONN && LWIP_UDPECHO_APP_NETCONN
   udpecho_init();
-#else /* LWIP_NETCONN && LWIP_UDPECHO_APP_NETCONN */
+#else  /* LWIP_NETCONN && LWIP_UDPECHO_APP_NETCONN */
   udpecho_raw_init();
 #endif /* LWIP_NETCONN && LWIP_UDPECHO_APP_NETCONN */
 #endif /* LWIP_UDPECHO_APP */
@@ -470,14 +468,12 @@ apps_init(void)
 /* This function initializes this lwIP test. When NO_SYS=1, this is done in
  * the main_loop context (there is no other one), when NO_SYS=0, this is done
  * in the tcpip_thread context */
-void
-test_init(void* arg)
-{
+void test_init(void *arg) {
 /* remove compiler warning */
 #if NO_SYS
   LWIP_UNUSED_ARG(arg);
-#else /* NO_SYS */
-  sys_sem_t* init_sem = (sys_sem_t*)arg;
+#else  /* NO_SYS */
+  sys_sem_t *init_sem = (sys_sem_t *)arg;
   LWIP_ASSERT("init_sem != NULL", init_sem != NULL);
 #endif /* NO_SYS */
 
@@ -493,8 +489,7 @@ test_init(void* arg)
 }
 
 #if defined(USING_OS_FREERTOS)
-void vAssertCalled(uint32_t ulLine, const char * const pcFileName)
-{
+void vAssertCalled(uint32_t ulLine, const char *const pcFileName) {
   /* Called if an assertion passed to configASSERT() fails.  See
   www.freertos.org/a00110.html#configASSERT for more information. */
 
@@ -507,15 +502,12 @@ void vAssertCalled(uint32_t ulLine, const char * const pcFileName)
 #endif
 
   taskENTER_CRITICAL();
-  {
-    LWIP_ASSERT("configASSERT():", 0);
-  }
+  { LWIP_ASSERT("configASSERT():", 0); }
   taskEXIT_CRITICAL();
 }
 /*-----------------------------------------------------------*/
 
-void vApplicationMallocFailedHook(void)
-{
+void vApplicationMallocFailedHook(void) {
   /* vApplicationMallocFailedHook() will only be called if
   configUSE_MALLOC_FAILED_HOOK is set to 1 in FreeRTOSConfig.h.  It is a hook
   function that will get called if a call to pvPortMalloc() fails.
@@ -532,10 +524,9 @@ void vApplicationMallocFailedHook(void)
 }
 /*-----------------------------------------------------------*/
 
-void vApplicationStackOverflowHook(TaskHandle_t pxTask, char *pcTaskName)
-{
-  (void) pcTaskName;
-  (void) pxTask;
+void vApplicationStackOverflowHook(TaskHandle_t pxTask, char *pcTaskName) {
+  (void)pcTaskName;
+  (void)pxTask;
 
   /* Run time stack overflow checking is performed if
   configCHECK_FOR_STACK_OVERFLOW is defined to 1 or 2.  This hook

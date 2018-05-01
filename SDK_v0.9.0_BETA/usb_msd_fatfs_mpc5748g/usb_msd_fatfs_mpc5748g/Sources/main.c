@@ -46,14 +46,15 @@
 /* Including needed modules to compile this module/procedure */
 #include "Cpu.h"
 #include "pin_mux.h"
-/* User includes (#include below this line is not maintained by Processor Expert) */
-#include <stdint.h>
+/* User includes (#include below this line is not maintained by Processor
+ * Expert) */
 #include <stdbool.h>
+#include <stdint.h>
 
-#include "usb_host_config.h"
-#include "usb_host.h"
 #include "host_msd_app.h"
 #include "host_msd_fatfs.h"
+#include "usb_host.h"
+#include "usb_host_config.h"
 #include "usb_phy.h"
 
 volatile int exit_code = 0;
@@ -65,22 +66,22 @@ static usb_host_msd_fatfs_function_t msd_function;
  * - startup asm routine
  * - main()
 */
-int main(void)
-{
-  /* Write your local variable definition here */
+int main(void) {
+/* Write your local variable definition here */
 
-  /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
-  #ifdef PEX_RTOS_INIT
-    PEX_RTOS_INIT();                   /* Initialization of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
+/*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
+#ifdef PEX_RTOS_INIT
+  PEX_RTOS_INIT(); /* Initialization of the selected RTOS. Macro is defined by
+                      the RTOS component. */
+#endif
   /*** End of Processor Expert internal initialization.                    ***/
 
   /* Initialize pins */
   PINS_DRV_Init(NUM_OF_CONFIGURED_PINS, g_pin_mux_InitConfigArr);
 
   /* Init PHI_0 (main clk) at 160 MHz, PHI_1 at 80 MHz, Clock all peripherals */
-  CLOCK_SYS_Init(g_clockManConfigsArr,   CLOCK_MANAGER_CONFIG_CNT,
-		 g_clockManCallbacksArr, CLOCK_MANAGER_CALLBACK_CNT);
+  CLOCK_SYS_Init(g_clockManConfigsArr, CLOCK_MANAGER_CONFIG_CNT,
+                 g_clockManCallbacksArr, CLOCK_MANAGER_CALLBACK_CNT);
   CLOCK_SYS_UpdateConfiguration(0U, CLOCK_MANAGER_POLICY_FORCIBLE);
 
   DbgConsole_Init(115200, DEBUG_CONSOLE_DEVICE_TYPE_UART);
@@ -89,38 +90,41 @@ int main(void)
 
   USB_HostApplicationInit();
 
-#if ((defined MSD_FATFS_THROUGHPUT_TEST_ENABLE) && (MSD_FATFS_THROUGHPUT_TEST_ENABLE))
+#if ((defined MSD_FATFS_THROUGHPUT_TEST_ENABLE) &&                             \
+     (MSD_FATFS_THROUGHPUT_TEST_ENABLE))
   msd_function = &USB_HostMsdFatfsThroughputTest; /* test throughput */
 #else
   msd_function = &USB_HostMsdFatfsTest;
 #endif /* MSD_FATFS_THROUGHPUT_TEST_ENABLE */
 
-  while (1)
-  {
+  while (1) {
 #if ((defined USB_HOST_CONFIG_KHCI) && (USB_HOST_CONFIG_KHCI))
-   	USB_HostKhciTaskFunction(g_HostHandle);
+    USB_HostKhciTaskFunction(g_HostHandle);
 #endif /* USB_HOST_CONFIG_KHCI */
 #if ((defined USB_HOST_CONFIG_EHCI) && (USB_HOST_CONFIG_EHCI))
-   	USB_HostEhciTaskFunction(g_HostHandle);
+    USB_HostEhciTaskFunction(g_HostHandle);
 #endif /* USB_HOST_CONFIG_EHCI */
 #if ((defined USB_HOST_CONFIG_OHCI) && (USB_HOST_CONFIG_OHCI > 0U))
-   	USB_HostOhciTaskFunction(g_HostHandle);
+    USB_HostOhciTaskFunction(g_HostHandle);
 #endif /* USB_HOST_CONFIG_OHCI */
 #if ((defined USB_HOST_CONFIG_IP3516HS) && (USB_HOST_CONFIG_IP3516HS > 0U))
-   	USB_HostIp3516HsTaskFunction(g_HostHandle);
+    USB_HostIp3516HsTaskFunction(g_HostHandle);
 #endif /* USB_HOST_CONFIG_IP3516HS */
-   	USB_HostMsdTask(&g_MsdFatfsInstance, msd_function);
+    USB_HostMsdTask(&g_MsdFatfsInstance, msd_function);
   }
 
-  /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
-  /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
-  #ifdef PEX_RTOS_START
-    PEX_RTOS_START();                  /* Startup of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
+/*** Don't write any code pass this line, or it will be deleted during code
+ * generation. ***/
+/*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component.
+ * DON'T MODIFY THIS CODE!!! ***/
+#ifdef PEX_RTOS_START
+  PEX_RTOS_START(); /* Startup of the selected RTOS. Macro is defined by the
+                       RTOS component. */
+#endif
   /*** End of RTOS startup code.  ***/
   /*** Processor Expert end of main routine. DON'T MODIFY THIS CODE!!! ***/
-  for(;;) {
-    if(exit_code != 0) {
+  for (;;) {
+    if (exit_code != 0) {
       break;
     }
   }

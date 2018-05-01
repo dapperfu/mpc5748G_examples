@@ -43,22 +43,22 @@
 */
 /* MODULE main */
 
-
 /* Including needed modules to compile this module/procedure */
 #include "Cpu.h"
+#include "clockMan1.h"
 #include "dmaController1.h"
 #include "pin_mux.h"
 #include "uart_pal1.h"
-#include "clockMan1.h"
 
-  volatile int exit_code = 0;
-/* User includes (#include below this line is not maintained by Processor Expert) */
+volatile int exit_code = 0;
+/* User includes (#include below this line is not maintained by Processor
+ * Expert) */
 #include <string.h>
 
 /* Message sent through UART interface */
-#define msg  "\nHello World!\n"
+#define msg "\nHello World!\n"
 /* Length of the message to be received from the console */
-#define RX_MSG_LEN  5U
+#define RX_MSG_LEN 5U
 
 /*!
   \brief The main function for the project.
@@ -66,19 +66,20 @@
  * - startup asm routine
  * - main()
 */
-int main(void)
-{
+int main(void) {
   /* Write your local variable definition here */
 
   /* Buffer to store the received message */
   uint8_t rxBuff[RX_MSG_LEN + 1];
-  /* Last value should be 0 (string terminator); only 5 characters will be read from console */
+  /* Last value should be 0 (string terminator); only 5 characters will be read
+   * from console */
   rxBuff[RX_MSG_LEN] = 0;
 
-  /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
-  #ifdef PEX_RTOS_INIT
-    PEX_RTOS_INIT();                   /* Initialization of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
+/*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
+#ifdef PEX_RTOS_INIT
+  PEX_RTOS_INIT(); /* Initialization of the selected RTOS. Macro is defined by
+                      the RTOS component. */
+#endif
   /*** End of Processor Expert internal initialization.                    ***/
 
   /* Initialize and configure clocks
@@ -96,33 +97,36 @@ int main(void)
   UART_Init(&uart_pal1_instance, &uart_pal1_Config0);
 
   /* Send the greeting message to console */
-  UART_SendData(&uart_pal1_instance, (uint8_t*)msg, strlen(msg));
+  UART_SendData(&uart_pal1_instance, (uint8_t *)msg, strlen(msg));
 
   /* Infinite loop */
-  for( ;; )
-  {
-    /* Get the message sent by user from the console, using blocking method, timeout 300 ms */
+  for (;;) {
+    /* Get the message sent by user from the console, using blocking method,
+     * timeout 300 ms */
     UART_ReceiveDataBlocking(&uart_pal1_instance, rxBuff, RX_MSG_LEN, 300U);
 
     /* If the user typed "Hello", reply with the "Hello world!" message again */
-    if(strcmp((char*)rxBuff, "Hello") == 0)
-    {
-      UART_SendDataBlocking(&uart_pal1_instance, (uint8_t*)msg, strlen(msg), 1000U);
-      /* Change the first character of the received buffer to avoid re-entering this branch,
-       * unless the user types "Hello" again */
+    if (strcmp((char *)rxBuff, "Hello") == 0) {
+      UART_SendDataBlocking(&uart_pal1_instance, (uint8_t *)msg, strlen(msg),
+                            1000U);
+      /* Change the first character of the received buffer to avoid re-entering
+       * this branch, unless the user types "Hello" again */
       rxBuff[0] = 0U;
     }
   }
 
-  /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
-  /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
-  #ifdef PEX_RTOS_START
-    PEX_RTOS_START();                  /* Startup of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
+/*** Don't write any code pass this line, or it will be deleted during code
+ * generation. ***/
+/*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component.
+ * DON'T MODIFY THIS CODE!!! ***/
+#ifdef PEX_RTOS_START
+  PEX_RTOS_START(); /* Startup of the selected RTOS. Macro is defined by the
+                       RTOS component. */
+#endif
   /*** End of RTOS startup code.  ***/
   /*** Processor Expert end of main routine. DON'T MODIFY THIS CODE!!! ***/
-  for(;;) {
-    if(exit_code != 0) {
+  for (;;) {
+    if (exit_code != 0) {
       break;
     }
   }

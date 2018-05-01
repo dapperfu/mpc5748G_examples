@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -40,24 +40,20 @@
  * @page misra_violations MISRA-C:2012 violations
  *
  * @section [global]
- * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made static.
- * The external variables will be used in other source files, with the same initialized values.
+ * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made
+ * static. The external variables will be used in other source files, with the
+ * same initialized values.
  */
 
 #include "adConv1.h"
 #include <stddef.h>
 
 /*! adConv1 configuration structure */
-static uint8_t adConv1_ChainCfg0_ArrNorm[] =
-{
-};
+static uint8_t adConv1_ChainCfg0_ArrNorm[] = {};
 
-static uint8_t adConv1_ChainCfg0_ArrInj[] =
-{
-};
+static uint8_t adConv1_ChainCfg0_ArrInj[] = {};
 
-const adc_chain_config_t adConv1_ChainCfg0 =
-{
+const adc_chain_config_t adConv1_ChainCfg0 = {
     .numChansNormal = 0u,
     .chanArrayNormal = adConv1_ChainCfg0_ArrNorm,
     .numChansInjected = 0u,
@@ -68,19 +64,19 @@ const adc_chain_config_t adConv1_ChainCfg0 =
 };
 
 const adc_conv_config_t adConv1_ConvCfg0 = {
-  .convMode = ADC_CONV_MODE_ONESHOT,
-  .clkSelect = ADC_CLK_HALF_BUS,
-  .refSelect = ADC_REF_VREFH,
-  .ctuMode = ADC_CTU_MODE_DISABLED,
-  .injectedEdge = ADC_INJECTED_EDGE_DISABLED,
-  .sampleTimeInternal = 20U,
-  .sampleTimePrecision = 20U,
-  .sampleTimeExternal = 20U,
-  .autoClockOff = false,
-  .overwriteEnable = false,
-  .dataAlign = ADC_DATA_ALIGNED_RIGHT,
-  .decodeDelay = 0U,
-  .powerDownDelay = 0U,
+    .convMode = ADC_CONV_MODE_ONESHOT,
+    .clkSelect = ADC_CLK_HALF_BUS,
+    .refSelect = ADC_REF_VREFH,
+    .ctuMode = ADC_CTU_MODE_DISABLED,
+    .injectedEdge = ADC_INJECTED_EDGE_DISABLED,
+    .sampleTimeInternal = 20U,
+    .sampleTimePrecision = 20U,
+    .sampleTimeExternal = 20U,
+    .autoClockOff = false,
+    .overwriteEnable = false,
+    .dataAlign = ADC_DATA_ALIGNED_RIGHT,
+    .decodeDelay = 0U,
+    .powerDownDelay = 0U,
 };
 
 /* END adConv1. */
@@ -95,4 +91,3 @@ const adc_conv_config_t adConv1_ConvCfg0 = {
 **
 ** ###################################################################
 */
-

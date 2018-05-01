@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -43,82 +43,76 @@
  *
  *
  * @section [global]
- * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made static.
- * The external variables will be used in other source files in application code.
+ * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made
+ * static. The external variables will be used in other source files in
+ * application code.
  *
  */
 /*! rtcTimer1 Alarm Configuration 0 Callback declaration */
-extern void rtcTimer1_AlarmCallback0(void * callbackParam);
+extern void rtcTimer1_AlarmCallback0(void *callbackParam);
 /*! rtcTimer1 State Structure definition */
 rtc_state_t rtcTimer1_State;
 
 /*! rtcTimer1 configuration structure */
-rtc_init_config_t rtcTimer1_Config0 =
-{
+rtc_init_config_t rtcTimer1_Config0 = {
     /*! Counter Clock Source is XOSC */
-    .clockSelect                =   RTC_CLOCK_SOURCE_XOSC,
+    .clockSelect = RTC_CLOCK_SOURCE_XOSC,
     /*! Divide by 32 of the input clock is disabled */
-    .divideBy32                 =   false,
+    .divideBy32 = false,
     /*! Divide by 512 of the input clock is disabled */
-    .divideBy512                =   false,
+    .divideBy512 = false,
     /*! Counter continues to run when the chip is in debug */
-    .freezeEnable               =   false,
+    .freezeEnable = false,
     /*! Non-supervisor mode write accesses are not supported and generate
      * a bus error.
      */
-    .nonSupervisorAccessEnable  =   false
-};
-
+    .nonSupervisorAccessEnable = false};
 
 /*! rtcTimer1 Initial Time and Date */
-rtc_timedate_t rtcTimer1_StartTime0 =
-{
+rtc_timedate_t rtcTimer1_StartTime0 = {
     /*! Year */
-    .year       =   2017U,
+    .year = 2017U,
     /*! Month */
-    .month      =   7U,
+    .month = 7U,
     /*! Day */
-    .day        =   12U,
+    .day = 12U,
     /*! Hour */
-    .hour       =   0U,
+    .hour = 0U,
     /*! Minutes */
-    .minutes    =   0U,
+    .minutes = 0U,
     /*! Seconds */
-    .seconds    =   0U
-};
+    .seconds = 0U};
 
 /*! rtcTimer1 Alarm configuration 0 */
-rtc_alarm_config_t rtcTimer1_AlarmConfig0 =
-{
+rtc_alarm_config_t rtcTimer1_AlarmConfig0 = {
     /*! Alarm Date */
-    .alarmTime           =
+    .alarmTime =
         {
             /*! Year    */
-            .year       =  2017U,
+            .year = 2017U,
             /*! Month   */
-            .month      =  7U,
+            .month = 7U,
             /*! Day     */
-            .day        =  12U,
+            .day = 12U,
             /*! Hour    */
-            .hour       =  0U,
+            .hour = 0U,
             /*! Minutes */
-            .minutes    =  0U,
+            .minutes = 0U,
             /*! Seconds */
-            .seconds    =  1U,
+            .seconds = 1U,
         },
     /*! Alarm repeat interval */
-    .repetitionInterval  =       1UL,
+    .repetitionInterval = 1UL,
     /*! Number of alarm repeats */
-    .numberOfRepeats     =       0UL,
+    .numberOfRepeats = 0UL,
     /*! Repeat alarm forever */
-    .repeatForever       =       true,
+    .repeatForever = true,
     /*! Alarm interrupt enabled */
-    .alarmIntEnable      =      true,
+    .alarmIntEnable = true,
     /*! Alarm interrupt User Callback */
-    .alarmCallback       =     rtcTimer1_AlarmCallback0,
+    .alarmCallback = rtcTimer1_AlarmCallback0,
     /*! Alarm interrupt handler parameters */
-    .callbackParams      =     NULL
-};
+    .callbackParams = NULL};
 
 /*! END rtcTimer1. */
 /*!
@@ -132,4 +126,3 @@ rtc_alarm_config_t rtcTimer1_AlarmConfig0 =
 **
 ** ###################################################################
 */
-

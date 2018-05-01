@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -39,29 +39,25 @@
  * @page misra_violations MISRA-C:2012 violations
  *
  * @section [global]
- * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made static.
- * The external variables will be used in other source files in application code.
+ * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made
+ * static. The external variables will be used in other source files in
+ * application code.
  */
 
 #include "pit1.h"
 
 /*! Global configuration of pit1 */
-const pit_config_t pit1_InitConfig =
-{
-    .enableStandardTimers = true,
-    .enableRTITimer = false,
-    .stopRunInDebug = false
-};
+const pit_config_t pit1_InitConfig = {.enableStandardTimers = true,
+                                      .enableRTITimer = false,
+                                      .stopRunInDebug = false};
 
 /*! User channel configuration 0 */
-pit_channel_config_t pit1_ChnConfig0 =
-{
-    .hwChannel = 1U,
-    .periodUnit = PIT_PERIOD_UNITS_MICROSECONDS,
-    .period = 1000000U,
-    .enableChain = false,
-    .enableInterrupt = true
-};
+pit_channel_config_t pit1_ChnConfig0 = {.hwChannel = 1U,
+                                        .periodUnit =
+                                            PIT_PERIOD_UNITS_MICROSECONDS,
+                                        .period = 1000000U,
+                                        .enableChain = false,
+                                        .enableInterrupt = true};
 /* END pit1. */
 /*!
 ** @}
@@ -74,4 +70,3 @@ pit_channel_config_t pit1_ChnConfig0 =
 **
 ** ###################################################################
 */
-

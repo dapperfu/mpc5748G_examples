@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -45,29 +45,22 @@
  */
 
 /*! @brief SPI_PAL instance */
-spi_instance_t spi1Instance =
-{
-    .instType = SPI_INST_TYPE_SPI,
-    .instIdx = 0U
-};
+spi_instance_t spi1Instance = {.instType = SPI_INST_TYPE_SPI, .instIdx = 0U};
 
 /* SPI Master Configurations */
-const spi_master_t MasterConfig0 =
-{
-    .baudRate      = 100000,
-    .ssPolarity    = SPI_ACTIVE_LOW,
-    .frameSize     = 8,
-    .clockPhase    = READ_ON_ODD_EDGE,
-    .clockPolarity = SPI_ACTIVE_LOW,
-    .bitOrder      = SPI_TRANSFER_MSB_FIRST,
-    .transferType  = SPI_USING_INTERRUPTS,
-    .rxDMAChannel  = 255U,
-    .txDMAChannel  = 255U,
-    .callback      = NULL,
-    .callbackParam = NULL,
-    .ssPin         = 0,
-    .extension     = NULL
-};
+const spi_master_t MasterConfig0 = {.baudRate = 100000,
+                                    .ssPolarity = SPI_ACTIVE_LOW,
+                                    .frameSize = 8,
+                                    .clockPhase = READ_ON_ODD_EDGE,
+                                    .clockPolarity = SPI_ACTIVE_LOW,
+                                    .bitOrder = SPI_TRANSFER_MSB_FIRST,
+                                    .transferType = SPI_USING_INTERRUPTS,
+                                    .rxDMAChannel = 255U,
+                                    .txDMAChannel = 255U,
+                                    .callback = NULL,
+                                    .callbackParam = NULL,
+                                    .ssPin = 0,
+                                    .extension = NULL};
 
 /* SPI Slave Configurations */
 /* END spi1. */
@@ -83,4 +76,3 @@ const spi_master_t MasterConfig0 =
 **
 ** ###################################################################
 */
-

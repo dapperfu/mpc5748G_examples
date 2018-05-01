@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -39,8 +39,9 @@
  * @page misra_violations MISRA-C:2012 violations
  *
  * @section [global]
- * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made static.
- * The external variables will be used in other source files in application code.
+ * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made
+ * static. The external variables will be used in other source files in
+ * application code.
  */
 
 #include "eee1.h"
@@ -48,14 +49,12 @@
 /*! Global configuration of eee1 */
 
 uint32_t table[EEE_CACHE_SIZE_IN_RAM];
-eee_cache_table_t cTable =
-{
+eee_cache_table_t cTable = {
     .startAddress = table,
     .size = sizeof(table),
 };
 
-eee_block_config_t eee1_blockConfig0 =
-{
+eee_block_config_t eee1_blockConfig0 = {
     .enabledBlock = 0x00000001U,
     .blockStartAddr = 0x00F90000U,
     .blockSize = 0x00004000U,
@@ -64,8 +63,7 @@ eee_block_config_t eee1_blockConfig0 =
     .partSelect = 0x00000002U,
 };
 
-eee_block_config_t eee1_blockConfig1 =
-{
+eee_block_config_t eee1_blockConfig1 = {
     .enabledBlock = 0x00000002U,
     .blockStartAddr = 0x00F94000U,
     .blockSize = 0x00004000U,
@@ -74,8 +72,7 @@ eee_block_config_t eee1_blockConfig1 =
     .partSelect = 0x00000002U,
 };
 
-eee_block_config_t eee1_blockConfig2 =
-{
+eee_block_config_t eee1_blockConfig2 = {
     .enabledBlock = 0x00000004U,
     .blockStartAddr = 0x00F98000U,
     .blockSize = 0x00004000U,
@@ -84,16 +81,13 @@ eee_block_config_t eee1_blockConfig2 =
     .partSelect = 0x00000002U,
 };
 
-
-eee_block_config_t * fBlocksConf[3] =
-{
+eee_block_config_t *fBlocksConf[3] = {
     &eee1_blockConfig0,
     &eee1_blockConfig1,
     &eee1_blockConfig2,
 };
 
-const eee_user_config_t userConf =
-{
+const eee_user_config_t userConf = {
     .numberOfBlock = 3U,
     .numberOfActBlock = 1U,
     .numOfByteRead = 30U,
@@ -123,4 +117,3 @@ const eee_user_config_t userConf =
 **
 ** ###################################################################
 */
-

@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -40,9 +40,9 @@
  * @page misra_violations MISRA-C:2012 violations
  *
  * @section [global]
- * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made static.
- * The external variables will be used in other source files that user initialize
- * to use this module.
+ * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made
+ * static. The external variables will be used in other source files that user
+ * initialize to use this module.
  */
 #include "pwrMan1.h"
 #include <stdbool.h>
@@ -52,106 +52,100 @@
  * ************************************************************************* */
 /*! @brief User Configuration structure power_managerCfg_0 */
 power_manager_user_config_t pwrMan1_InitConfig0 = {
-    .powerMode = POWER_MANAGER_SAFE,                                 /*!< Power manager mode */
-    .powerLevel = MC_ME_PWRLVL_0,                                    /*!< Relative power level indicator */
-    .flashMode = MC_ME_FLASH_RUN_MODE,                               /*!< Flash power-down control */
-    .outputPowerdown = true,                                         /*!< Output power-down control */
-    .mainVoltage = true                                              /*!< Main voltage regulator control */
+    .powerMode = POWER_MANAGER_SAFE,   /*!< Power manager mode */
+    .powerLevel = MC_ME_PWRLVL_0,      /*!< Relative power level indicator */
+    .flashMode = MC_ME_FLASH_RUN_MODE, /*!< Flash power-down control */
+    .outputPowerdown = true,           /*!< Output power-down control */
+    .mainVoltage = true                /*!< Main voltage regulator control */
 };
 /* *************************************************************************
  * Configuration structure for Power Manager Configuration 1
  * ************************************************************************* */
 /*! @brief User Configuration structure power_managerCfg_1 */
 power_manager_user_config_t pwrMan1_InitConfig1 = {
-    .powerMode = POWER_MANAGER_DRUN,                                 /*!< Power manager mode */
-    .powerLevel = MC_ME_PWRLVL_0,                                    /*!< Relative power level indicator */
-    .flashMode = MC_ME_FLASH_RUN_MODE,                               /*!< Flash power-down control */
-    .outputPowerdown = false,                                        /*!< Output power-down control */
-    .mainVoltage = true                                              /*!< Main voltage regulator control */
+    .powerMode = POWER_MANAGER_DRUN,   /*!< Power manager mode */
+    .powerLevel = MC_ME_PWRLVL_0,      /*!< Relative power level indicator */
+    .flashMode = MC_ME_FLASH_RUN_MODE, /*!< Flash power-down control */
+    .outputPowerdown = false,          /*!< Output power-down control */
+    .mainVoltage = true                /*!< Main voltage regulator control */
 };
 /* *************************************************************************
  * Configuration structure for Power Manager Configuration 2
  * ************************************************************************* */
 /*! @brief User Configuration structure power_managerCfg_2 */
 power_manager_user_config_t pwrMan1_InitConfig2 = {
-    .powerMode = POWER_MANAGER_RUN0,                                 /*!< Power manager mode */
-    .powerLevel = MC_ME_PWRLVL_0,                                    /*!< Relative power level indicator */
-    .flashMode = MC_ME_FLASH_RUN_MODE,                               /*!< Flash power-down control */
-    .outputPowerdown = false,                                        /*!< Output power-down control */
-    .mainVoltage = true                                              /*!< Main voltage regulator control */
+    .powerMode = POWER_MANAGER_RUN0,   /*!< Power manager mode */
+    .powerLevel = MC_ME_PWRLVL_0,      /*!< Relative power level indicator */
+    .flashMode = MC_ME_FLASH_RUN_MODE, /*!< Flash power-down control */
+    .outputPowerdown = false,          /*!< Output power-down control */
+    .mainVoltage = true                /*!< Main voltage regulator control */
 };
 /* *************************************************************************
  * Configuration structure for Power Manager Configuration 3
  * ************************************************************************* */
 /*! @brief User Configuration structure power_managerCfg_3 */
 power_manager_user_config_t pwrMan1_InitConfig3 = {
-    .powerMode = POWER_MANAGER_RUN1,                                 /*!< Power manager mode */
-    .powerLevel = MC_ME_PWRLVL_0,                                    /*!< Relative power level indicator */
-    .flashMode = MC_ME_FLASH_RUN_MODE,                               /*!< Flash power-down control */
-    .outputPowerdown = false,                                        /*!< Output power-down control */
-    .mainVoltage = true                                              /*!< Main voltage regulator control */
+    .powerMode = POWER_MANAGER_RUN1,   /*!< Power manager mode */
+    .powerLevel = MC_ME_PWRLVL_0,      /*!< Relative power level indicator */
+    .flashMode = MC_ME_FLASH_RUN_MODE, /*!< Flash power-down control */
+    .outputPowerdown = false,          /*!< Output power-down control */
+    .mainVoltage = true                /*!< Main voltage regulator control */
 };
 /* *************************************************************************
  * Configuration structure for Power Manager Configuration 4
  * ************************************************************************* */
 /*! @brief User Configuration structure power_managerCfg_4 */
 power_manager_user_config_t pwrMan1_InitConfig4 = {
-    .powerMode = POWER_MANAGER_RUN2,                                 /*!< Power manager mode */
-    .powerLevel = MC_ME_PWRLVL_0,                                    /*!< Relative power level indicator */
-    .flashMode = MC_ME_FLASH_RUN_MODE,                               /*!< Flash power-down control */
-    .outputPowerdown = false,                                        /*!< Output power-down control */
-    .mainVoltage = true                                              /*!< Main voltage regulator control */
+    .powerMode = POWER_MANAGER_RUN2,   /*!< Power manager mode */
+    .powerLevel = MC_ME_PWRLVL_0,      /*!< Relative power level indicator */
+    .flashMode = MC_ME_FLASH_RUN_MODE, /*!< Flash power-down control */
+    .outputPowerdown = false,          /*!< Output power-down control */
+    .mainVoltage = true                /*!< Main voltage regulator control */
 };
 /* *************************************************************************
  * Configuration structure for Power Manager Configuration 5
  * ************************************************************************* */
 /*! @brief User Configuration structure power_managerCfg_5 */
 power_manager_user_config_t pwrMan1_InitConfig5 = {
-    .powerMode = POWER_MANAGER_RUN3,                                 /*!< Power manager mode */
-    .powerLevel = MC_ME_PWRLVL_0,                                    /*!< Relative power level indicator */
-    .flashMode = MC_ME_FLASH_RUN_MODE,                               /*!< Flash power-down control */
-    .outputPowerdown = false,                                        /*!< Output power-down control */
-    .mainVoltage = true                                              /*!< Main voltage regulator control */
+    .powerMode = POWER_MANAGER_RUN3,   /*!< Power manager mode */
+    .powerLevel = MC_ME_PWRLVL_0,      /*!< Relative power level indicator */
+    .flashMode = MC_ME_FLASH_RUN_MODE, /*!< Flash power-down control */
+    .outputPowerdown = false,          /*!< Output power-down control */
+    .mainVoltage = true                /*!< Main voltage regulator control */
 };
 /* *************************************************************************
  * Configuration structure for Power Manager Configuration 6
  * ************************************************************************* */
 /*! @brief User Configuration structure power_managerCfg_6 */
 power_manager_user_config_t pwrMan1_InitConfig6 = {
-    .powerMode = POWER_MANAGER_STOP0,                                /*!< Power manager mode */
-    .powerLevel = MC_ME_PWRLVL_0,                                    /*!< Relative power level indicator */
-    .flashMode = MC_ME_FLASH_POWER_DOWN_MODE,                        /*!< Flash power-down control */
-    .outputPowerdown = false,                                        /*!< Output power-down control */
-    .mainVoltage = true                                              /*!< Main voltage regulator control */
+    .powerMode = POWER_MANAGER_STOP0, /*!< Power manager mode */
+    .powerLevel = MC_ME_PWRLVL_0,     /*!< Relative power level indicator */
+    .flashMode = MC_ME_FLASH_POWER_DOWN_MODE, /*!< Flash power-down control */
+    .outputPowerdown = false,                 /*!< Output power-down control */
+    .mainVoltage = true /*!< Main voltage regulator control */
 };
 /* *************************************************************************
  * Configuration structure for Power Manager Configuration 7
  * ************************************************************************* */
 /*! @brief User Configuration structure power_managerCfg_7 */
 power_manager_user_config_t pwrMan1_InitConfig7 = {
-    .powerMode = POWER_MANAGER_STANDBY0,                             /*!< Power manager mode */
-    .powerLevel = MC_ME_PWRLVL_0,                                    /*!< Relative power level indicator */
-    .flashMode = MC_ME_FLASH_POWER_DOWN_MODE,                        /*!< Flash power-down control */
-    .outputPowerdown = true,                                         /*!< Output power-down control */
-    .mainVoltage = false                                             /*!< Main voltage regulator control */
+    .powerMode = POWER_MANAGER_STANDBY0, /*!< Power manager mode */
+    .powerLevel = MC_ME_PWRLVL_0,        /*!< Relative power level indicator */
+    .flashMode = MC_ME_FLASH_POWER_DOWN_MODE, /*!< Flash power-down control */
+    .outputPowerdown = true,                  /*!< Output power-down control */
+    .mainVoltage = false /*!< Main voltage regulator control */
 };
 
 /*! @brief Array of pointers to User configuration structures */
-power_manager_user_config_t * powerConfigsArr[] = {
-    &pwrMan1_InitConfig0,
-    &pwrMan1_InitConfig1,
-    &pwrMan1_InitConfig2,
-    &pwrMan1_InitConfig3,
-    &pwrMan1_InitConfig4,
-    &pwrMan1_InitConfig5,
-    &pwrMan1_InitConfig6,
-    &pwrMan1_InitConfig7
-};
-/*! @brief Array of pointers to User defined Callbacks configuration structures */
+power_manager_user_config_t *powerConfigsArr[] = {
+    &pwrMan1_InitConfig0, &pwrMan1_InitConfig1, &pwrMan1_InitConfig2,
+    &pwrMan1_InitConfig3, &pwrMan1_InitConfig4, &pwrMan1_InitConfig5,
+    &pwrMan1_InitConfig6, &pwrMan1_InitConfig7};
+/*! @brief Array of pointers to User defined Callbacks configuration structures
+ */
 
-power_manager_callback_user_config_t * powerStaticCallbacksConfigsArr[] = {(void *)0};
-
-
+power_manager_callback_user_config_t *powerStaticCallbacksConfigsArr[] = {
+    (void *)0};
 
 /* END pwrMan1. */
 /*!

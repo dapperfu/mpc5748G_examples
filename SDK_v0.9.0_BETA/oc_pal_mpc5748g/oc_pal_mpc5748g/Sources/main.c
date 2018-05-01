@@ -42,26 +42,25 @@
 */
 /* MODULE main */
 
-
 /* Including needed modules to compile this module/procedure */
 #include "Cpu.h"
 #include "clockMan1.h"
-#include "pin_mux.h"
 #include "oc_pal1.h"
+#include "pin_mux.h"
 
 volatile int exit_code = 0;
-/* User includes (#include below this line is not maintained by Processor Expert) */
+/* User includes (#include below this line is not maintained by Processor
+ * Expert) */
 
 /* This example is setup to work by default with DEVKIT.
-*/
+ */
 
-void oc_pal1_channel_callBack0(oc_event_t event, void * userData)
-{
-    static uint32_t index = 0;
-    index++;
-    userData = (void*) index;
-    (void)userData;
-    (void)event;
+void oc_pal1_channel_callBack0(oc_event_t event, void *userData) {
+  static uint32_t index = 0;
+  index++;
+  userData = (void *)index;
+  (void)userData;
+  (void)event;
 }
 /*!
   \brief The main function for the project.
@@ -69,38 +68,41 @@ void oc_pal1_channel_callBack0(oc_event_t event, void * userData)
  * - startup asm routine
  * - main()
 */
-int main(void)
-{
-    /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
-    #ifdef PEX_RTOS_INIT
-    PEX_RTOS_INIT();                   /* Initialization of the selected RTOS. Macro is defined by the RTOS component. */
-    #endif
-    /*** End of Processor Expert internal initialization.                    ***/
+int main(void) {
+/*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
+#ifdef PEX_RTOS_INIT
+  PEX_RTOS_INIT(); /* Initialization of the selected RTOS. Macro is defined by
+                      the RTOS component. */
+#endif
+  /*** End of Processor Expert internal initialization.                    ***/
 
-    /* Initialize clock gate*/
-    CLOCK_SYS_Init(g_clockManConfigsArr,   CLOCK_MANAGER_CONFIG_CNT,
-                   g_clockManCallbacksArr, CLOCK_MANAGER_CALLBACK_CNT);
-    CLOCK_SYS_UpdateConfiguration(0U, CLOCK_MANAGER_POLICY_AGREEMENT);
+  /* Initialize clock gate*/
+  CLOCK_SYS_Init(g_clockManConfigsArr, CLOCK_MANAGER_CONFIG_CNT,
+                 g_clockManCallbacksArr, CLOCK_MANAGER_CALLBACK_CNT);
+  CLOCK_SYS_UpdateConfiguration(0U, CLOCK_MANAGER_POLICY_AGREEMENT);
 
-    /* Initialize pins
-    *  -  See PinSettings component for more info
-    */
-    PINS_DRV_Init(NUM_OF_CONFIGURED_PINS, g_pin_mux_InitConfigArr);
+  /* Initialize pins
+   *  -  See PinSettings component for more info
+   */
+  PINS_DRV_Init(NUM_OF_CONFIGURED_PINS, g_pin_mux_InitConfigArr);
 
-    /* Initialize oc_pal
-    *  -  See oc_pal Settings component for more info
-    */
-    OC_Init(&oc_pal1_instance, &oc_pal1_InitConfig);
+  /* Initialize oc_pal
+   *  -  See oc_pal Settings component for more info
+   */
+  OC_Init(&oc_pal1_instance, &oc_pal1_InitConfig);
 
-    /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
-  /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
-  #ifdef PEX_RTOS_START
-    PEX_RTOS_START();                  /* Startup of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
+  /*** Don't write any code pass this line, or it will be deleted during code
+   * generation. ***/
+/*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component.
+ * DON'T MODIFY THIS CODE!!! ***/
+#ifdef PEX_RTOS_START
+  PEX_RTOS_START(); /* Startup of the selected RTOS. Macro is defined by the
+                       RTOS component. */
+#endif
   /*** End of RTOS startup code.  ***/
   /*** Processor Expert end of main routine. DON'T MODIFY THIS CODE!!! ***/
-  for(;;) {
-    if(exit_code != 0) {
+  for (;;) {
+    if (exit_code != 0) {
       break;
     }
   }

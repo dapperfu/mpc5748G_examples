@@ -14,7 +14,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -55,16 +55,15 @@
 linflexd_uart_state_t console_uart_State;
 
 const linflexd_uart_user_config_t console_uart_InitConfig0 = {
-  .transferType = LINFLEXD_UART_USING_INTERRUPTS,
-  .baudRate = 9600U,
-  .parityCheck = false,
-  .parityType = LINFLEXD_UART_PARITY_EVEN,
-  .stopBitsCount = LINFLEXD_UART_ONE_STOP_BIT,
-  .wordLength = LINFLEXD_UART_8_BITS,
-  .rxDMAChannel = 0U,
-  .txDMAChannel = 0U,
+    .transferType = LINFLEXD_UART_USING_INTERRUPTS,
+    .baudRate = 9600U,
+    .parityCheck = false,
+    .parityType = LINFLEXD_UART_PARITY_EVEN,
+    .stopBitsCount = LINFLEXD_UART_ONE_STOP_BIT,
+    .wordLength = LINFLEXD_UART_8_BITS,
+    .rxDMAChannel = 0U,
+    .txDMAChannel = 0U,
 };
-
 
 /* END console_uart. */
 /*!
@@ -78,4 +77,3 @@ const linflexd_uart_user_config_t console_uart_InitConfig0 = {
 **
 ** ###################################################################
 */
-

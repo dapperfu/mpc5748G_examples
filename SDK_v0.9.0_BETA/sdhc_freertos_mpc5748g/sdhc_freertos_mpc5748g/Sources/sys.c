@@ -23,7 +23,8 @@
 **     Compiler    : GNU C Compiler
 **     Date/Time   :
 **     Abstract    :
-**         This module contains FreeRTOS-related routines (imported from lwip stack and adopted for the needs).
+**         This module contains FreeRTOS-related routines (imported from lwip
+*stack and adopted for the needs).
 **     Settings    :
 **     Contents    :
 **
@@ -41,20 +42,20 @@
 #include "sys.h"
 
 /*******************************************************************************
-* Global variables
-*******************************************************************************/
+ * Global variables
+ *******************************************************************************/
 
 /*******************************************************************************
-* Constants and macros
-*******************************************************************************/
+ * Constants and macros
+ *******************************************************************************/
 
 /*******************************************************************************
-* Local types
-*******************************************************************************/
+ * Local types
+ *******************************************************************************/
 
 /*******************************************************************************
-* Local function prototypes
-*******************************************************************************/
+ * Local function prototypes
+ *******************************************************************************/
 
 /*!
  * @brief A routine that wraps a thread function call and provides a way
@@ -66,25 +67,24 @@
 static void run_thread_function(void *arg);
 
 /*******************************************************************************
-* Local variables
-*******************************************************************************/
+ * Local variables
+ *******************************************************************************/
 
 /*******************************************************************************
-* Local functions
-*******************************************************************************/
+ * Local functions
+ *******************************************************************************/
 
-static void run_thread_function(void *arg)
-{
-	thread_function_wrapper_t *t =
-			(thread_function_wrapper_t *)arg;
-	t->function(t->arg);
-	/* Regular FreeRTOS tasks don't return. But in case they do, make them exit cleanly. */
-	sys_thread_delete(NULL);
+static void run_thread_function(void *arg) {
+  thread_function_wrapper_t *t = (thread_function_wrapper_t *)arg;
+  t->function(t->arg);
+  /* Regular FreeRTOS tasks don't return. But in case they do, make them exit
+   * cleanly. */
+  sys_thread_delete(NULL);
 }
 
 /*******************************************************************************
-* Global functions
-*******************************************************************************/
+ * Global functions
+ *******************************************************************************/
 
 /*!
  * @brief A routine that starts a new thread.
@@ -99,28 +99,30 @@ static void run_thread_function(void *arg)
  * @param prio thread priority.
  * @retval sys_thread_t new created thread structure.
  */
-sys_thread_t sys_thread_new(const char *name, thread_function_wrapper_t *thread_wrapper, sys_thread_function thread_function, void *arg, int stacksize, int prio)
-{
-	sys_thread_t createdTask;
-	BaseType_t creationResult;
+sys_thread_t sys_thread_new(const char *name,
+                            thread_function_wrapper_t *thread_wrapper,
+                            sys_thread_function thread_function, void *arg,
+                            int stacksize, int prio) {
+  sys_thread_t createdTask;
+  BaseType_t creationResult;
 
-	createdTask = NULL;
-	thread_wrapper->name = (char *)name;
-	thread_wrapper->function = thread_function;
-	thread_wrapper->prio = prio;
-	thread_wrapper->arg = arg;
+  createdTask = NULL;
+  thread_wrapper->name = (char *)name;
+  thread_wrapper->function = thread_function;
+  thread_wrapper->prio = prio;
+  thread_wrapper->arg = arg;
 
-	if (0U == stacksize)
-	{
-		stacksize = configMINIMAL_STACK_SIZE;
-	}
+  if (0U == stacksize) {
+    stacksize = configMINIMAL_STACK_SIZE;
+  }
 
-	creationResult = xTaskCreate(run_thread_function, thread_wrapper->name, (uint16_t)stacksize, thread_wrapper, thread_wrapper->prio, &createdTask);
-	if ((BaseType_t)1 != creationResult)
-	{
-		DEV_ASSERT(false);
-	}
-	return createdTask;
+  creationResult = xTaskCreate(run_thread_function, thread_wrapper->name,
+                               (uint16_t)stacksize, thread_wrapper,
+                               thread_wrapper->prio, &createdTask);
+  if ((BaseType_t)1 != creationResult) {
+    DEV_ASSERT(false);
+  }
+  return createdTask;
 }
 
 /*!
@@ -129,7 +131,4 @@ sys_thread_t sys_thread_new(const char *name, thread_function_wrapper_t *thread_
  * @param thread thread structure.
  * @retval void.
  */
-void sys_thread_delete(sys_thread_t thread)
-{
-    vTaskDelete(thread);
-}
+void sys_thread_delete(sys_thread_t thread) { vTaskDelete(thread); }

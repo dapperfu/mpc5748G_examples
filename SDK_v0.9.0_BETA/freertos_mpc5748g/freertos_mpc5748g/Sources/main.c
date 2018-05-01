@@ -42,7 +42,6 @@
 */
 /* MODULE main */
 
-
 /* Including needed modules to compile this module/procedure */
 #include "Cpu.h"
 #include "FreeRTOS.h"
@@ -50,61 +49,59 @@
 #include "pin_mux.h"
 
 volatile int exit_code = 0;
-/* User includes (#include below this line is not maintained by Processor Expert) */
-#include <stdint.h>
-#include <stdbool.h>
+/* User includes (#include below this line is not maintained by Processor
+ * Expert) */
 #include "task.h"
+#include <stdbool.h>
+#include <stdint.h>
 
-#define mainLED_DELAY                        ( ( TickType_t ) 500 / portTICK_PERIOD_MS )
-#define mainLED_TASK_PRIORITY                ( tskIDLE_PRIORITY + 2 )
+#define mainLED_DELAY ((TickType_t)500 / portTICK_PERIOD_MS)
+#define mainLED_TASK_PRIORITY (tskIDLE_PRIORITY + 2)
 
-/* This example is setup to work by default with DEVKIT. To use it with other boards
-   please comment the following line
+/* This example is setup to work by default with DEVKIT. To use it with other
+   boards please comment the following line
 */
 #define DEVKIT
 #define START_OS_DEMO 1
 
 #ifdef DEVKIT
-	#define LED1_PORT	PTA
-    #define LED1 		0          /* pin PA[0] - LED1 (DS10) on DEV-KIT */
-	#define LED2_PORT	PTJ
-    #define LED2 		4	       /* pin PJ[4] - LED2 (DS9) on DEV-KIT */
-	#define LED3_PORT	PTH
-    #define LED3 		5          /* pin PH[5] - LED3 (DS8) on DEV-KIT */
-	#define LED4_PORT	PTC
-    #define LED4 		4          /* pin PC[4] - LED4 (DS7) on DEV-KIT */
+#define LED1_PORT PTA
+#define LED1 0 /* pin PA[0] - LED1 (DS10) on DEV-KIT */
+#define LED2_PORT PTJ
+#define LED2 4 /* pin PJ[4] - LED2 (DS9) on DEV-KIT */
+#define LED3_PORT PTH
+#define LED3 5 /* pin PH[5] - LED3 (DS8) on DEV-KIT */
+#define LED4_PORT PTC
+#define LED4 4 /* pin PC[4] - LED4 (DS7) on DEV-KIT */
 #else
-	#define LED1_PORT	PTG
-    #define LED1 		2          /* pin PG[2] - LED1 on Motherboard */
-	#define LED2_PORT	PTG
-    #define LED2 		3          /* pin PG[3] - LED2 on Motherboard */
-	#define LED3_PORT	PTG
-    #define LED3 		4          /* pin PG[4] - LED3 on Motherboard */
-	#define LED4_PORT	PTG
-    #define LED4 		5          /* pin PG[5] - LED4 on Motherboard */
+#define LED1_PORT PTG
+#define LED1 2 /* pin PG[2] - LED1 on Motherboard */
+#define LED2_PORT PTG
+#define LED2 3 /* pin PG[3] - LED2 on Motherboard */
+#define LED3_PORT PTG
+#define LED3 4 /* pin PG[4] - LED3 on Motherboard */
+#define LED4_PORT PTG
+#define LED4 5 /* pin PG[5] - LED4 on Motherboard */
 #endif
 
 uint32_t leds[] = {LED1, LED2, LED3, LED4};
-GPIO_Type * ports[] = {LED1_PORT, LED2_PORT, LED3_PORT, LED4_PORT};
+GPIO_Type *ports[] = {LED1_PORT, LED2_PORT, LED3_PORT, LED4_PORT};
 
 #if START_OS_DEMO
-void vLEDTask( void *pvParameters )
-{
-    unsigned int ID = (unsigned int)pvParameters;
+void vLEDTask(void *pvParameters) {
+  unsigned int ID = (unsigned int)pvParameters;
 
+  for (;;) {
+    /* Not very exciting - just delay... */
+    vTaskDelay(mainLED_DELAY / (ID + 1));
 
-    for( ;; )
-    {
-        /* Not very exciting - just delay... */
-        vTaskDelay( mainLED_DELAY/(ID+1) );
+    PINS_DRV_ClearPins(ports[ID], (1 << leds[ID]));
 
-        PINS_DRV_ClearPins(ports[ID], (1 << leds[ID]));
+    /* delay */
+    vTaskDelay(mainLED_DELAY / ((3 - ID) + 1));
 
-        /* delay */
-        vTaskDelay( mainLED_DELAY/((3-ID)+1) );
-
-        PINS_DRV_SetPins(ports[ID], (1 << leds[ID]));
-    }
+    PINS_DRV_SetPins(ports[ID], (1 << leds[ID]));
+  }
 }
 #endif
 
@@ -114,41 +111,48 @@ void vLEDTask( void *pvParameters )
  * - startup asm routine
  * - main()
 */
-int main(void)
-{
-  /* Write your local variable definition here */
+int main(void) {
+/* Write your local variable definition here */
 
-  /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
-  #ifdef PEX_RTOS_INIT
-    PEX_RTOS_INIT();                   /* Initialization of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
+/*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
+#ifdef PEX_RTOS_INIT
+  PEX_RTOS_INIT(); /* Initialization of the selected RTOS. Macro is defined by
+                      the RTOS component. */
+#endif
   /*** End of Processor Expert internal initialization.                    ***/
 
-    /* Initialize clocks */
-    CLOCK_SYS_Init(g_clockManConfigsArr,   CLOCK_MANAGER_CONFIG_CNT,
-  		 g_clockManCallbacksArr, CLOCK_MANAGER_CALLBACK_CNT);
-    CLOCK_SYS_UpdateConfiguration(0U, CLOCK_MANAGER_POLICY_AGREEMENT);
+  /* Initialize clocks */
+  CLOCK_SYS_Init(g_clockManConfigsArr, CLOCK_MANAGER_CONFIG_CNT,
+                 g_clockManCallbacksArr, CLOCK_MANAGER_CALLBACK_CNT);
+  CLOCK_SYS_UpdateConfiguration(0U, CLOCK_MANAGER_POLICY_AGREEMENT);
 
-    PINS_DRV_Init(NUM_OF_CONFIGURED_PINS, g_pin_mux_InitConfigArr);
+  PINS_DRV_Init(NUM_OF_CONFIGURED_PINS, g_pin_mux_InitConfigArr);
 
 #if START_OS_DEMO
-  xTaskCreate( vLEDTask, ( const char * const ) "LedTask", configMINIMAL_STACK_SIZE, (void*)0, mainLED_TASK_PRIORITY, NULL );
-  xTaskCreate( vLEDTask, ( const char * const ) "LedTask", configMINIMAL_STACK_SIZE, (void*)1, mainLED_TASK_PRIORITY+1, NULL );
-  xTaskCreate( vLEDTask, ( const char * const ) "LedTask", configMINIMAL_STACK_SIZE, (void*)2, mainLED_TASK_PRIORITY+2, NULL );
-  xTaskCreate( vLEDTask, ( const char * const ) "LedTask", configMINIMAL_STACK_SIZE, (void*)3, mainLED_TASK_PRIORITY+3, NULL );
+  xTaskCreate(vLEDTask, (const char *const) "LedTask", configMINIMAL_STACK_SIZE,
+              (void *)0, mainLED_TASK_PRIORITY, NULL);
+  xTaskCreate(vLEDTask, (const char *const) "LedTask", configMINIMAL_STACK_SIZE,
+              (void *)1, mainLED_TASK_PRIORITY + 1, NULL);
+  xTaskCreate(vLEDTask, (const char *const) "LedTask", configMINIMAL_STACK_SIZE,
+              (void *)2, mainLED_TASK_PRIORITY + 2, NULL);
+  xTaskCreate(vLEDTask, (const char *const) "LedTask", configMINIMAL_STACK_SIZE,
+              (void *)3, mainLED_TASK_PRIORITY + 3, NULL);
 
   // Start the scheduler.
   vTaskStartScheduler();
 #endif
-  /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
-  /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
-  #ifdef PEX_RTOS_START
-    PEX_RTOS_START();                  /* Startup of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
+/*** Don't write any code pass this line, or it will be deleted during code
+ * generation. ***/
+/*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component.
+ * DON'T MODIFY THIS CODE!!! ***/
+#ifdef PEX_RTOS_START
+  PEX_RTOS_START(); /* Startup of the selected RTOS. Macro is defined by the
+                       RTOS component. */
+#endif
   /*** End of RTOS startup code.  ***/
   /*** Processor Expert end of main routine. DON'T MODIFY THIS CODE!!! ***/
-  for(;;) {
-    if(exit_code != 0) {
+  for (;;) {
+    if (exit_code != 0) {
       break;
     }
   }

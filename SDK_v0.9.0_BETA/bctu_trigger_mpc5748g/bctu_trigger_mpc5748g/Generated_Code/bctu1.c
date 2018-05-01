@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -49,27 +49,26 @@
 /*! bctu1 configuration structures */
 
 const bctu_config_t bctu1_globalConfig0 = {
-  .lowPowerModeEn = false,
-  .globalHwTriggersEn = false,
-  .globalTriggersEn = false,
-  .dmaEnMask = 0U,
-  .triggerIntEn = false,
-  .listIntEn = true,
-  .newDataIntEnMask = 2U,
+    .lowPowerModeEn = false,
+    .globalHwTriggersEn = false,
+    .globalTriggersEn = false,
+    .dmaEnMask = 0U,
+    .triggerIntEn = false,
+    .listIntEn = true,
+    .newDataIntEnMask = 2U,
 };
 
 const bctu_trig_config_t bctu1_trigConfig0 = {
-  .loopEn = true,
-  .adcTargetMask = 2U,
-  .hwTriggersEn = false,
+    .loopEn = true,
+    .adcTargetMask = 2U,
+    .hwTriggersEn = false,
 };
 
 const bctu_trig_config_t bctu1_trigConfig1 = {
-  .loopEn = false,
-  .adcTargetMask = 2U,
-  .hwTriggersEn = false,
+    .loopEn = false,
+    .adcTargetMask = 2U,
+    .hwTriggersEn = false,
 };
-
 
 /* END bctu1. */
 /*!
@@ -83,4 +82,3 @@ const bctu_trig_config_t bctu1_trigConfig1 = {
 **
 ** ###################################################################
 */
-

@@ -42,90 +42,97 @@
 */
 /* MODULE main */
 
-
 /* Including needed modules to compile this module/procedure */
 #include "Cpu.h"
 #include "clockMan1.h"
-#include "pit1.h"
 #include "pin_mux.h"
+#include "pit1.h"
 
 volatile int exit_code = 0;
-uint32_t PIT0_ctr = 0;      /* Counter for # of PIT 0 ISRs */
-/* User includes (#include below this line is not maintained by Processor Expert) */
+uint32_t PIT0_ctr = 0; /* Counter for # of PIT 0 ISRs */
+/* User includes (#include below this line is not maintained by Processor
+ * Expert) */
 
-#define LED1        (1<<10)   /* GPIO  10 - pin PA[10] */
-#define LED3        (1<<13)   /* GPIO 125 - pin PH[13] */
-#define LED5        (1<<5)    /* GPIO 117 - pin PH[5] */
-#define LED7        (1<<0)    /* GPIO   0 - pin PA[0] */
-#define LED1_PORT   PTA       /* base pointer */
-#define LED3_PORT   PTH       /* base pointer */
-#define LED5_PORT   PTH       /* base pointer */
-#define LED7_PORT   PTA       /* base pointer */
+#define LED1 (1 << 10) /* GPIO  10 - pin PA[10] */
+#define LED3 (1 << 13) /* GPIO 125 - pin PH[13] */
+#define LED5 (1 << 5)  /* GPIO 117 - pin PH[5] */
+#define LED7 (1 << 0)  /* GPIO   0 - pin PA[0] */
+#define LED1_PORT PTA  /* base pointer */
+#define LED3_PORT PTH  /* base pointer */
+#define LED5_PORT PTH  /* base pointer */
+#define LED7_PORT PTA  /* base pointer */
 
 /*
  * PIT's Channel 1 interrupt handler
- * It toggles the LED3 once a second and generates a software interrupt on core Z2 every 5 seconds
+ * It toggles the LED3 once a second and generates a software interrupt on core
+ * Z2 every 5 seconds
  */
-void PIT_Ch1_IRQHandler(void)
-{
-    PINS_DRV_TogglePins(LED3_PORT, LED3);           /* LED toggle */
-    PIT0_ctr++;                                     /* Increment ISR counter */
-    if (PIT0_ctr == 5) {
-        PIT0_ctr = 0;                               /* Clear counter */
-        INT_SYS_SetSoftwareIRQRequest(SS1_IRQn);    /* Generate software interrupt request that is sent to core 2 */
-    }
-    PIT_DRV_ClearStatusFlags(INST_PIT1, pit1_ChnConfig0.hwChannel);     /* Clear channel 1 interrupt flag */
+void PIT_Ch1_IRQHandler(void) {
+  PINS_DRV_TogglePins(LED3_PORT, LED3); /* LED toggle */
+  PIT0_ctr++;                           /* Increment ISR counter */
+  if (PIT0_ctr == 5) {
+    PIT0_ctr = 0; /* Clear counter */
+    INT_SYS_SetSoftwareIRQRequest(
+        SS1_IRQn); /* Generate software interrupt request that is sent to core 2
+                    */
+  }
+  PIT_DRV_ClearStatusFlags(
+      INST_PIT1,
+      pit1_ChnConfig0.hwChannel); /* Clear channel 1 interrupt flag */
 }
 
-  /*!
-    \brief The main function for the project.
-    \details The startup initialization sequence is the following:
-   * - startup asm routine
-   * - main()
-  */
-int main(void)
-{
-    /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
-    #ifdef PEX_RTOS_INIT
-    PEX_RTOS_INIT();                   /* Initialization of the selected RTOS. Macro is defined by the RTOS component. */
-    #endif
-    /*** End of Processor Expert internal initialization.                    ***/
+/*!
+  \brief The main function for the project.
+  \details The startup initialization sequence is the following:
+ * - startup asm routine
+ * - main()
+*/
+int main(void) {
+/*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
+#ifdef PEX_RTOS_INIT
+  PEX_RTOS_INIT(); /* Initialization of the selected RTOS. Macro is defined by
+                      the RTOS component. */
+#endif
+  /*** End of Processor Expert internal initialization.                    ***/
 
-    /* Initialize clock gate*/
-    CLOCK_SYS_Init(g_clockManConfigsArr,   CLOCK_MANAGER_CONFIG_CNT,
-                   g_clockManCallbacksArr, CLOCK_MANAGER_CALLBACK_CNT);
-    CLOCK_SYS_UpdateConfiguration(0U, CLOCK_MANAGER_POLICY_AGREEMENT);
+  /* Initialize clock gate*/
+  CLOCK_SYS_Init(g_clockManConfigsArr, CLOCK_MANAGER_CONFIG_CNT,
+                 g_clockManCallbacksArr, CLOCK_MANAGER_CALLBACK_CNT);
+  CLOCK_SYS_UpdateConfiguration(0U, CLOCK_MANAGER_POLICY_AGREEMENT);
 
-    /* Disable PIT channel 1 interrupt for all cores*/
-    /* This is done because all interrupts are enabled on core Z4_0 by default*/
-    INT_SYS_DisableIRQ_MC_All(PIT_Ch1_IRQn);
+  /* Disable PIT channel 1 interrupt for all cores*/
+  /* This is done because all interrupts are enabled on core Z4_0 by default*/
+  INT_SYS_DisableIRQ_MC_All(PIT_Ch1_IRQn);
 
-    /* Initialize PIT channel 1 */
-    PIT_DRV_InitChannel(INST_PIT1, &pit1_ChnConfig0);
+  /* Initialize PIT channel 1 */
+  PIT_DRV_InitChannel(INST_PIT1, &pit1_ChnConfig0);
 
-    /* Start PIT channel 1 counting */
-    PIT_DRV_StartChannel(INST_PIT1, pit1_ChnConfig0.hwChannel);
+  /* Start PIT channel 1 counting */
+  PIT_DRV_StartChannel(INST_PIT1, pit1_ChnConfig0.hwChannel);
 
-    /* Disable software interrupt 1 for all cores*/
-    /* This is done because all interrupts are enabled on core Z4_0 by default*/
-    INT_SYS_DisableIRQ_MC_All(SS1_IRQn);
+  /* Disable software interrupt 1 for all cores*/
+  /* This is done because all interrupts are enabled on core Z4_0 by default*/
+  INT_SYS_DisableIRQ_MC_All(SS1_IRQn);
 
-    /* Enable software interrupt on core Z2 */
-    uint8_t cores[1] = { 2 };
-    INT_SYS_EnableIRQ_MC(SS1_IRQn, cores, 1);
+  /* Enable software interrupt on core Z2 */
+  uint8_t cores[1] = {2};
+  INT_SYS_EnableIRQ_MC(SS1_IRQn, cores, 1);
 
-    /* Set priority for software interrupt */
-    INT_SYS_SetPriority(SS1_IRQn, 7);
+  /* Set priority for software interrupt */
+  INT_SYS_SetPriority(SS1_IRQn, 7);
 
-    /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
-  /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
-  #ifdef PEX_RTOS_START
-    PEX_RTOS_START();                  /* Startup of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
+  /*** Don't write any code pass this line, or it will be deleted during code
+   * generation. ***/
+/*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component.
+ * DON'T MODIFY THIS CODE!!! ***/
+#ifdef PEX_RTOS_START
+  PEX_RTOS_START(); /* Startup of the selected RTOS. Macro is defined by the
+                       RTOS component. */
+#endif
   /*** End of RTOS startup code.  ***/
   /*** Processor Expert end of main routine. DON'T MODIFY THIS CODE!!! ***/
-  for(;;) {
-    if(exit_code != 0) {
+  for (;;) {
+    if (exit_code != 0) {
       break;
     }
   }

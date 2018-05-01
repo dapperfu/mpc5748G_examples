@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -50,17 +50,15 @@ dspi_state_t dspi2State;
 /* SPI Master Configurations */
 
 /* SPI Slave Configurations */
-dspi_slave_config_t dspi2_SlaveInitConfig0 =
-{
-    .bitcount      = 8,
-    .clkPhase      = DSPI_CLOCK_PHASE_1ST_EDGE,
-    .clkPolarity   = DSPI_ACTIVE_HIGH,
-    .transferType  = DSPI_USING_INTERRUPTS,
-    .rxDMAChannel  = 255U,
-    .txDMAChannel  = 255U,
-    .callback      = NULL,
-    .callbackParam = NULL
-};
+dspi_slave_config_t dspi2_SlaveInitConfig0 = {
+    .bitcount = 8,
+    .clkPhase = DSPI_CLOCK_PHASE_1ST_EDGE,
+    .clkPolarity = DSPI_ACTIVE_HIGH,
+    .transferType = DSPI_USING_INTERRUPTS,
+    .rxDMAChannel = 255U,
+    .txDMAChannel = 255U,
+    .callback = NULL,
+    .callbackParam = NULL};
 
 /* END dspi2. */
 
@@ -75,5 +73,3 @@ dspi_slave_config_t dspi2_SlaveInitConfig0 =
 **
 ** ###################################################################
 */
-
-

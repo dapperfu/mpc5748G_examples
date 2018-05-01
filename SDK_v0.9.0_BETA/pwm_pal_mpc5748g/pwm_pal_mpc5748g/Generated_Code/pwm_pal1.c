@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -44,52 +44,38 @@
  * This structure is defined for usage by application code.
  *
  * @section [global]
- * Violates MISRA 2012 Required Rule 8.4, external symbol defined without a prior
- * declaration.
- * This symbol is not a part of the public symbols.
+ * Violates MISRA 2012 Required Rule 8.4, external symbol defined without a
+ * prior declaration. This symbol is not a part of the public symbols.
  *
  */
 
-
-
-
-
- /* Timebases */
-pwm_emios_timebase_t BUS_A_Timebase =
-{
+/* Timebases */
+pwm_emios_timebase_t BUS_A_Timebase = {
     .name = BUS_A,
     .internalPrescaler = EMIOS_CLOCK_DIVID_BY_1,
 };
 
- /* Channels */
-pwm_channel_t pwm_pal1Channels[1] =
-{
-    {
-        .channel                       = 0,
-        .channelType                   = PWM_EDGE_ALIGNED,
-        .period                        = 5000,
-        .duty                          = 2500,
-        .polarity                      = PWM_ACTIVE_HIGH,
-        .timebase                      = &BUS_A_Timebase
-    },
+/* Channels */
+pwm_channel_t pwm_pal1Channels[1] = {
+    {.channel = 0,
+     .channelType = PWM_EDGE_ALIGNED,
+     .period = 5000,
+     .duty = 2500,
+     .polarity = PWM_ACTIVE_HIGH,
+     .timebase = &BUS_A_Timebase},
 };
 
-
-
-  /* Initialization configuration */
-pwm_global_config_t pwm_pal1Configs =
-{
-    .pwmChannels          = pwm_pal1Channels,
-    .numberOfPwmChannels  = 1,
+/* Initialization configuration */
+pwm_global_config_t pwm_pal1Configs = {
+    .pwmChannels = pwm_pal1Channels,
+    .numberOfPwmChannels = 1,
 };
 
-  /* Instance configuration */
-pwm_instance_t pwm_pal1Instance =
-{
-    .instType  = PWM_INST_TYPE_EMIOS,
-    .instIdx   = 0,
+/* Instance configuration */
+pwm_instance_t pwm_pal1Instance = {
+    .instType = PWM_INST_TYPE_EMIOS,
+    .instIdx = 0,
 };
-
 
 /* END pwm_pal1. */
 
@@ -104,4 +90,3 @@ pwm_instance_t pwm_pal1Instance =
 **
 ** ###################################################################
 */
-

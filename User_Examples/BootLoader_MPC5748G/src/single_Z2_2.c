@@ -9,28 +9,24 @@
 extern void xcptn_xmpl(void (*)(void));
 extern void VTABLE2(void);
 
-__attribute__ ((section(".text")))
-int main2(void)
-{
-	int counter = 0;
-	uint8_t t = 0;
-	
-	xcptn_xmpl (VTABLE2);
+__attribute__((section(".text"))) int main2(void) {
+  int counter = 0;
+  uint8_t t = 0;
 
-#define PCR_NUM 101		//PG5
+  xcptn_xmpl(VTABLE2);
 
-	gpo_init_pcr_out_pnt_fnc( PCR_NUM );
+#define PCR_NUM 101 // PG5
 
-	for(;;) {	   
-	   	counter++;
+  gpo_init_pcr_out_pnt_fnc(PCR_NUM);
 
-	   	if (!(counter % 200000))
-		{
-	   		t ^= 1;
-	   		gpo_pin_update_pnt_fnc(PCR_NUM, t);
-		}
+  for (;;) {
+    counter++;
 
-	}
-	
-	return 0;
+    if (!(counter % 200000)) {
+      t ^= 1;
+      gpo_pin_update_pnt_fnc(PCR_NUM, t);
+    }
+  }
+
+  return 0;
 }

@@ -39,16 +39,16 @@
 */
 /* MODULE main */
 
-
 /* Including needed modules to compile this module/procedure */
 #include "Cpu.h"
-#include "dmaController1.h"
 #include "clockMan1.h"
 #include "console_uart.h"
+#include "dmaController1.h"
 #include "pin_mux.h"
 
-  volatile int exit_code = 0;
-/* User includes (#include below this line is not maintained by Processor Expert) */
+volatile int exit_code = 0;
+/* User includes (#include below this line is not maintained by Processor
+ * Expert) */
 #include "edmaTransfer.h"
 #include <string.h>
 
@@ -57,14 +57,19 @@ uint32_t bytesRemaining;
 /* Macro defined to display text to console; it sends the
  * buffer via UART and waits the transmission to complete
  */
-#define PRINTF(text) LINFLEXD_UART_DRV_SendData(INST_CONSOLE_UART, (uint8_t *)text, strlen(text));\
-                     while(LINFLEXD_UART_DRV_GetTransmitStatus(INST_CONSOLE_UART, &bytesRemaining) != STATUS_SUCCESS);
+#define PRINTF(text)                                                           \
+  LINFLEXD_UART_DRV_SendData(INST_CONSOLE_UART, (uint8_t *)text,               \
+                             strlen(text));                                    \
+  while (LINFLEXD_UART_DRV_GetTransmitStatus(                                  \
+             INST_CONSOLE_UART, &bytesRemaining) != STATUS_SUCCESS)            \
+    ;
 
 /* Flag updated in DMA isr to signal transfer completion */
 volatile bool transferComplete;
 
 /* Text to be displayed on the console */
-#define menuText "\r\nThis is a demo illustrating eDMA driver usage.\r\n\
+#define menuText                                                               \
+  "\r\nThis is a demo illustrating eDMA driver usage.\r\n\
 Messages are sent and received to/from the console using DMA based serial communication.\r\n\
 Select one of the following options:\r\n\
   - press '1' to trigger a single block memory-to-memory transfer\r\n\
@@ -78,52 +83,47 @@ Select one of the following options:\r\n\
 uint8_t destBuffer[255];
 
 /* Callback for DMA channels */
-void edmaCallback(void *parameter, edma_chn_status_t status)
-{
-    (void)status;
-    (void)parameter;
-    /* signal transfer completion */
-    transferComplete = true;
+void edmaCallback(void *parameter, edma_chn_status_t status) {
+  (void)status;
+  (void)parameter;
+  /* signal transfer completion */
+  transferComplete = true;
 }
 
 /* Static function used to clear all elements in a buffer */
-static void clearBuff(uint8_t *buff, uint32_t size)
-{
-    uint32_t i;
-    for(i = 0U; i < size; i++)
-        buff[i] = 0U;
+static void clearBuff(uint8_t *buff, uint32_t size) {
+  uint32_t i;
+  for (i = 0U; i < size; i++)
+    buff[i] = 0U;
 }
 
 /* Function that reads the option chosen by the user */
-void readOptionFromConsole(uint8_t * option)
-{
-    bool strReceived = false;
-    uint8_t i = 0;
-    uint8_t buffer[255];
+void readOptionFromConsole(uint8_t *option) {
+  bool strReceived = false;
+  uint8_t i = 0;
+  uint8_t buffer[255];
 
-    while(strReceived == false)
-    {
-        /* Because the terminal appends new line to user data,
-         * receive and store data into a buffer until it is received
-         */
-        LINFLEXD_UART_DRV_ReceiveData(INST_CONSOLE_UART, &buffer[i], 1UL);
-        /* Wait for transfer to be completed */
-        while(LINFLEXD_UART_DRV_GetReceiveStatus(INST_CONSOLE_UART, &bytesRemaining) != STATUS_SUCCESS);
-         /* Check if current byte is new line */
-        if(buffer[i++] == '\n')
-            strReceived = true;
-    }
+  while (strReceived == false) {
+    /* Because the terminal appends new line to user data,
+     * receive and store data into a buffer until it is received
+     */
+    LINFLEXD_UART_DRV_ReceiveData(INST_CONSOLE_UART, &buffer[i], 1UL);
+    /* Wait for transfer to be completed */
+    while (LINFLEXD_UART_DRV_GetReceiveStatus(
+               INST_CONSOLE_UART, &bytesRemaining) != STATUS_SUCCESS)
+      ;
+    /* Check if current byte is new line */
+    if (buffer[i++] == '\n')
+      strReceived = true;
+  }
 
-    /* Check for invalid options */
-    if(i > 2 || buffer[0] < '0' || buffer[0] > '3')
-    {
-        PRINTF("Invalid option!\r\n");
-        *option = 0;
-    }
-    else
-    {
-        *option = buffer[0];
-    }
+  /* Check for invalid options */
+  if (i > 2 || buffer[0] < '0' || buffer[0] > '3') {
+    PRINTF("Invalid option!\r\n");
+    *option = 0;
+  } else {
+    *option = buffer[0];
+  }
 }
 
 /*!
@@ -132,8 +132,7 @@ void readOptionFromConsole(uint8_t * option)
  * - startup asm routine
  * - main()
 */
-int main(void)
-{
+int main(void) {
   /* Write your local variable definition here */
 
   /* Declare a variable to store the option entered by user */
@@ -141,10 +140,11 @@ int main(void)
   /* Declare a boolean flag to control the demo loop */
   bool exitDemo = false;
 
-  /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
-  #ifdef PEX_RTOS_INIT
-    PEX_RTOS_INIT();                   /* Initialization of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
+/*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
+#ifdef PEX_RTOS_INIT
+  PEX_RTOS_INIT(); /* Initialization of the selected RTOS. Macro is defined by
+                      the RTOS component. */
+#endif
   /*** End of Processor Expert internal initialization.                    ***/
 
   /* Write your code here */
@@ -162,99 +162,103 @@ int main(void)
    */
   PINS_DRV_Init(NUM_OF_CONFIGURED_PINS, g_pin_mux_InitConfigArr);
 
-  /* Initialize the LINFlexD instance used for console message display (DMA based) */
-  LINFLEXD_UART_DRV_Init(INST_CONSOLE_UART, &console_uart_State, &console_uart_InitConfig0);
+  /* Initialize the LINFlexD instance used for console message display (DMA
+   * based) */
+  LINFLEXD_UART_DRV_Init(INST_CONSOLE_UART, &console_uart_State,
+                         &console_uart_InitConfig0);
 
   /* Initialize eDMA module & channels */
   EDMA_DRV_Init(&dmaController1_State, &dmaController1_InitConfig0,
-                edmaChnStateArray, edmaChnConfigArray, EDMA_CONFIGURED_CHANNELS_COUNT);
+                edmaChnStateArray, edmaChnConfigArray,
+                EDMA_CONFIGURED_CHANNELS_COUNT);
 
   /* Demo loop:
    *     - Receive option from user
    *     - Trigger the appropriate action
    */
-  while (!exitDemo)
-  {
-      /* Display the menu message */
-      PRINTF(menuText);
+  while (!exitDemo) {
+    /* Display the menu message */
+    PRINTF(menuText);
 
-      /* Read the user option */
-      readOptionFromConsole(&option);
+    /* Read the user option */
+    readOptionFromConsole(&option);
 
-      /* If the option is not valid, display the menu again */
-      if(option == 0)
-          continue;
+    /* If the option is not valid, display the menu again */
+    if (option == 0)
+      continue;
 
-      /* Trigger the action chosen by user */
-      switch(option)
-      {
-          case '1':
-              /* Single block memory-to-memory transfer */
-              triggerSingleBlock(EDMA_CHN2_NUMBER, (uint8_t *)dmaSampleBuffer,
-                                 destBuffer, strlen(dmaSampleBuffer));
+    /* Trigger the action chosen by user */
+    switch (option) {
+    case '1':
+      /* Single block memory-to-memory transfer */
+      triggerSingleBlock(EDMA_CHN2_NUMBER, (uint8_t *)dmaSampleBuffer,
+                         destBuffer, strlen(dmaSampleBuffer));
 
-              /* Display the source buffer */
-              PRINTF("Source buffer:\r\n");
-              PRINTF(dmaSampleBuffer);
+      /* Display the source buffer */
+      PRINTF("Source buffer:\r\n");
+      PRINTF(dmaSampleBuffer);
 
-              /* Display the destination buffer */
-              PRINTF("Destination buffer (transferred in single block mode):\r\n");
-              PRINTF((char *)destBuffer);
+      /* Display the destination buffer */
+      PRINTF("Destination buffer (transferred in single block mode):\r\n");
+      PRINTF((char *)destBuffer);
 
-              /* Clear the destination buffer */
-              clearBuff(destBuffer, 255);
-              break;
-          case '2':
-              /* Loop memory-to-memory transfer */
-              triggerLoopTransfer(EDMA_CHN2_NUMBER, (uint8_t *)dmaSampleBuffer,
-                                  destBuffer, strlen(dmaSampleBuffer));
+      /* Clear the destination buffer */
+      clearBuff(destBuffer, 255);
+      break;
+    case '2':
+      /* Loop memory-to-memory transfer */
+      triggerLoopTransfer(EDMA_CHN2_NUMBER, (uint8_t *)dmaSampleBuffer,
+                          destBuffer, strlen(dmaSampleBuffer));
 
-              /* Display the source buffer */
-              PRINTF("Source buffer:\r\n");
-              PRINTF(dmaSampleBuffer);
+      /* Display the source buffer */
+      PRINTF("Source buffer:\r\n");
+      PRINTF(dmaSampleBuffer);
 
-              /* Display the destination buffer */
-              PRINTF("Destination buffer (transferred in loop mode):\r\n");
-              PRINTF((char *)destBuffer);
+      /* Display the destination buffer */
+      PRINTF("Destination buffer (transferred in loop mode):\r\n");
+      PRINTF((char *)destBuffer);
 
-              /* Clear the destination buffer */
-              clearBuff(destBuffer, 255);
-              break;
-          case '3':
-              /* Scatter/gather memory-to-memory transfer */
-              triggerScatterGather(EDMA_CHN2_NUMBER, (uint8_t *)dmaSampleBuffer,
-                                   destBuffer, strlen(dmaSampleBuffer));
+      /* Clear the destination buffer */
+      clearBuff(destBuffer, 255);
+      break;
+    case '3':
+      /* Scatter/gather memory-to-memory transfer */
+      triggerScatterGather(EDMA_CHN2_NUMBER, (uint8_t *)dmaSampleBuffer,
+                           destBuffer, strlen(dmaSampleBuffer));
 
-              /* Display the source buffer */
-              PRINTF("Source buffer:\r\n");
-              PRINTF(dmaSampleBuffer);
+      /* Display the source buffer */
+      PRINTF("Source buffer:\r\n");
+      PRINTF(dmaSampleBuffer);
 
-              /* Display the destination buffer */
-              PRINTF("Destination buffer (transferred in scatter/gather mode):\r\n");
-              PRINTF((char *)destBuffer);
+      /* Display the destination buffer */
+      PRINTF("Destination buffer (transferred in scatter/gather mode):\r\n");
+      PRINTF((char *)destBuffer);
 
-              /* Clear the destination buffer */
-              clearBuff(destBuffer, 255);
-              break;
-          case '0':
-              /* Exit the demo */
-              PRINTF("Goodbye!");
-              EDMA_DRV_Deinit();
-              LINFLEXD_UART_DRV_Deinit(INST_CONSOLE_UART);
-              exitDemo = true;
-              break;
-      }
+      /* Clear the destination buffer */
+      clearBuff(destBuffer, 255);
+      break;
+    case '0':
+      /* Exit the demo */
+      PRINTF("Goodbye!");
+      EDMA_DRV_Deinit();
+      LINFLEXD_UART_DRV_Deinit(INST_CONSOLE_UART);
+      exitDemo = true;
+      break;
+    }
   }
 
-  /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
-  /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
-  #ifdef PEX_RTOS_START
-    PEX_RTOS_START();                  /* Startup of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
+/*** Don't write any code pass this line, or it will be deleted during code
+ * generation. ***/
+/*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component.
+ * DON'T MODIFY THIS CODE!!! ***/
+#ifdef PEX_RTOS_START
+  PEX_RTOS_START(); /* Startup of the selected RTOS. Macro is defined by the
+                       RTOS component. */
+#endif
   /*** End of RTOS startup code.  ***/
   /*** Processor Expert end of main routine. DON'T MODIFY THIS CODE!!! ***/
-  for(;;) {
-    if(exit_code != 0) {
+  for (;;) {
+    if (exit_code != 0) {
       break;
     }
   }

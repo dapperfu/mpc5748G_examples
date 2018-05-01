@@ -7,14 +7,13 @@
 
 extern void xcptn_xmpl(void);
 
-int main(void)
-{
-	volatile int counter = 0;
-	
-	xcptn_xmpl ();              /* Configure and Enable Interrupts */
+int main(void) {
+  volatile int counter = 0;
 
-	/* Loop forever */
-	for(;;) {	   
-	   	counter++;
-	}
+  xcptn_xmpl(); /* Configure and Enable Interrupts */
+
+  /* Loop forever */
+  for (;;) {
+    counter++;
+  }
 }

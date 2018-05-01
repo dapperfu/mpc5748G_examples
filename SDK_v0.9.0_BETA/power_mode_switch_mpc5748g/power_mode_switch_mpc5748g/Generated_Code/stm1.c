@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -39,8 +39,9 @@
  * @page misra_violations MISRA-C:2012 violations
  *
  * @section [global]
- * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made static.
- * The external variables will be used in other source files in application code.
+ * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made
+ * static. The external variables will be used in other source files in
+ * application code.
  *
  * @section [global]
  * Violates MISRA 2012 Advisory Rule 8.9, An object should be defined at block
@@ -52,20 +53,14 @@
 #include "stm1.h"
 
 /*! Global configuration 0 of stm1 */
-const stm_config_t stm1_InitConfig0 =
-{
-    .clockSource = STM_CLOCK_FXOSC,
-    .clockPrescaler = 0U,
-    .stopInDebugMode = false,
-    .startValue = 0U
-};
+const stm_config_t stm1_InitConfig0 = {.clockSource = STM_CLOCK_FXOSC,
+                                       .clockPrescaler = 0U,
+                                       .stopInDebugMode = false,
+                                       .startValue = 0U};
 
 /*! User channel configuration 0 of stm1 */
-const stm_channel_config_t stm1_ChnConfig0 =
-{
-    .channel = 0U,
-    .compareValue = 40000000U
-};
+const stm_channel_config_t stm1_ChnConfig0 = {.channel = 0U,
+                                              .compareValue = 40000000U};
 /* END stm1. */
 /*!
 ** @}
@@ -78,4 +73,3 @@ const stm_channel_config_t stm1_ChnConfig0 =
 **
 ** ###################################################################
 */
-

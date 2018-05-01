@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -39,304 +39,295 @@
  * @page misra_violations MISRA-C:2012 violations
  *
  * @section [global]
- * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made static.
- * The external variable will be used in other source file that user initialize
- * to use this module.
+ * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made
+ * static. The external variable will be used in other source file that user
+ * initialize to use this module.
  */
 
 #include "mpu_pal1.h"
 #include "stddef.h"
 /*! Master configuration 0 */
-const mpu_master_access_permission_t mpu_pal1_AccessRightConfig0[] =
-{
+const mpu_master_access_permission_t mpu_pal1_AccessRightConfig0[] = {
     /*! CORE_Z4A_0 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_CORE_Z4A,            /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_CORE_Z4A, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,            /*!< Access right */
     },
     /*! CORE_Z4B_0 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_CORE_Z4B,            /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_CORE_Z4B, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,            /*!< Access right */
     },
     /*! CORE_Z2_0 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_CORE_Z2,             /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_CORE_Z2, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,           /*!< Access right */
     },
     /*! DEBUG_Z4A_0 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_DEBUG_Z4A,           /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_DEBUG_Z4A, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,             /*!< Access right */
     },
     /*! DEBUG_Z4B_0 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_DEBUG_Z4B,           /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_DEBUG_Z4B, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,             /*!< Access right */
     },
     /*! DEBUG_Z2_0 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_DEBUG_Z2,            /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_DEBUG_Z2, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,            /*!< Access right */
     },
     /*! EDMA_0 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_EDMA,                /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_EDMA, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,        /*!< Access right */
     },
     /*! ENET0_0 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_ENET0,               /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_ENET0, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,         /*!< Access right */
     },
     /*! ENET1_0 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_ENET1,               /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_ENET1, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,         /*!< Access right */
     },
     /*! FLEXRAY_0 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_FLEXRAY,             /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_FLEXRAY, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,           /*!< Access right */
     },
     /*! HSM_0 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_HSM,                 /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_HSM, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,       /*!< Access right */
     },
     /*! MLB_0 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_MLB,                 /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_MLB, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,       /*!< Access right */
     },
     /*! USB0_0 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_USB0,                /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_USB0, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,        /*!< Access right */
     },
     /*! USB1_0 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_USB1,                /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_USB1, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,        /*!< Access right */
     },
     /*! USDHC_0 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_USDHC,               /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
-    }
-};
+        .masterNum = FEATURE_SMPU_MASTER_USDHC, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,         /*!< Access right */
+    }};
 /*! Master configuration 1 */
-const mpu_master_access_permission_t mpu_pal1_AccessRightConfig1[] =
-{
+const mpu_master_access_permission_t mpu_pal1_AccessRightConfig1[] = {
     /*! CORE_Z4A_1 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_CORE_Z4A,            /*!< Master number */
-        .accessRight = MPU_W_OR_SET_1,                          /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_CORE_Z4A, /*!< Master number */
+        .accessRight = MPU_W_OR_SET_1,             /*!< Access right */
     },
     /*! CORE_Z4B_1 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_CORE_Z4B,            /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_CORE_Z4B, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,            /*!< Access right */
     },
     /*! CORE_Z2_1 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_CORE_Z2,             /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_CORE_Z2, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,           /*!< Access right */
     },
     /*! DEBUG_Z4A_1 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_DEBUG_Z4A,           /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_DEBUG_Z4A, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,             /*!< Access right */
     },
     /*! DEBUG_Z4B_1 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_DEBUG_Z4B,           /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_DEBUG_Z4B, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,             /*!< Access right */
     },
     /*! DEBUG_Z2_1 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_DEBUG_Z2,            /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_DEBUG_Z2, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,            /*!< Access right */
     },
     /*! EDMA_1 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_EDMA,                /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_EDMA, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,        /*!< Access right */
     },
     /*! ENET0_1 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_ENET0,               /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_ENET0, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,         /*!< Access right */
     },
     /*! ENET1_1 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_ENET1,               /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_ENET1, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,         /*!< Access right */
     },
     /*! FLEXRAY_1 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_FLEXRAY,             /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_FLEXRAY, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,           /*!< Access right */
     },
     /*! HSM_1 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_HSM,                 /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_HSM, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,       /*!< Access right */
     },
     /*! MLB_1 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_MLB,                 /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_MLB, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,       /*!< Access right */
     },
     /*! USB0_1 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_USB0,                /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_USB0, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,        /*!< Access right */
     },
     /*! USB1_1 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_USB1,                /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_USB1, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,        /*!< Access right */
     },
     /*! USDHC_1 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_USDHC,               /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
-    }
-};
+        .masterNum = FEATURE_SMPU_MASTER_USDHC, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,         /*!< Access right */
+    }};
 /*! Master configuration 2 */
-const mpu_master_access_permission_t mpu_pal1_AccessRightConfig2[] =
-{
+const mpu_master_access_permission_t mpu_pal1_AccessRightConfig2[] = {
     /*! CORE_Z4A_2 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_CORE_Z4A,            /*!< Master number */
-        .accessRight = MPU_R_OR_SET_2,                          /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_CORE_Z4A, /*!< Master number */
+        .accessRight = MPU_R_OR_SET_2,             /*!< Access right */
     },
     /*! CORE_Z4B_2 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_CORE_Z4B,            /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_CORE_Z4B, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,            /*!< Access right */
     },
     /*! CORE_Z2_2 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_CORE_Z2,             /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_CORE_Z2, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,           /*!< Access right */
     },
     /*! DEBUG_Z4A_2 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_DEBUG_Z4A,           /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_DEBUG_Z4A, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,             /*!< Access right */
     },
     /*! DEBUG_Z4B_2 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_DEBUG_Z4B,           /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_DEBUG_Z4B, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,             /*!< Access right */
     },
     /*! DEBUG_Z2_2 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_DEBUG_Z2,            /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_DEBUG_Z2, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,            /*!< Access right */
     },
     /*! EDMA_2 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_EDMA,                /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_EDMA, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,        /*!< Access right */
     },
     /*! ENET0_2 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_ENET0,               /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_ENET0, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,         /*!< Access right */
     },
     /*! ENET1_2 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_ENET1,               /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_ENET1, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,         /*!< Access right */
     },
     /*! FLEXRAY_2 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_FLEXRAY,             /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_FLEXRAY, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,           /*!< Access right */
     },
     /*! HSM_2 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_HSM,                 /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_HSM, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,       /*!< Access right */
     },
     /*! MLB_2 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_MLB,                 /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_MLB, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,       /*!< Access right */
     },
     /*! USB0_2 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_USB0,                /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_USB0, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,        /*!< Access right */
     },
     /*! USB1_2 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_USB1,                /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
+        .masterNum = FEATURE_SMPU_MASTER_USB1, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,        /*!< Access right */
     },
     /*! USDHC_2 */
     {
-        .masterNum   = FEATURE_SMPU_MASTER_USDHC,               /*!< Master number */
-        .accessRight = MPU_RW_OR_SET_3,                         /*!< Access right */
-    }
-};
-
-
+        .masterNum = FEATURE_SMPU_MASTER_USDHC, /*!< Master number */
+        .accessRight = MPU_RW_OR_SET_3,         /*!< Access right */
+    }};
 
 /*! User configuration 0 */
-const mpu_region_config_t mpu_pal1_RegionConfig0[] =
-{
+const mpu_region_config_t mpu_pal1_RegionConfig0[] = {
     /*! Region number 0 */
     {
-        .startAddr         = 0x00000000U,                       /*!< Memory region start address */
-        .endAddr           = 0x011387FFU,                       /*!< Memory region end address */
-        .masterAccRight    = mpu_pal1_AccessRightConfig0,       /*!< Master access right */
-        .processIdEnable   = 0x00U,                             /*!< Process identifier enable */
-        .processIdentifier = 0x00U,                             /*!< Process identifier */
-        .processIdMask     = 0x00U,                             /*!< Process identifier mask */
-        .extension         = NULL                               /*!< Lock configuration */
+        .startAddr = 0x00000000U, /*!< Memory region start address */
+        .endAddr = 0x011387FFU,   /*!< Memory region end address */
+        .masterAccRight =
+            mpu_pal1_AccessRightConfig0, /*!< Master access right */
+        .processIdEnable = 0x00U,        /*!< Process identifier enable */
+        .processIdentifier = 0x00U,      /*!< Process identifier */
+        .processIdMask = 0x00U,          /*!< Process identifier mask */
+        .extension = NULL                /*!< Lock configuration */
     },
     /*! Region number 1 */
     {
-        .startAddr         = 0x01138800U,                       /*!< Memory region start address */
-        .endAddr           = 0x0113881FU,                       /*!< Memory region end address */
-        .masterAccRight    = mpu_pal1_AccessRightConfig1,       /*!< Master access right */
-        .processIdEnable   = 0x00U,                             /*!< Process identifier enable */
-        .processIdentifier = 0x00U,                             /*!< Process identifier */
-        .processIdMask     = 0x00U,                             /*!< Process identifier mask */
-        .extension         = NULL                               /*!< Lock configuration */
+        .startAddr = 0x01138800U, /*!< Memory region start address */
+        .endAddr = 0x0113881FU,   /*!< Memory region end address */
+        .masterAccRight =
+            mpu_pal1_AccessRightConfig1, /*!< Master access right */
+        .processIdEnable = 0x00U,        /*!< Process identifier enable */
+        .processIdentifier = 0x00U,      /*!< Process identifier */
+        .processIdMask = 0x00U,          /*!< Process identifier mask */
+        .extension = NULL                /*!< Lock configuration */
     },
     /*! Region number 2 */
     {
-        .startAddr         = 0x01138800U,                       /*!< Memory region start address */
-        .endAddr           = 0x0113881FU,                       /*!< Memory region end address */
-        .masterAccRight    = mpu_pal1_AccessRightConfig2,       /*!< Master access right */
-        .processIdEnable   = 0x00U,                             /*!< Process identifier enable */
-        .processIdentifier = 0x00U,                             /*!< Process identifier */
-        .processIdMask     = 0x00U,                             /*!< Process identifier mask */
-        .extension         = NULL                               /*!< Lock configuration */
+        .startAddr = 0x01138800U, /*!< Memory region start address */
+        .endAddr = 0x0113881FU,   /*!< Memory region end address */
+        .masterAccRight =
+            mpu_pal1_AccessRightConfig2, /*!< Master access right */
+        .processIdEnable = 0x00U,        /*!< Process identifier enable */
+        .processIdentifier = 0x00U,      /*!< Process identifier */
+        .processIdMask = 0x00U,          /*!< Process identifier mask */
+        .extension = NULL                /*!< Lock configuration */
     },
     /*! Region number 3 */
     {
-        .startAddr         = 0x01138820U,                       /*!< Memory region start address */
-        .endAddr           = 0xFFFFFFFFU,                       /*!< Memory region end address */
-        .masterAccRight    = mpu_pal1_AccessRightConfig0,       /*!< Master access right */
-        .processIdEnable   = 0x00U,                             /*!< Process identifier enable */
-        .processIdentifier = 0x00U,                             /*!< Process identifier */
-        .processIdMask     = 0x00U,                             /*!< Process identifier mask */
-        .extension         = NULL                               /*!< Lock configuration */
-    }
-};
+        .startAddr = 0x01138820U, /*!< Memory region start address */
+        .endAddr = 0xFFFFFFFFU,   /*!< Memory region end address */
+        .masterAccRight =
+            mpu_pal1_AccessRightConfig0, /*!< Master access right */
+        .processIdEnable = 0x00U,        /*!< Process identifier enable */
+        .processIdentifier = 0x00U,      /*!< Process identifier */
+        .processIdMask = 0x00U,          /*!< Process identifier mask */
+        .extension = NULL                /*!< Lock configuration */
+    }};
 
 /*! @brief MPU PAL instance information */
-const mpu_instance_t mpu_pal1_Instance =
-{
-    .instType = MPU_INST_TYPE_SMPU,
-    .instIdx  = 0U
-};
+const mpu_instance_t mpu_pal1_Instance = {.instType = MPU_INST_TYPE_SMPU,
+                                          .instIdx = 0U};
 
 /* END mpu_pal1. */
 

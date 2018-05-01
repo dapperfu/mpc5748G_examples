@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -40,9 +40,9 @@
  * @page misra_violations MISRA-C:2012 violations
  *
  * @section [global]
- * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made static.
- * The external variables will be used in other source files that user initialize
- * to use this module.
+ * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made
+ * static. The external variables will be used in other source files that user
+ * initialize to use this module.
  */
 #include "pwrMan1.h"
 #include <stdbool.h>
@@ -52,22 +52,20 @@
  * ************************************************************************* */
 /*! @brief User Configuration structure power_managerCfg_0 */
 power_manager_user_config_t pwrMan1_InitConfig0 = {
-    .powerMode = POWER_MANAGER_STANDBY0,                             /*!< Power manager mode */
-    .powerLevel = MC_ME_PWRLVL_0,                                    /*!< Relative power level indicator */
-    .flashMode = MC_ME_FLASH_POWER_DOWN_MODE,                        /*!< Flash power-down control */
-    .outputPowerdown = true,                                         /*!< Output power-down control */
-    .mainVoltage = false                                             /*!< Main voltage regulator control */
+    .powerMode = POWER_MANAGER_STANDBY0, /*!< Power manager mode */
+    .powerLevel = MC_ME_PWRLVL_0,        /*!< Relative power level indicator */
+    .flashMode = MC_ME_FLASH_POWER_DOWN_MODE, /*!< Flash power-down control */
+    .outputPowerdown = true,                  /*!< Output power-down control */
+    .mainVoltage = false /*!< Main voltage regulator control */
 };
 
 /*! @brief Array of pointers to User configuration structures */
-power_manager_user_config_t * powerConfigsArr[] = {
-    &pwrMan1_InitConfig0
-};
-/*! @brief Array of pointers to User defined Callbacks configuration structures */
+power_manager_user_config_t *powerConfigsArr[] = {&pwrMan1_InitConfig0};
+/*! @brief Array of pointers to User defined Callbacks configuration structures
+ */
 
-power_manager_callback_user_config_t * powerStaticCallbacksConfigsArr[] = {(void *)0};
-
-
+power_manager_callback_user_config_t *powerStaticCallbacksConfigsArr[] = {
+    (void *)0};
 
 /* END pwrMan1. */
 /*!

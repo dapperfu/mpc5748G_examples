@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -61,17 +61,13 @@
 /*! @brief PAL instance information */
 i2c_instance_t i2c1_instance = {I2C_INST_TYPE_I2C, 2U};
 
-
-i2c_slave_t i2c1_SlaveConfig0 =
-{
-    .slaveAddress       = 10,
-    .is10bitAddr        = false,
-    .slaveListening     = true,
-    .transferType       = I2C_PAL_USING_INTERRUPTS,
-    .dmaChannel         = 255,
-    .callback           = i2c1_SlaveCallback0,
-    .callbackParam      = NULL
-};
+i2c_slave_t i2c1_SlaveConfig0 = {.slaveAddress = 10,
+                                 .is10bitAddr = false,
+                                 .slaveListening = true,
+                                 .transferType = I2C_PAL_USING_INTERRUPTS,
+                                 .dmaChannel = 255,
+                                 .callback = i2c1_SlaveCallback0,
+                                 .callbackParam = NULL};
 
 /* END i2c1. */
 
@@ -86,4 +82,3 @@ i2c_slave_t i2c1_SlaveConfig0 =
 **
 ** ###################################################################
 */
-

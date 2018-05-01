@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -39,41 +39,30 @@
  * @page misra_violations MISRA-C:2012 violations
  *
  * @section [global]
- * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made static.
- * The external variable will be used in other source file that user initialize
- * to use this module.
+ * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made
+ * static. The external variable will be used in other source file that user
+ * initialize to use this module.
  */
 
 #include "wkpu1.h"
 
-  /*********************************************
-   * Interrupt configurations
-   ********************************************/
+/*********************************************
+ * Interrupt configurations
+ ********************************************/
 /*! Interrupt Configuration 0 */
-const wkpu_interrupt_cfg_t wkpu1_InterruptCfg0[] =
-{
-    {
-        .hwChannel = 0U,
-        .edgeEvent = WKPU_EDGE_NONE,
-        .filterEn  = false,
-        .pullEn    = false
-    },
-    {
-        .hwChannel = 1U,
-        .edgeEvent = WKPU_EDGE_RISING,
-        .filterEn  = true,
-        .pullEn    = true
-    },
-    {
-        .hwChannel = 2U,
-        .edgeEvent = WKPU_EDGE_NONE,
-        .filterEn  = false,
-        .pullEn    = false
-    }
-};
-
-
-
+const wkpu_interrupt_cfg_t wkpu1_InterruptCfg0[] = {
+    {.hwChannel = 0U,
+     .edgeEvent = WKPU_EDGE_NONE,
+     .filterEn = false,
+     .pullEn = false},
+    {.hwChannel = 1U,
+     .edgeEvent = WKPU_EDGE_RISING,
+     .filterEn = true,
+     .pullEn = true},
+    {.hwChannel = 2U,
+     .edgeEvent = WKPU_EDGE_NONE,
+     .filterEn = false,
+     .pullEn = false}};
 
 /* END wkpu1. */
 

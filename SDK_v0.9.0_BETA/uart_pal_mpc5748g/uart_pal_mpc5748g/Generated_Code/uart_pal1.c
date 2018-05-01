@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -36,26 +36,23 @@
 #include "uart_pal1.h"
 
 /* Instance structure is used for storing PAL instance information. */
-const uart_instance_t uart_pal1_instance = {
-    .instType          = UART_INST_TYPE_LINFLEXD,
-    .instIdx           = 2U
-};
+const uart_instance_t uart_pal1_instance = {.instType = UART_INST_TYPE_LINFLEXD,
+                                            .instIdx = 2U};
 
 /* Serial User Configurations */
 const uart_user_config_t uart_pal1_Config0 = {
-    .baudRate         = 9600,
-    .bitCount         = UART_8_BITS_PER_CHAR,
-    .parityMode       = UART_PARITY_DISABLED,
-    .stopBitCount     = UART_ONE_STOP_BIT,
-    .transferType     = UART_USING_INTERRUPTS,
-    .rxDMAChannel     = 0U,
-    .txDMAChannel     = 0U,
-    .rxCallback       = NULL,
-    .rxCallbackParam  = NULL,
-    .txCallback       = NULL,
-    .txCallbackParam  = NULL,
-    .extension        = NULL
-};
+    .baudRate = 9600,
+    .bitCount = UART_8_BITS_PER_CHAR,
+    .parityMode = UART_PARITY_DISABLED,
+    .stopBitCount = UART_ONE_STOP_BIT,
+    .transferType = UART_USING_INTERRUPTS,
+    .rxDMAChannel = 0U,
+    .txDMAChannel = 0U,
+    .rxCallback = NULL,
+    .rxCallbackParam = NULL,
+    .txCallback = NULL,
+    .txCallbackParam = NULL,
+    .extension = NULL};
 
 /* END uart_pal1. */
 /*!

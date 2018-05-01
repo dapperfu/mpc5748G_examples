@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -40,8 +40,9 @@
  *
  *
  * @section [global]
- * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made static.
- * The external variables will be used in other source files in application code.
+ * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made
+ * static. The external variables will be used in other source files in
+ * application code.
  *
  */
 
@@ -53,13 +54,11 @@ usdhc_state_t usdhc1_State;
 static uint8_t usdhc1_admaTable0[4096] = {0};
 
 /* uSDHC User Configurations */
-usdhc_config_t usdhc1_Config0 = {
-    .cardDetectDat3  = true,
-    .endianMode      = uSDHC_ENDIAN_MODE_LITTLE,
-    .dmaMode         = uSDHC_DMA_MODE_ADMA2,
-    .admaTable       = usdhc1_admaTable0,
-    .admaTableSize   = 4096U
-};
+usdhc_config_t usdhc1_Config0 = {.cardDetectDat3 = true,
+                                 .endianMode = uSDHC_ENDIAN_MODE_LITTLE,
+                                 .dmaMode = uSDHC_DMA_MODE_ADMA2,
+                                 .admaTable = usdhc1_admaTable0,
+                                 .admaTableSize = 4096U};
 
 /* END usdhc1. */
 /*!

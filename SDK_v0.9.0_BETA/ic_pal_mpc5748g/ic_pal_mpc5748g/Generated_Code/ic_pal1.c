@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -39,62 +39,49 @@
  * @page misra_violations MISRA-C:2012 violations
  *
  * @section [global]
- * Violates MISRA 2012 Required Rule 8.4, external symbol defined without a prior
- * declaration.
- * The symbols are declared in the driver header as external; the header is not included
- * by this file.
+ * Violates MISRA 2012 Required Rule 8.4, external symbol defined without a
+ * prior declaration. The symbols are declared in the driver header as external;
+ * the header is not included by this file.
  *
  * @section [global]
- * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made static.
- * The external variable will be used in other source files in application code.
+ * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made
+ * static. The external variable will be used in other source files in
+ * application code.
  */
 
 #include "ic_pal1.h"
 
-
-
 /*! @brief PAL instance information */
-const ic_instance_t ic_pal1_instance = { IC_INST_TYPE_EMIOS, 0U };
+const ic_instance_t ic_pal1_instance = {IC_INST_TYPE_EMIOS, 0U};
 
 /*! @brief Channel configuration array */
-ic_input_ch_param_t ic_pal1_ChnConfig[1] =
-{
+ic_input_ch_param_t ic_pal1_ChnConfig[1] = {
     /* Channel configuration 0 */
-    {
-         .hwChannelId           = 4U,
-         .inputCaptureMode      = IC_MEASURE_RISING_EDGE_PERIOD,
-         .filterEn              = false,
-         .filterValue           = 0U,
-         .channelExtension      = &ic_pal1_emiosChnExtension0,
-         .channelCallbackParams = NULL,
-         .channelCallbacks      = ic_pal1_channel_callBack0
-    }
-};
+    {.hwChannelId = 4U,
+     .inputCaptureMode = IC_MEASURE_RISING_EDGE_PERIOD,
+     .filterEn = false,
+     .filterValue = 0U,
+     .channelExtension = &ic_pal1_emiosChnExtension0,
+     .channelCallbackParams = NULL,
+     .channelCallbacks = ic_pal1_channel_callBack0}};
 
-
-channel_extension_emios_for_ic_t ic_pal1_emiosChnExtension0 =
-{
-    .timebase            = IC_BUS_SEL_B, /*!< Counter bus selected */
-    .prescaler           = IC_CLOCK_DIVID_BY_3, /*!< Internal prescaler, pre-scale channel clock by internalPrescaler + 1 */
+channel_extension_emios_for_ic_t ic_pal1_emiosChnExtension0 = {
+    .timebase = IC_BUS_SEL_B,         /*!< Counter bus selected */
+    .prescaler = IC_CLOCK_DIVID_BY_3, /*!< Internal prescaler, pre-scale channel
+                                         clock by internalPrescaler + 1 */
 };
 
 /*! @brief IP specific extension configuration */
-extension_emios_for_ic_t ic_pal1_emiosExtension =
-{
-    .clkDivVal             = 1U,
+extension_emios_for_ic_t ic_pal1_emiosExtension = {
+    .clkDivVal = 1U,
     .enableGlobalPrescaler = true,
-    .enableGlobalTimeBase  = false,
+    .enableGlobalTimeBase = false,
 };
-
 
 /*! @brief Input capture configuration */
-ic_config_t ic_pal1_InitConfig =
-{
-    .nNumChannels  = 1U,
-    .inputChConfig = ic_pal1_ChnConfig,
-    .extension     = &ic_pal1_emiosExtension
-};
-
+ic_config_t ic_pal1_InitConfig = {.nNumChannels = 1U,
+                                  .inputChConfig = ic_pal1_ChnConfig,
+                                  .extension = &ic_pal1_emiosExtension};
 
 /* END ic_pal1. */
 

@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -41,9 +41,9 @@
  * @page misra_violations MISRA-C:2012 violations
  *
  * @section [global]
- * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made static.
- * The external variables will be used in other source files that user initialize
- * to use this module.
+ * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made
+ * static. The external variables will be used in other source files that user
+ * initialize to use this module.
  */
 
 #include "dmaController1.h"
@@ -52,29 +52,24 @@ edma_state_t dmaController1_State;
 
 edma_chn_state_t dmaController1Chn0_State;
 
-edma_chn_state_t * const edmaChnStateArray[] = {
-    &dmaController1Chn0_State
-};
+edma_chn_state_t *const edmaChnStateArray[] = {&dmaController1Chn0_State};
 
 edma_channel_config_t dmaController1Chn0_Config = {
     .channelPriority = EDMA_CHN_DEFAULT_PRIORITY,
     .virtChnConfig = EDMA_CHN0_NUMBER,
     .source = EDMA_REQ_DISABLED_MUX0,
     .callback = NULL,
-    .callbackParam = NULL
-};
+    .callbackParam = NULL};
 
-const edma_channel_config_t * const edmaChnConfigArray[] = {
-    &dmaController1Chn0_Config
-};
+const edma_channel_config_t *const edmaChnConfigArray[] = {
+    &dmaController1Chn0_Config};
 
 const edma_user_config_t dmaController1_InitConfig0 = {
-  .chnArbitration = EDMA_ARBITRATION_FIXED_PRIORITY,
-  .groupArbitration = EDMA_ARBITRATION_FIXED_PRIORITY,
-  .groupPriority = EDMA_GRP0_PRIO_LOW_GRP1_PRIO_HIGH,
-  .haltOnError = false,
+    .chnArbitration = EDMA_ARBITRATION_FIXED_PRIORITY,
+    .groupArbitration = EDMA_ARBITRATION_FIXED_PRIORITY,
+    .groupPriority = EDMA_GRP0_PRIO_LOW_GRP1_PRIO_HIGH,
+    .haltOnError = false,
 };
-
 
 /* END dmaController1. */
 

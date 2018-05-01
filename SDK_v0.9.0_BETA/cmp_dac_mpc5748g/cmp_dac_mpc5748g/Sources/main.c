@@ -43,7 +43,6 @@
 */
 /* MODULE main */
 
-
 /* Including needed modules to compile this module/procedure */
 #include "Cpu.h"
 #include "clockMan1.h"
@@ -51,26 +50,27 @@
 #include "pin_mux.h"
 
 volatile int exit_code = 0;
-/* User includes (#include below this line is not maintained by Processor Expert) */
-#include <stdint.h>
+/* User includes (#include below this line is not maintained by Processor
+ * Expert) */
 #include <stdbool.h>
+#include <stdint.h>
 
-/* This example is setup to work by default with DEVKIT. To use it with other boards
-   please comment the following line
+/* This example is setup to work by default with DEVKIT. To use it with other
+   boards please comment the following line
 */
 #define DEVKIT
 
 #ifdef DEVKIT
-	#define LED1 4	/* GPIO 148 - pin PJ[4] - LED1 (DS9) on DEV-KIT */
-	#define LED1_PORT PTJ
-	#define LED2 0	/* GPIO 0 - pin PA[0] - LED1 (DS10) on DEV-KIT */
-	#define LED2_PORT PTA
+#define LED1 4 /* GPIO 148 - pin PJ[4] - LED1 (DS9) on DEV-KIT */
+#define LED1_PORT PTJ
+#define LED2 0 /* GPIO 0 - pin PA[0] - LED1 (DS10) on DEV-KIT */
+#define LED2_PORT PTA
 
 #else
-	#define LED1 2	/* GPIO 98 - pin PG[2] - LED1 (DS2) on Motherboard */
-	#define LED1_PORT PTG
-	#define LED2 3	/* GPIO 99 - pin PG[3] - LED1 (DS3) on Motherboard */
-	#define LED2_PORT PTG
+#define LED1 2 /* GPIO 98 - pin PG[2] - LED1 (DS2) on Motherboard */
+#define LED1_PORT PTG
+#define LED2 3 /* GPIO 99 - pin PG[3] - LED1 (DS3) on Motherboard */
+#define LED2_PORT PTG
 #endif
 
 /*! brief Comparator Interrupt Service routine
@@ -80,34 +80,32 @@ volatile int exit_code = 0;
  *  -   DS10 if Vin is lower than DAC voltage
  */
 
-void comparatorISR(void)
-{
-	/* Variable used to store comparator output flags */
-	cmp_output_trigger_t cmpOutputFlags;
-	/* Get output flags */
-	CMP_DRV_GetOutputFlags(INST_COMPARATOR1, &cmpOutputFlags);
+void comparatorISR(void) {
+  /* Variable used to store comparator output flags */
+  cmp_output_trigger_t cmpOutputFlags;
+  /* Get output flags */
+  CMP_DRV_GetOutputFlags(INST_COMPARATOR1, &cmpOutputFlags);
 
-	 switch(cmpOutputFlags)
-	    {
-	    /* Vin is greater than DAC voltage */
-	    case CMP_FALLING_EDGE:
-	        /* Light the RED led */
-	        PINS_DRV_ClearPins(LED1_PORT, (1 << LED1));
-	        PINS_DRV_SetPins(LED2_PORT, (1 << LED2));
-	        break;
-	    /* Vin is lower than DAC voltage */
-	    case CMP_RISING_EDGE:
-	        PINS_DRV_ClearPins(LED2_PORT, (1 << LED2));
-	        PINS_DRV_SetPins(LED1_PORT, (1 << LED1));
-	        break;
-	    default:
-	        /* Light both LEDs */
-	        PINS_DRV_ClearPins(LED1_PORT, 1 << LED1);
-	        PINS_DRV_ClearPins(LED2_PORT, 1 << LED2);
-	        break;
-	    }
+  switch (cmpOutputFlags) {
+  /* Vin is greater than DAC voltage */
+  case CMP_FALLING_EDGE:
+    /* Light the RED led */
+    PINS_DRV_ClearPins(LED1_PORT, (1 << LED1));
+    PINS_DRV_SetPins(LED2_PORT, (1 << LED2));
+    break;
+  /* Vin is lower than DAC voltage */
+  case CMP_RISING_EDGE:
+    PINS_DRV_ClearPins(LED2_PORT, (1 << LED2));
+    PINS_DRV_SetPins(LED1_PORT, (1 << LED1));
+    break;
+  default:
+    /* Light both LEDs */
+    PINS_DRV_ClearPins(LED1_PORT, 1 << LED1);
+    PINS_DRV_ClearPins(LED2_PORT, 1 << LED2);
+    break;
+  }
 
-	CMP_DRV_ClearOutputFlags(INST_COMPARATOR1);
+  CMP_DRV_ClearOutputFlags(INST_COMPARATOR1);
 }
 
 /*!
@@ -116,38 +114,38 @@ void comparatorISR(void)
  * - startup asm routine
  * - main()
 */
-int main(void)
-{
-  /* Write your local variable definition here */
+int main(void) {
+/* Write your local variable definition here */
 
-  /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
-  #ifdef PEX_RTOS_INIT
-    PEX_RTOS_INIT();                   /* Initialization of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
+/*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
+#ifdef PEX_RTOS_INIT
+  PEX_RTOS_INIT(); /* Initialization of the selected RTOS. Macro is defined by
+                      the RTOS component. */
+#endif
   /*** End of Processor Expert internal initialization.                    ***/
 
   /* Initialize and configure clocks
-  *  -   see clock manager component for details
-  */
+   *  -   see clock manager component for details
+   */
   CLOCK_SYS_Init(g_clockManConfigsArr, CLOCK_MANAGER_CONFIG_CNT,
-			g_clockManCallbacksArr, CLOCK_MANAGER_CALLBACK_CNT);
+                 g_clockManCallbacksArr, CLOCK_MANAGER_CALLBACK_CNT);
   CLOCK_SYS_UpdateConfiguration(0U, CLOCK_MANAGER_POLICY_AGREEMENT);
 
   /* Initialize pins
-  *  -   Setup input pins for Comparator
-  *  -   Setup output pins for LED
-  *  -   See PinSettings component for more info
-  */
+   *  -   Setup input pins for Comparator
+   *  -   Setup output pins for LED
+   *  -   See PinSettings component for more info
+   */
   PINS_DRV_Init(NUM_OF_CONFIGURED_PINS, g_pin_mux_InitConfigArr);
   PINS_DRV_SetPins(LED1_PORT, 1 << LED1);
   PINS_DRV_SetPins(LED2_PORT, 1 << LED2);
   /* Initialize Comparator
-  *  -   Positive source from AIN0
-  *  -   Negative source from internal DAC with half the reference voltage
-  *  5V/2 = 2.5V(For EVB). For other boards please contact the boards reference
-  *  manual.
-  *  -   Output interrupt enabled for both edges
-  */
+   *  -   Positive source from AIN0
+   *  -   Negative source from internal DAC with half the reference voltage
+   *  5V/2 = 2.5V(For EVB). For other boards please contact the boards reference
+   *  manual.
+   *  -   Output interrupt enabled for both edges
+   */
   CMP_DRV_Init(INST_COMPARATOR1, &cmp_general_config);
 
   /* Install Comparator interrupt handler */
@@ -155,15 +153,18 @@ int main(void)
   /* Enable Comparator interrupt */
   INT_SYS_EnableIRQ(CMP0_IRQn);
 
-  /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
-  /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
-  #ifdef PEX_RTOS_START
-    PEX_RTOS_START();                  /* Startup of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
+/*** Don't write any code pass this line, or it will be deleted during code
+ * generation. ***/
+/*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component.
+ * DON'T MODIFY THIS CODE!!! ***/
+#ifdef PEX_RTOS_START
+  PEX_RTOS_START(); /* Startup of the selected RTOS. Macro is defined by the
+                       RTOS component. */
+#endif
   /*** End of RTOS startup code.  ***/
   /*** Processor Expert end of main routine. DON'T MODIFY THIS CODE!!! ***/
-  for(;;) {
-    if(exit_code != 0) {
+  for (;;) {
+    if (exit_code != 0) {
       break;
     }
   }

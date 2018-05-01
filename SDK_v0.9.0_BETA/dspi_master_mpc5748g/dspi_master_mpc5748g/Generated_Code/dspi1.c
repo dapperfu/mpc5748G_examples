@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -48,22 +48,20 @@
 /*Define state structure for current DSPI instance */
 dspi_state_t dspi1State;
 /* SPI Master Configurations */
-dspi_master_config_t dspi1_MasterInitConfig0 =
-{
-    .bitsPerSec              = 500000,
-    .pcsPolarity             = DSPI_ACTIVE_LOW,
-    .bitcount                = 8,
-    .clkPhase                = DSPI_CLOCK_PHASE_1ST_EDGE,
-    .clkPolarity             = DSPI_ACTIVE_HIGH,
-    .lsbFirst                = false,
-    .transferType            = DSPI_USING_INTERRUPTS,
-    .rxDMAChannel            = 255U,
-    .txDMAChannel            = 255U,
-    .callback                = NULL,
-    .callbackParam           = NULL,
-    .continuousPCS           = false,
-    .whichPCS                = 0
-};
+dspi_master_config_t dspi1_MasterInitConfig0 = {
+    .bitsPerSec = 500000,
+    .pcsPolarity = DSPI_ACTIVE_LOW,
+    .bitcount = 8,
+    .clkPhase = DSPI_CLOCK_PHASE_1ST_EDGE,
+    .clkPolarity = DSPI_ACTIVE_HIGH,
+    .lsbFirst = false,
+    .transferType = DSPI_USING_INTERRUPTS,
+    .rxDMAChannel = 255U,
+    .txDMAChannel = 255U,
+    .callback = NULL,
+    .callbackParam = NULL,
+    .continuousPCS = false,
+    .whichPCS = 0};
 
 /* SPI Slave Configurations */
 /* END dspi1. */
@@ -79,5 +77,3 @@ dspi_master_config_t dspi1_MasterInitConfig0 =
 **
 ** ###################################################################
 */
-
-

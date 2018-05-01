@@ -43,46 +43,45 @@
 */
 /* MODULE main */
 
-
 /* Including needed modules to compile this module/procedure */
 #include "Cpu.h"
-#include "swt1.h"
 #include "clockMan1.h"
 #include "pin_mux.h"
+#include "swt1.h"
 
-  volatile int exit_code = 0;
-/* User includes (#include below this line is not maintained by Processor Expert) */
-#include <stdint.h>
+volatile int exit_code = 0;
+/* User includes (#include below this line is not maintained by Processor
+ * Expert) */
 #include <stdbool.h>
+#include <stdint.h>
 
-/* This example is setup to work by default with DEVKIT. To use it with other boards
-   please comment the following line
+/* This example is setup to work by default with DEVKIT. To use it with other
+   boards please comment the following line
 */
 #define DEVKIT
 
 #ifdef DEVKIT
-    #define ON           0U     /* LED ON */
-    #define OFF          1U     /* LED OFF */
-    #define LED_GPIO     PTJ    /* GPIO type */
-    #define LED          4U     /* pin PJ[4] - LED1 (DS9) on DEV-KIT */
+#define ON 0U        /* LED ON */
+#define OFF 1U       /* LED OFF */
+#define LED_GPIO PTJ /* GPIO type */
+#define LED 4U       /* pin PJ[4] - LED1 (DS9) on DEV-KIT */
 #else
-    #define ON           0U     /* LED ON */
-    #define OFF          1U     /* LED OFF */
-    #define LED_GPIO     PTG    /* GPIO type */
-    #define LED          2U     /* pin PG[2] - LED1 (DS2) on Motherboard */
+#define ON 0U        /* LED ON */
+#define OFF 1U       /* LED OFF */
+#define LED_GPIO PTG /* GPIO type */
+#define LED 2U       /* pin PG[2] - LED1 (DS2) on Motherboard */
 #endif
 
 /*!
  * @brief ISR for SWT timeout interrupt
  */
-void SWT_ISR(void)
-{
-    /* Clear SWT interrupt flag */
-    SWT_DRV_ClearIntFlag(INST_SWT1);
-    /* Service SWT 0 */
-    SWT_DRV_Service(INST_SWT1);
-    /* Toggle output value LED */
-    PINS_DRV_TogglePins(LED_GPIO, (1U << LED));
+void SWT_ISR(void) {
+  /* Clear SWT interrupt flag */
+  SWT_DRV_ClearIntFlag(INST_SWT1);
+  /* Service SWT 0 */
+  SWT_DRV_Service(INST_SWT1);
+  /* Toggle output value LED */
+  PINS_DRV_TogglePins(LED_GPIO, (1U << LED));
 }
 
 /*!
@@ -91,42 +90,46 @@ void SWT_ISR(void)
  * - startup asm routine
  * - main()
 */
-int main(void)
-{
+int main(void) {
   /* Write your local variable definition here */
-    IRQn_Type swtIrqId[SWT_INSTANCE_COUNT] = SWT_IRQS;
+  IRQn_Type swtIrqId[SWT_INSTANCE_COUNT] = SWT_IRQS;
 
-  /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
-  #ifdef PEX_RTOS_INIT
-    PEX_RTOS_INIT();                   /* Initialization of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
+/*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
+#ifdef PEX_RTOS_INIT
+  PEX_RTOS_INIT(); /* Initialization of the selected RTOS. Macro is defined by
+                      the RTOS component. */
+#endif
   /*** End of Processor Expert internal initialization.                    ***/
 
-    /* Initialize clock module */
-    CLOCK_SYS_Init(g_clockManConfigsArr, CLOCK_MANAGER_CONFIG_CNT, g_clockManCallbacksArr, CLOCK_MANAGER_CALLBACK_CNT);
-    CLOCK_SYS_UpdateConfiguration(0U, CLOCK_MANAGER_POLICY_AGREEMENT);
+  /* Initialize clock module */
+  CLOCK_SYS_Init(g_clockManConfigsArr, CLOCK_MANAGER_CONFIG_CNT,
+                 g_clockManCallbacksArr, CLOCK_MANAGER_CALLBACK_CNT);
+  CLOCK_SYS_UpdateConfiguration(0U, CLOCK_MANAGER_POLICY_AGREEMENT);
 
-    /* Initialize LED configuration */
-    PINS_DRV_Init(NUM_OF_CONFIGURED_PINS, g_pin_mux_InitConfigArr);
+  /* Initialize LED configuration */
+  PINS_DRV_Init(NUM_OF_CONFIGURED_PINS, g_pin_mux_InitConfigArr);
 
-    /* LED off */
-    PINS_DRV_WritePin(LED_GPIO, LED, OFF);
+  /* LED off */
+  PINS_DRV_WritePin(LED_GPIO, LED, OFF);
 
-    /* Install the handler for SWT interrupt */
-    INT_SYS_InstallHandler(swtIrqId[INST_SWT1], SWT_ISR, (isr_t *)NULL);
+  /* Install the handler for SWT interrupt */
+  INT_SYS_InstallHandler(swtIrqId[INST_SWT1], SWT_ISR, (isr_t *)NULL);
 
-    /* Initialize Software Watchdog */
-    SWT_DRV_Init(INST_SWT1, &swt1_Config0);
+  /* Initialize Software Watchdog */
+  SWT_DRV_Init(INST_SWT1, &swt1_Config0);
 
-  /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
-  /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
-  #ifdef PEX_RTOS_START
-    PEX_RTOS_START();                  /* Startup of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
+/*** Don't write any code pass this line, or it will be deleted during code
+ * generation. ***/
+/*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component.
+ * DON'T MODIFY THIS CODE!!! ***/
+#ifdef PEX_RTOS_START
+  PEX_RTOS_START(); /* Startup of the selected RTOS. Macro is defined by the
+                       RTOS component. */
+#endif
   /*** End of RTOS startup code.  ***/
   /*** Processor Expert end of main routine. DON'T MODIFY THIS CODE!!! ***/
-  for(;;) {
-    if(exit_code != 0) {
+  for (;;) {
+    if (exit_code != 0) {
       break;
     }
   }

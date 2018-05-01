@@ -42,45 +42,42 @@
 */
 /* MODULE main */
 
-
 /* Including needed modules to compile this module/procedure */
 #include "Cpu.h"
 #include "clockMan1.h"
-#include "sai0.h"
-#include "sai1.h"
 #include "dmaController1.h"
 #include "pin_mux.h"
+#include "sai0.h"
+#include "sai1.h"
 
 #if CPU_INIT_CONFIG
-  #include "Init_Config.h"
+#include "Init_Config.h"
 #endif
 
 volatile int exit_code = 0;
-/* User includes (#include below this line is not maintained by Processor Expert) */
+/* User includes (#include below this line is not maintained by Processor
+ * Expert) */
 
 #define BUFF_SIZE 100
 
 uint16_t LeftData[BUFF_SIZE];
 uint16_t RightData[BUFF_SIZE];
-uint16_t* SendData[2] = {LeftData, RightData};
-uint16_t RecvBuff[BUFF_SIZE*2];
-uint16_t* RecvData[1] = {RecvBuff};
+uint16_t *SendData[2] = {LeftData, RightData};
+uint16_t RecvBuff[BUFF_SIZE * 2];
+uint16_t *RecvData[1] = {RecvBuff};
 bool CheckResult;
 
 /* check data from a certain index */
-bool CheckData(uint32_t from)
-{
-    uint32_t j = 0;
-    uint32_t i;
-    for (i = from; i < BUFF_SIZE; i++)
-    {
-        if (RecvBuff[j*2] != LeftData[i] || RecvBuff[j*2+1] != RightData[i])
-        {
-            return false;
-        }
-        j++;
+bool CheckData(uint32_t from) {
+  uint32_t j = 0;
+  uint32_t i;
+  for (i = from; i < BUFF_SIZE; i++) {
+    if (RecvBuff[j * 2] != LeftData[i] || RecvBuff[j * 2 + 1] != RightData[i]) {
+      return false;
     }
-    return true;
+    j++;
+  }
+  return true;
 }
 
 /*!
@@ -89,21 +86,20 @@ bool CheckData(uint32_t from)
  * - __start (startup asm routine)
  * - main()
 */
-int main(void)
-{
+int main(void) {
 /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
 #ifdef PEX_RTOS_INIT
-    PEX_RTOS_INIT();                 /* Initialization of the selected RTOS. Macro is defined by the RTOS component. */
+  PEX_RTOS_INIT(); /* Initialization of the selected RTOS. Macro is defined by
+                      the RTOS component. */
 #endif
-/*** End of Processor Expert internal initialization.                    ***/
+  /*** End of Processor Expert internal initialization.                    ***/
 
   /* initialize send data */
   uint32_t i;
 
-  for (i = 0; i < BUFF_SIZE; i++)
-  {
-      LeftData[i] = i*2;
-      RightData[i] = i*2+1;
+  for (i = 0; i < BUFF_SIZE; i++) {
+    LeftData[i] = i * 2;
+    RightData[i] = i * 2 + 1;
   }
   /* Initialize and configure clocks
    *    -   see clock manager component for details
@@ -114,7 +110,9 @@ int main(void)
   /* Initialize edma
    *    -   See edma component for more info
    */
-  EDMA_DRV_Init (&dmaController1_State, &dmaController1_InitConfig0, edmaChnStateArray, edmaChnConfigArray, EDMA_CONFIGURED_CHANNELS_COUNT);
+  EDMA_DRV_Init(&dmaController1_State, &dmaController1_InitConfig0,
+                edmaChnStateArray, edmaChnConfigArray,
+                EDMA_CONFIGURED_CHANNELS_COUNT);
   /* Initialize pins
    *    -   See PinSettings component for more info
    */
@@ -128,29 +126,32 @@ int main(void)
   SAI_DRV_TxInit(INST_SAI0, &sai0_InitConfig0, &sai0TxState);
 
   /* Call receive data first because rx is slave */
-  SAI_DRV_Receive(INST_SAI1, (uint8_t**) RecvData, BUFF_SIZE*2);
+  SAI_DRV_Receive(INST_SAI1, (uint8_t **)RecvData, BUFF_SIZE * 2);
   /* Send data from SAI0 to SAI1 */
-  SAI_DRV_Send(INST_SAI0, (const uint8_t**) SendData, BUFF_SIZE);
+  SAI_DRV_Send(INST_SAI0, (const uint8_t **)SendData, BUFF_SIZE);
   /* Wait for transfer complete */
-  while (SAI_DRV_GetReceivingStatus(INST_SAI1, NULL) == STATUS_BUSY)
-  {
+  while (SAI_DRV_GetReceivingStatus(INST_SAI1, NULL) == STATUS_BUSY) {
   }
 
   SAI_DRV_TxDeinit(INST_SAI0);
   SAI_DRV_RxDeinit(INST_SAI1);
 
-  /* Check if data is received properly, result of the check is stored in CheckResult */
+  /* Check if data is received properly, result of the check is stored in
+   * CheckResult */
   CheckResult = CheckData(0);
 
-  /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
-  /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
-  #ifdef PEX_RTOS_START
-    PEX_RTOS_START();                  /* Startup of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
+/*** Don't write any code pass this line, or it will be deleted during code
+ * generation. ***/
+/*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component.
+ * DON'T MODIFY THIS CODE!!! ***/
+#ifdef PEX_RTOS_START
+  PEX_RTOS_START(); /* Startup of the selected RTOS. Macro is defined by the
+                       RTOS component. */
+#endif
   /*** End of RTOS startup code.  ***/
   /*** Processor Expert end of main routine. DON'T MODIFY THIS CODE!!! ***/
-  for(;;) {
-    if(exit_code != 0) {
+  for (;;) {
+    if (exit_code != 0) {
       break;
     }
   }
@@ -170,4 +171,3 @@ int main(void)
 **
 ** ###################################################################
 */
-

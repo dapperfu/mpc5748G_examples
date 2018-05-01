@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -48,11 +48,10 @@
  * writing dynamic code is that the stack segment may be different from the data
  * segment.
  *
- * Violates MISRA 2012 Required Rule 8.4, external symbol defined without a prior
- * declaration.
- * The symbols are declared in the driver common file as external; they are needed
- * at driver initialization to install the correct interrupt handler, but are not
- * a part of the public API.
+ * Violates MISRA 2012 Required Rule 8.4, external symbol defined without a
+ * prior declaration. The symbols are declared in the driver common file as
+ * external; they are needed at driver initialization to install the correct
+ * interrupt handler, but are not a part of the public API.
  *
  * @section [global]
  * Violates MISRA 2012 Advisory Rule 8.7, Could be made static.
@@ -68,23 +67,21 @@
  * The cast is required to define a callback function.
  */
 
-
 const i2c_master_user_config_t i2c1_MasterConfig0 = {
-  .slaveAddress = 39U,
-  .baudRate = 200000U,
-  .transferType = I2C_USING_INTERRUPTS,
-  .dmaChannel = 0U,
-  .masterCallback = NULL,
-  .callbackParam = NULL,
+    .slaveAddress = 39U,
+    .baudRate = 200000U,
+    .transferType = I2C_USING_INTERRUPTS,
+    .dmaChannel = 0U,
+    .masterCallback = NULL,
+    .callbackParam = NULL,
 };
 
 i2c_slave_user_config_t i2c1_SlaveConfig0 = {
-  .slaveAddress = 39U,
-  .slaveListening = true,
-  .slaveCallback = i2c1_SlaveCallback0,
-  .callbackParam = NULL,
+    .slaveAddress = 39U,
+    .slaveListening = true,
+    .slaveCallback = i2c1_SlaveCallback0,
+    .callbackParam = NULL,
 };
-
 
 /* END i2c1. */
 

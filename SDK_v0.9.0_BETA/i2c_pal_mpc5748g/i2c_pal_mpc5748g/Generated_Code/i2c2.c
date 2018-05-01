@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -61,30 +61,24 @@
 /*! @brief PAL instance information */
 i2c_instance_t i2c2_instance = {I2C_INST_TYPE_I2C, 3U};
 
-i2c_master_t i2c2_MasterConfig0 =
-{
-    .slaveAddress        = 10,
-    .is10bitAddr         = false,
-    .baudRate            = 100000,
-    .transferType        = I2C_PAL_USING_INTERRUPTS,
-    .operatingMode       = I2C_PAL_STANDARD_MODE,
-    .dmaChannel1         = 255,
-    .dmaChannel2         = 255,
-    .callback            = NULL,
-    .callbackParam       = NULL,
-    .extension           = NULL
-};
+i2c_master_t i2c2_MasterConfig0 = {.slaveAddress = 10,
+                                   .is10bitAddr = false,
+                                   .baudRate = 100000,
+                                   .transferType = I2C_PAL_USING_INTERRUPTS,
+                                   .operatingMode = I2C_PAL_STANDARD_MODE,
+                                   .dmaChannel1 = 255,
+                                   .dmaChannel2 = 255,
+                                   .callback = NULL,
+                                   .callbackParam = NULL,
+                                   .extension = NULL};
 
-i2c_slave_t i2c2_SlaveConfig0 =
-{
-    .slaveAddress       = 0,
-    .is10bitAddr        = false,
-    .slaveListening     = true,
-    .transferType       = I2C_PAL_USING_INTERRUPTS,
-    .dmaChannel         = 255,
-    .callback           = NULL,
-    .callbackParam      = NULL
-};
+i2c_slave_t i2c2_SlaveConfig0 = {.slaveAddress = 0,
+                                 .is10bitAddr = false,
+                                 .slaveListening = true,
+                                 .transferType = I2C_PAL_USING_INTERRUPTS,
+                                 .dmaChannel = 255,
+                                 .callback = NULL,
+                                 .callbackParam = NULL};
 
 /* END i2c2. */
 
@@ -99,4 +93,3 @@ i2c_slave_t i2c2_SlaveConfig0 =
 **
 ** ###################################################################
 */
-

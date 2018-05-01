@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -39,35 +39,32 @@
  * @page misra_violations MISRA-C:2012 violations
  *
  * @section [global]
- * Violates MISRA 2012 Required Rule 8.4, external symbol defined without a prior
- * declaration.
- * The symbols are declared in the driver header as external; the header is not included
- * by this file.
+ * Violates MISRA 2012 Required Rule 8.4, external symbol defined without a
+ * prior declaration. The symbols are declared in the driver header as external;
+ * the header is not included by this file.
  *
  * @section [global]
- * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made static.
- * The external variable will be used in other source files in application code.
+ * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made
+ * static. The external variable will be used in other source files in
+ * application code.
  */
 
 #include "eMIOS1.h"
 
-
-
 /* eMIOS Output compare mode configuration structure for eMIOS1_OCChnConfig0 */
-emios_oc_param_t eMIOS1_OCChnConfig0 =
-{
-    EMIOS_MODE_SAOC,
-    EMIOS_BUS_SEL_F, /*!< Counter bus selected */
-    4000UL, /*!< Match value of leading edge in DAOC mode or Match value of compare mode in SAOC mode */
-    0UL, /*!< Match value of leading edge. Ignore if SAOC mode selected */
+emios_oc_param_t eMIOS1_OCChnConfig0 = {
+    EMIOS_MODE_SAOC, EMIOS_BUS_SEL_F, /*!< Counter bus selected */
+    4000UL, /*!< Match value of leading edge in DAOC mode or Match value of
+               compare mode in SAOC mode */
+    0UL,    /*!< Match value of leading edge. Ignore if SAOC mode selected */
     EMIOS_OUTPUT_ACTIVE_TOGGLE /*!< Output active positive / negative pulse */
 };
 /* eMIOS Output compare mode configuration structure for eMIOS1_OCChnConfig1 */
-emios_oc_param_t eMIOS1_OCChnConfig1 =
-{
+emios_oc_param_t eMIOS1_OCChnConfig1 = {
     EMIOS_MODE_DAOC_FSET_TRAILING_MATCH,
     EMIOS_BUS_SEL_F, /*!< Counter bus selected */
-    3000UL, /*!< Match value of leading edge in DAOC mode or Match value of compare mode in SAOC mode */
+    3000UL, /*!< Match value of leading edge in DAOC mode or Match value of
+               compare mode in SAOC mode */
     7000UL, /*!< Match value of leading edge. Ignore if SAOC mode selected */
     EMIOS_OUTPUT_ACTIVE_HIGH /*!< Output active positive / negative pulse */
 };

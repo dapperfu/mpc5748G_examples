@@ -12,7 +12,7 @@
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc.
 **     Copyright 2016-2017 NXP
 **     All Rights Reserved.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
 **     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 **     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -38,34 +38,29 @@
  * @page misra_violations MISRA-C:2012 violations
  *
  * @section [global]
- * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made static.
- * The external variables will be used in other source files, with the same initialized values.
+ * Violates MISRA 2012 Advisory Rule 8.7, External variable could be made
+ * static. The external variables will be used in other source files, with the
+ * same initialized values.
  */
 
-#include <stddef.h>
 #include "timing_pal1.h"
+#include <stddef.h>
 
 /*! @brief PAL instance information */
-const timing_instance_t timing_pal1_instance = { TIMING_INST_TYPE_PIT, 0U };
+const timing_instance_t timing_pal1_instance = {TIMING_INST_TYPE_PIT, 0U};
 
 /*! @brief Channel configuration array */
-timer_chan_config_t timing_pal1_channelConfigs[1] =
-{
+timer_chan_config_t timing_pal1_channelConfigs[1] = {
     /* Channel configuration 0 */
-    {
-         .channel        = 0U,
-         .chanType       = TIMER_CHAN_TYPE_CONTINUOUS,
-         .callback       = timing_pal1_channel_callBack0,
-         .callbackParam  = NULL
-    }
-};
+    {.channel = 0U,
+     .chanType = TIMER_CHAN_TYPE_CONTINUOUS,
+     .callback = timing_pal1_channel_callBack0,
+     .callbackParam = NULL}};
 /*! @brief Timer configuration */
-timer_config_t timing_pal1_InitConfig =
-{
-    .chanConfigArray     = timing_pal1_channelConfigs,
-    .numChan             = 1U,
-    .extension           = NULL
-};
+timer_config_t timing_pal1_InitConfig = {.chanConfigArray =
+                                             timing_pal1_channelConfigs,
+                                         .numChan = 1U,
+                                         .extension = NULL};
 
 /* END timing_pal1. */
 /*!

@@ -18,24 +18,28 @@
 
 /* Including needed modules to compile this module/procedure */
 #include "Cpu.h"
-#include "pin_mux.h"
-#include "i2c1.h"
-#include "dmaController1.h"
 #include "clockMan1.h"
+#include "dmaController1.h"
+#include "i2c1.h"
+#include "pin_mux.h"
 #include <devassert.h>
 
-/* User includes (#include below this line is not maintained by Processor Expert) */
-#include <string.h>
-#include <stdio.h>
-#include <stdint.h>
+/* User includes (#include below this line is not maintained by Processor
+ * Expert) */
 #include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <string.h>
 
 /* Definition of the data transfer size */
 #define TRANSFER_SIZE 16
 
 /* Initialization of slave buffers */
-uint8_t slaveTxBuffer[TRANSFER_SIZE] = {0x0, 0x1, 0x02, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8, 0x9, 0xa, 0xb, 0xc, 0xd, 0xe, 0xf};
-uint8_t slaveRxBuffer[TRANSFER_SIZE] = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0};
+uint8_t slaveTxBuffer[TRANSFER_SIZE] = {0x0, 0x1, 0x02, 0x3, 0x4, 0x5,
+                                        0x6, 0x7, 0x8,  0x9, 0xa, 0xb,
+                                        0xc, 0xd, 0xe,  0xf};
+uint8_t slaveRxBuffer[TRANSFER_SIZE] = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
+                                        0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0};
 
 /*!
  *  @brief I2C Slave Callback
@@ -49,19 +53,18 @@ uint8_t slaveRxBuffer[TRANSFER_SIZE] = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 
  *  will assign the buffer for TX or RX events.
  *  If an error event occurs, it will abort the current transfer.
  */
-void i2c1_SlaveCallback0(i2c_slave_event_t slaveEvent, void *userData)
-{
-	/* Get instance number from userData */
-	i2c_instance_t * instance;
-	instance = (i2c_instance_t *) userData;
+void i2c1_SlaveCallback0(i2c_slave_event_t slaveEvent, void *userData) {
+  /* Get instance number from userData */
+  i2c_instance_t *instance;
+  instance = (i2c_instance_t *)userData;
 
-	/* Check the event type:
-	 *  - set RX or TX buffers depending on the master request type
-	 */
-	if (slaveEvent == I2C_SLAVE_EVENT_RX_REQ)
-		I2C_SlaveSetRxBuffer(instance, slaveRxBuffer, TRANSFER_SIZE);
-	if (slaveEvent == I2C_SLAVE_EVENT_TX_REQ)
-		I2C_SlaveSetTxBuffer(instance, slaveTxBuffer, TRANSFER_SIZE);
+  /* Check the event type:
+   *  - set RX or TX buffers depending on the master request type
+   */
+  if (slaveEvent == I2C_SLAVE_EVENT_RX_REQ)
+    I2C_SlaveSetRxBuffer(instance, slaveRxBuffer, TRANSFER_SIZE);
+  if (slaveEvent == I2C_SLAVE_EVENT_TX_REQ)
+    I2C_SlaveSetTxBuffer(instance, slaveTxBuffer, TRANSFER_SIZE);
 }
 
 volatile int exit_code = 0;
@@ -73,88 +76,90 @@ volatile int exit_code = 0;
  * - main()
 */
 
-int main(void)
-{
-    /* Declaration of the I2C transfer buffer */
-    uint8_t masterTxBuffer[TRANSFER_SIZE];
-    /* Variable that is used to initialize the buffers */
-    uint8_t cnt;
-    bool isTransferOk = true;
+int main(void) {
+  /* Declaration of the I2C transfer buffer */
+  uint8_t masterTxBuffer[TRANSFER_SIZE];
+  /* Variable that is used to initialize the buffers */
+  uint8_t cnt;
+  bool isTransferOk = true;
 
-    /* Variable used for the loop that initializes the data buffer */
-    uint16_t i;
+  /* Variable used for the loop that initializes the data buffer */
+  uint16_t i;
 
-    /* Use as callback parameter for slave module the I2C instance number */
-    i2c1_SlaveConfig0.callbackParam = &i2c1_instance;
+  /* Use as callback parameter for slave module the I2C instance number */
+  i2c1_SlaveConfig0.callbackParam = &i2c1_instance;
 
-    /* Initialize and configure clocks
-     *  - Configure system clocks and dividers
-     *  - Configure LPI2C clock gating
-     *  -   see clock manager component for details
+  /* Initialize and configure clocks
+   *  - Configure system clocks and dividers
+   *  - Configure LPI2C clock gating
+   *  -   see clock manager component for details
+   */
+  CLOCK_SYS_Init(g_clockManConfigsArr, CLOCK_MANAGER_CONFIG_CNT,
+                 g_clockManCallbacksArr, CLOCK_MANAGER_CALLBACK_CNT);
+  CLOCK_SYS_UpdateConfiguration(0U, CLOCK_MANAGER_POLICY_FORCIBLE);
+
+  /* Initialize pins
+   *  - Configure I2C pins
+   *  -   See PinSettings component for more info
+   */
+  PINS_DRV_Init(NUM_OF_CONFIGURED_PINS, g_pin_mux_InitConfigArr);
+
+  /* Initialize I2C Master configuration
+   *  See I2C component for configuration details
+   */
+  I2C_MasterInit(&i2c2_instance, &i2c2_MasterConfig0);
+
+  /* Initialize I2C Master configuration
+   *  See I2C component for configuration details
+   */
+  I2C_SlaveInit(&i2c1_instance, &i2c1_SlaveConfig0);
+
+  /* Initialize the data buffer */
+  for (i = 0u; i < TRANSFER_SIZE; i++) {
+    masterTxBuffer[i] = i;
+  }
+
+  /* Send a packet of data to the bus slave */
+  (void)I2C_MasterSendDataBlocking(&i2c2_instance, masterTxBuffer,
+                                   TRANSFER_SIZE, true, 0xFFFF);
+
+  /* Check if transfer is completed with no errors */
+  for (cnt = 0U; cnt < TRANSFER_SIZE; cnt++) {
+    /* If the values are not equal, break the loop and set isTransferOk to false
      */
-    CLOCK_SYS_Init(g_clockManConfigsArr, CLOCK_MANAGER_CONFIG_CNT,
-                g_clockManCallbacksArr, CLOCK_MANAGER_CALLBACK_CNT);
-    CLOCK_SYS_UpdateConfiguration(0U, CLOCK_MANAGER_POLICY_FORCIBLE);
-
-    /* Initialize pins
-     *  - Configure I2C pins
-     *  -   See PinSettings component for more info
-     */
-    PINS_DRV_Init(NUM_OF_CONFIGURED_PINS, g_pin_mux_InitConfigArr);
-
-    /* Initialize I2C Master configuration
-     *  See I2C component for configuration details
-     */
-    I2C_MasterInit(&i2c2_instance, &i2c2_MasterConfig0);
-
-    /* Initialize I2C Master configuration
-     *  See I2C component for configuration details
-     */
-    I2C_SlaveInit(&i2c1_instance, &i2c1_SlaveConfig0);
-
-    /* Initialize the data buffer */
-    for (i = 0u; i < TRANSFER_SIZE; i++)
-    {
-        masterTxBuffer[i] = i;
+    if ((masterTxBuffer[cnt] != slaveRxBuffer[cnt])) {
+      isTransferOk = false;
+      break;
     }
+  }
 
-    /* Send a packet of data to the bus slave */
-    (void) I2C_MasterSendDataBlocking(&i2c2_instance, masterTxBuffer, TRANSFER_SIZE, true, 0xFFFF);
+  /* Cast isTransferOk to avoid "set but not used" warnings */
+  (void)isTransferOk;
 
-    /* Check if transfer is completed with no errors */
-    for (cnt = 0U; cnt < TRANSFER_SIZE; cnt++)
-    {
-        /* If the values are not equal, break the loop and set isTransferOk to false */
-        if((masterTxBuffer[cnt] != slaveRxBuffer[cnt]))
-        {
-            isTransferOk = false;
-            break;
-        }
-    }
+  /* End of the driver example */
 
-    /* Cast isTransferOk to avoid "set but not used" warnings */
-    (void)isTransferOk;
+/*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
+#ifdef PEX_RTOS_INIT
+  PEX_RTOS_INIT(); /* Initialization of the selected RTOS. Macro is defined by
+                      the RTOS component. */
+#endif
+/*** End of Processor Expert internal initialization.                    ***/
 
-    /* End of the driver example */
+/* Write your code here */
+/* For example: for(;;) { } */
 
-  /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
-  #ifdef PEX_RTOS_INIT
-    PEX_RTOS_INIT();                   /* Initialization of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
-  /*** End of Processor Expert internal initialization.                    ***/
-
-  /* Write your code here */
-  /* For example: for(;;) { } */
-
-  /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
-  /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
-  #ifdef PEX_RTOS_START
-    PEX_RTOS_START();                  /* Startup of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
+/*** Don't write any code pass this line, or it will be deleted during code
+ * generation. ***/
+/*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component.
+ * DON'T MODIFY THIS CODE!!! ***/
+#ifdef PEX_RTOS_START
+  PEX_RTOS_START(); /* Startup of the selected RTOS. Macro is defined by the
+                       RTOS component. */
+#endif
   /*** End of RTOS startup code.  ***/
   /*** Processor Expert end of main routine. DON'T MODIFY THIS CODE!!! ***/
-  for(;;) {
-    if(exit_code != 0) {
+  for (;;) {
+    if (exit_code != 0) {
       break;
     }
   }
