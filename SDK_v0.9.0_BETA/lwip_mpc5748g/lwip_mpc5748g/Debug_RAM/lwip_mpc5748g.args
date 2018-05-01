@@ -1,0 +1,13 @@
+"./Sources/main.o"
+"./Project_Settings/Startup_Code/startup_MPC5748G.o"
+"./Project_Settings/Startup_Code/interrupt_vectors.o"
+"./Project_Settings/Startup_Code/core0_intc_sw_handlers.o"
+-T
+"/home/jed/workspaceS32DS.Power.2017.R1/lwip_mpc5748g/lwip_mpc5748g/Project_Settings/Linker_Files/MPC5748G_ram.ld"
+-Wl,-Map,"lwip_mpc5748g.map"
+-Xlinker
+--gc-sections
+-mcpu=e200z4
+-specs=nosys.specs
+-mhard-float
+--sysroot="/opt/NXP/S32DS_Power_v2017.R1/Cross_Tools/powerpc-eabivle-4_9/powerpc-eabivle/newlib"

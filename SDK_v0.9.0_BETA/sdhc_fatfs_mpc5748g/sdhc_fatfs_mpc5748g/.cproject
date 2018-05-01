@@ -467,6 +467,9 @@
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Generated_Code&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Sources&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/src/clock/MPC57xx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/middleware/fatfs/source&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/middleware/fatfs&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/middleware/sdhc&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.dialect.std.1972513523" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.c99" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.warnings.extrawarn.1589970720" name="Extra warnings (-Wextra)" superClass="gnu.c.compiler.option.warnings.extrawarn" useByScannerDiscovery="false" value="true" valueType="boolean"/>
@@ -580,6 +583,9 @@
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Generated_Code&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Sources&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/src/clock/MPC57xx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/middleware/fatfs/source&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/middleware/fatfs&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/middleware/sdhc&quot;"/>
 								</option>
 							</tool>
 						</toolChain>
@@ -633,6 +639,9 @@
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Generated_Code&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Sources&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/src/clock/MPC57xx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/middleware/fatfs/source&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/middleware/fatfs&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/middleware/sdhc&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.dialect.std.1947846983" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.c99" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.misc.other.91814695" name="Other flags" superClass="gnu.c.compiler.option.misc.other" useByScannerDiscovery="false" value="-c -fmessage-length=0" valueType="string"/>
@@ -752,6 +761,9 @@
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Generated_Code&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Sources&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/src/clock/MPC57xx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/middleware/fatfs/source&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/middleware/fatfs&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/middleware/sdhc&quot;"/>
 								</option>
 							</tool>
 						</toolChain>

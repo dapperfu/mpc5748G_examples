@@ -141,7 +141,15 @@
 							<tool id="com.freescale.s32ds.cross.gnu.disassembler.381199949" name="Standard S32DS Disassembler" superClass="com.freescale.s32ds.cross.gnu.disassembler"/>
 							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.assembler.1800524357" name="SPT Assembler" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.assembler"/>
 							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.disassembler.368808188" name="SPT Disassembler" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.disassembler"/>
-							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.969848140" name="SPT Preprocessor" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor"/>
+							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.969848140" name="SPT Preprocessor" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor">
+								<option id="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.option.paths.1976125241" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.option.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices/MPC5748G/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices/MPC5748G/startup&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/inc&quot;"/>
+								</option>
+							</tool>
 						</toolChain>
 					</folderInfo>
 					<fileInfo id="com.freescale.s32ds.cross.gnu.e200.exe.debug.564269357.Project_Settings/Debugger/sema42_multicore_mpc5748g_z4_1_debug_ram.launch" name="sema42_multicore_mpc5748g_z4_1_debug_ram.launch" rcbsApplicability="disable" resourcePath="Project_Settings/Debugger/sema42_multicore_mpc5748g_z4_1_debug_ram.launch" toolsToInvoke=""/>
@@ -292,7 +300,15 @@
 							<tool id="com.freescale.s32ds.cross.gnu.disassembler.279816015" name="Standard S32DS Disassembler" superClass="com.freescale.s32ds.cross.gnu.disassembler"/>
 							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.assembler.157602116" name="SPT Assembler" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.assembler"/>
 							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.disassembler.1173149448" name="SPT Disassembler" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.disassembler"/>
-							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.1012222123" name="SPT Preprocessor" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor"/>
+							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.1012222123" name="SPT Preprocessor" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor">
+								<option id="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.option.paths.1051833570" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.option.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices/MPC5748G/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices/MPC5748G/startup&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/inc&quot;"/>
+								</option>
+							</tool>
 						</toolChain>
 					</folderInfo>
 					<fileInfo id="com.freescale.s32ds.cross.gnu.e200.exe.Debug_RAM.Project_Settings/Debugger/sema42_multicore_mpc5748g_z4_1_debug_flash.launch" name="sema42_multicore_mpc5748g_z4_1_debug_flash.launch" rcbsApplicability="disable" resourcePath="Project_Settings/Debugger/sema42_multicore_mpc5748g_z4_1_debug_flash.launch" toolsToInvoke=""/>

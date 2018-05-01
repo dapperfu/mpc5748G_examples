@@ -61,6 +61,7 @@
 									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/src/clock/MPC57xx&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/rtos/osif/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/pal/mpu/inc&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.dialect.std.1631315936" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1370504351" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
@@ -155,7 +156,17 @@
 							<tool id="com.freescale.s32ds.cross.gnu.disassembler.2113421611" name="Standard S32DS Disassembler" superClass="com.freescale.s32ds.cross.gnu.disassembler"/>
 							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.assembler.2064117676" name="SPT Assembler" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.assembler"/>
 							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.disassembler.934039050" name="SPT Disassembler" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.disassembler"/>
-							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.1029986709" name="SPT Preprocessor" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor"/>
+							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.1029986709" name="SPT Preprocessor" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor">
+								<option id="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.option.paths.1344528452" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.option.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/src/clock/MPC57xx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/pal/mpu/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices/MPC5748G/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices/MPC5748G/startup&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/inc&quot;"/>
+								</option>
+							</tool>
 						</toolChain>
 					</folderInfo>
 					<fileInfo id="com.freescale.s32ds.cross.gnu.e200.exe.Debug_FLASH.Debug_Configurations/mpu_pal_memory_protection_mpc5748g_debug_flash_pemicro.launch" name="mpu_pal_memory_protection_mpc5748g_debug_flash_pemicro.launch" rcbsApplicability="disable" resourcePath="Debug_Configurations/mpu_pal_memory_protection_mpc5748g_debug_ram_pemicro.launch" toolsToInvoke=""/>
@@ -231,6 +242,7 @@
 									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/src/clock/MPC57xx&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/rtos/osif/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/pal/mpu/inc&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.2145765700" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
@@ -322,7 +334,17 @@
 							<tool id="com.freescale.s32ds.cross.gnu.disassembler.1888457081" name="Standard S32DS Disassembler" superClass="com.freescale.s32ds.cross.gnu.disassembler"/>
 							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.assembler.394837135" name="SPT Assembler" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.assembler"/>
 							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.disassembler.472372204" name="SPT Disassembler" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.disassembler"/>
-							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.1288139716" name="SPT Preprocessor" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor"/>
+							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.1288139716" name="SPT Preprocessor" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor">
+								<option id="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.option.paths.2138427917" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.option.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/src/clock/MPC57xx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/pal/mpu/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices/MPC5748G/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices/MPC5748G/startup&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/inc&quot;"/>
+								</option>
+							</tool>
 						</toolChain>
 					</folderInfo>
 					<fileInfo id="com.freescale.s32ds.cross.gnu.e200.exe.Debug_RAM.Debug_Configurations/mpu_pal_memory_protection_mpc5748g_debug_ram_pemicro.launch" name="mpu_pal_memory_protection_mpc5748g_debug_ram_pemicro.launch" rcbsApplicability="disable" resourcePath="Project_Settings/Debugger/mpu_pal_memory_protection_mpc5748g_Debug.launch" toolsToInvoke=""/>

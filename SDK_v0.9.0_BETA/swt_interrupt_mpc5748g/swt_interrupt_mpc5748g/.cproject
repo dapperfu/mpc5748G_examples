@@ -155,7 +155,16 @@
 							<tool id="com.freescale.s32ds.cross.gnu.disassembler.2113421611" name="Standard S32DS Disassembler" superClass="com.freescale.s32ds.cross.gnu.disassembler"/>
 							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.assembler.2064117676" name="SPT Assembler" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.assembler"/>
 							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.disassembler.934039050" name="SPT Disassembler" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.disassembler"/>
-							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.755672164" name="SPT Preprocessor" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor"/>
+							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.755672164" name="SPT Preprocessor" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor">
+								<option id="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.option.paths.1917326992" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.option.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/src/clock/MPC57xx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices/MPC5748G/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices/MPC5748G/startup&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/inc&quot;"/>
+								</option>
+							</tool>
 						</toolChain>
 					</folderInfo>
 					<fileInfo id="com.freescale.s32ds.cross.gnu.e200.exe.debug.2047577174.Debug_Configurations/swt_interrupt_mpc5748g_debug_flash_pemicro.launch" name="swt_interrupt_mpc5748g_debug_flash_pemicro.launch" rcbsApplicability="disable" resourcePath="Debug_Configurations/swt_interrupt_mpc5748g_debug_ram_pemicro.launch" toolsToInvoke=""/>
@@ -322,7 +331,16 @@
 							<tool id="com.freescale.s32ds.cross.gnu.disassembler.1888457081" name="Standard S32DS Disassembler" superClass="com.freescale.s32ds.cross.gnu.disassembler"/>
 							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.assembler.394837135" name="SPT Assembler" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.assembler"/>
 							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.disassembler.472372204" name="SPT Disassembler" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.disassembler"/>
-							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.2134491867" name="SPT Preprocessor" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor"/>
+							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.2134491867" name="SPT Preprocessor" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor">
+								<option id="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.option.paths.1068643088" superClass="com.freescale.s32ds.cross.gnu.e200.tool.spt.preprocessor.option.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/src/clock/MPC57xx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices/MPC5748G/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices/MPC5748G/startup&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/inc&quot;"/>
+								</option>
+							</tool>
 						</toolChain>
 					</folderInfo>
 					<fileInfo id="com.freescale.s32ds.cross.gnu.e200.exe.Debug_RAM.Debug_Configurations/swt_interrupt_mpc5748g_debug_ram_pemicro.launch" name="swt_interrupt_mpc5748g_debug_ram_pemicro.launch" rcbsApplicability="disable" resourcePath="Project_Settings/Debugger/swt_interrupt_mpc5748g_Debug.launch" toolsToInvoke=""/>

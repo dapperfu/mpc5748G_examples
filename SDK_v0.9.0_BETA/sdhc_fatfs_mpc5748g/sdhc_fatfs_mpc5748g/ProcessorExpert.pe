@@ -6,7 +6,7 @@
     <ModificationStamp>40</ModificationStamp>
     <Date>2017-07-19</Date>
     <IDE>Eclipse IDE</IDE>
-    <PEversion>1.12.2.RT7_b1725-0712</PEversion>
+    <PEversion>1.12.2.RT7_b1743-0713</PEversion>
   </Header>
   <Options>
     <ProjectMainModule>main</ProjectMainModule>
@@ -53,7 +53,7 @@
     <ExpandedAll>true</ExpandedAll>
   </UserFolder>
   <CPU>
-    <Repository>file:/${ProcessorExpert_loc}/Repositories/SDK_MPC574x_04_Repository</Repository>
+    <Repository>file:/${ProcessorExpert_loc}/../../S32DS/S32_SDK_MPC574xx_BETA_0.9.0/tools/pex/Repositories/SDK_MPC574x_04_Repository</Repository>
     <BeanType>MPC5748G_176</BeanType>
     <Name>Cpu</Name>
     <CompNumb>2</CompNumb>
@@ -672,7 +672,7 @@
     </ItemState>
   </Configuration>
   <Bean>
-    <Repository>file:/${ProcessorExpert_loc}/Repositories/SDK_MPC574x_04_Repository</Repository>
+    <Repository>file:/${ProcessorExpert_loc}/../../S32DS/S32_SDK_MPC574xx_BETA_0.9.0/tools/pex/Repositories/SDK_MPC574x_04_Repository</Repository>
     <ComponentUUID>com.freescale.processorexpert.ksdk.osif</ComponentUUID>
     <BeanType>osif</BeanType>
     <Name>osif1</Name>
@@ -848,7 +848,7 @@
     <Events />
   </Bean>
   <Bean>
-    <Repository>file:/${ProcessorExpert_loc}/Repositories/SDK_MPC574x_04_Repository</Repository>
+    <Repository>file:/${ProcessorExpert_loc}/../../S32DS/S32_SDK_MPC574xx_BETA_0.9.0/tools/pex/Repositories/SDK_MPC574x_04_Repository</Repository>
     <ComponentUUID>com.freescale.processorexpert.ksdk.interrupt_manager</ComponentUUID>
     <BeanType>interrupt_manager</BeanType>
     <Name>intMan1</Name>
@@ -1042,7 +1042,7 @@
     </Events>
   </Bean>
   <Bean>
-    <Repository>file:/${ProcessorExpert_loc}/Repositories/SDK_MPC574x_04_Repository</Repository>
+    <Repository>file:/${ProcessorExpert_loc}/../../S32DS/S32_SDK_MPC574xx_BETA_0.9.0/tools/pex/Repositories/SDK_MPC574x_04_Repository</Repository>
     <ComponentUUID>com.freescale.processorexpert.ksdk.rtc_c55</ComponentUUID>
     <BeanType>rtc_c55</BeanType>
     <Name>rtcTimer1</Name>
@@ -1477,7 +1477,7 @@
     <Events />
   </Bean>
   <Bean>
-    <Repository>file:/${ProcessorExpert_loc}/Repositories/SDK_MPC574x_04_Repository</Repository>
+    <Repository>file:/${ProcessorExpert_loc}/../../S32DS/S32_SDK_MPC574xx_BETA_0.9.0/tools/pex/Repositories/SDK_MPC574x_04_Repository</Repository>
     <ComponentUUID>com.freescale.processorexpert.ksdk.usdhc</ComponentUUID>
     <BeanType>usdhc</BeanType>
     <Name>usdhc1</Name>
@@ -1533,6 +1533,14 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>usdhc1_State</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>usdhcCfg_WRITE_PROTECT</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>1</Index>
+        <Value>false</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>usdhcCfg</ItemSymbol>
@@ -1742,13 +1750,13 @@
         <UsrMethodName>uSDHC_DRV_Transfer</UsrMethodName>
       </ItemState>
       <ItemState>
-        <ItemSymbol>uSDHC_DRV_EnableWakeupEvent</ItemSymbol>
+        <ItemSymbol>uSDHC_DRV_EnableCardControl</ItemSymbol>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
         <Index>0</Index>
         <Value>true</Value>
         <LastSelection>true</LastSelection>
         <LastUserSel>always</LastUserSel>
-        <UsrMethodName>uSDHC_DRV_EnableWakeupEvent</UsrMethodName>
+        <UsrMethodName>uSDHC_DRV_EnableCardControl</UsrMethodName>
       </ItemState>
       <ItemState>
         <ItemSymbol>uSDHC_DRV_GetPresentStatusFlags</ItemSymbol>
@@ -1759,11 +1767,20 @@
         <LastUserSel>always</LastUserSel>
         <UsrMethodName>uSDHC_DRV_GetPresentStatusFlags</UsrMethodName>
       </ItemState>
+      <ItemState>
+        <ItemSymbol>uSDHC_DRV_EnableWakeupEvent</ItemSymbol>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>0</Index>
+        <Value>true</Value>
+        <LastSelection>true</LastSelection>
+        <LastUserSel>always</LastUserSel>
+        <UsrMethodName>uSDHC_DRV_EnableWakeupEvent</UsrMethodName>
+      </ItemState>
     </Methods>
     <Events />
   </Bean>
   <Bean>
-    <Repository>file:/${ProcessorExpert_loc}/Repositories/SDK_MPC574x_04_Repository</Repository>
+    <Repository>file:/${ProcessorExpert_loc}/../../S32DS/S32_SDK_MPC574xx_BETA_0.9.0/tools/pex/Repositories/SDK_MPC574x_04_Repository</Repository>
     <ComponentUUID>com.freescale.processorexpert.ksdk.sdhc</ComponentUUID>
     <BeanType>sdhc</BeanType>
     <Name>sdhc_middleware1</Name>
@@ -1842,7 +1859,7 @@
     <Events />
   </Bean>
   <Bean>
-    <Repository>file:/${ProcessorExpert_loc}/Repositories/SDK_MPC574x_04_Repository</Repository>
+    <Repository>file:/${ProcessorExpert_loc}/../../S32DS/S32_SDK_MPC574xx_BETA_0.9.0/tools/pex/Repositories/SDK_MPC574x_04_Repository</Repository>
     <ComponentUUID>com.freescale.processorexpert.ksdk.fatfs</ComponentUUID>
     <BeanType>fatfs</BeanType>
     <Name>fatfs_middleware1</Name>
@@ -1881,6 +1898,12 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>rtcTimer1</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Link2</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>osif1</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>Settings</ItemSymbol>
@@ -2199,7 +2222,7 @@
     <Events />
   </Bean>
   <Bean>
-    <Repository>file:/${ProcessorExpert_loc}/Repositories/SDK_MPC574x_04_Repository</Repository>
+    <Repository>file:/${ProcessorExpert_loc}/../../S32DS/S32_SDK_MPC574xx_BETA_0.9.0/tools/pex/Repositories/SDK_MPC574x_04_Repository</Repository>
     <ComponentUUID>com.freescale.processorexpert.ksdk.pinsettings</ComponentUUID>
     <BeanType>PinSettings</BeanType>
     <Name>pin_mux</Name>
@@ -38871,7 +38894,7 @@
     <Events />
   </Bean>
   <Bean>
-    <Repository>file:/${ProcessorExpert_loc}/Repositories/SDK_MPC574x_04_Repository</Repository>
+    <Repository>file:/${ProcessorExpert_loc}/../../S32DS/S32_SDK_MPC574xx_BETA_0.9.0/tools/pex/Repositories/SDK_MPC574x_04_Repository</Repository>
     <ComponentUUID>com.freescale.processorexpert.ksdk.clock_manager</ComponentUUID>
     <BeanType>clock_manager</BeanType>
     <Name>clockMan1</Name>
@@ -41091,6 +41114,453 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>Peripheral12_CLK0</ItemSymbol>
+        <Value>80 MHz</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral64_CLK_Grp0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Expanded>true</Expanded>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral64_CLKEnablePowerMode_0_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral64_CLKEnablePowerMode_1_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral64_CLKEnablePowerMode_2_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral64_CLKEnablePowerMode_3_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral64_CLKEnablePowerMode_4_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral64_CLKEnablePowerMode_5_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral64_CLKEnablePowerMode_6_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral64_CLKEnablePowerMode_7_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral64_CLKEnablePowerMode_8_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>1</Index>
+        <EnumSymbVal>Disabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral64_CLKEnablePowerMode_9_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral64_CLKEnablePowerMode_10_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral64_CLKEnablePowerMode__0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Value>true</Value>
+        <Expanded>true</Expanded>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral64_CLOCK_NAME0</ItemSymbol>
+        <Value>eMIOS0_CLK</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral64_MODULE_NAME0</ItemSymbol>
+        <Value>eMIOS</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral64_INTERFACE_CLOCK0</ItemSymbol>
+        <Value>FS80</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral64_INTERFACE_AUX_CLOCK0</ItemSymbol>
+        <Value />
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral64_CLOCK_SEL_20</ItemSymbol>
+        <Value>FS80</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral64_PROTOCOL_AUX_CLOCK0</ItemSymbol>
+        <Value />
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral64_FRAC_DIVIDER0</ItemSymbol>
+        <Value>/1</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral64_FRACTIONAL_DIVIDER_AUX0</ItemSymbol>
+        <Value />
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral64_CLK0</ItemSymbol>
+        <Value>80 MHz</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral65_CLK_Grp0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Expanded>true</Expanded>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral65_CLKEnablePowerMode_0_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral65_CLKEnablePowerMode_1_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral65_CLKEnablePowerMode_2_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral65_CLKEnablePowerMode_3_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral65_CLKEnablePowerMode_4_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral65_CLKEnablePowerMode_5_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral65_CLKEnablePowerMode_6_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral65_CLKEnablePowerMode_7_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral65_CLKEnablePowerMode_8_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>1</Index>
+        <EnumSymbVal>Disabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral65_CLKEnablePowerMode_9_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral65_CLKEnablePowerMode_10_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral65_CLKEnablePowerMode__0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Value>true</Value>
+        <Expanded>true</Expanded>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral65_CLOCK_NAME0</ItemSymbol>
+        <Value>eMIOS1_CLK</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral65_MODULE_NAME0</ItemSymbol>
+        <Value>eMIOS</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral65_INTERFACE_CLOCK0</ItemSymbol>
+        <Value>FS80</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral65_INTERFACE_AUX_CLOCK0</ItemSymbol>
+        <Value />
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral65_CLOCK_SEL_20</ItemSymbol>
+        <Value>FS80</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral65_PROTOCOL_AUX_CLOCK0</ItemSymbol>
+        <Value />
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral65_FRAC_DIVIDER0</ItemSymbol>
+        <Value>/1</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral65_FRACTIONAL_DIVIDER_AUX0</ItemSymbol>
+        <Value />
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral65_CLK0</ItemSymbol>
+        <Value>80 MHz</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral66_CLK_Grp0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Expanded>true</Expanded>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral66_CLKEnablePowerMode_0_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral66_CLKEnablePowerMode_1_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral66_CLKEnablePowerMode_2_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral66_CLKEnablePowerMode_3_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral66_CLKEnablePowerMode_4_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral66_CLKEnablePowerMode_5_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral66_CLKEnablePowerMode_6_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral66_CLKEnablePowerMode_7_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral66_CLKEnablePowerMode_8_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>1</Index>
+        <EnumSymbVal>Disabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral66_CLKEnablePowerMode_9_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral66_CLKEnablePowerMode_10_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
+        <Index>0</Index>
+        <EnumSymbVal>Enabled</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral66_CLKEnablePowerMode__0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Value>true</Value>
+        <Expanded>true</Expanded>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral66_CLOCK_NAME0</ItemSymbol>
+        <Value>eMIOS2_CLK</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral66_MODULE_NAME0</ItemSymbol>
+        <Value>eMIOS</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral66_INTERFACE_CLOCK0</ItemSymbol>
+        <Value>FS80</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral66_INTERFACE_AUX_CLOCK0</ItemSymbol>
+        <Value />
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral66_CLOCK_SEL_20</ItemSymbol>
+        <Value>FS80</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral66_PROTOCOL_AUX_CLOCK0</ItemSymbol>
+        <Value />
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral66_FRAC_DIVIDER0</ItemSymbol>
+        <Value>/1</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral66_FRACTIONAL_DIVIDER_AUX0</ItemSymbol>
+        <Value />
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Peripheral66_CLK0</ItemSymbol>
         <Value>80 MHz</Value>
       </ItemState>
       <ItemState>
@@ -49069,453 +49539,6 @@
         <Value>40 MHz</Value>
       </ItemState>
       <ItemState>
-        <ItemSymbol>Peripheral64_CLK_Grp0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Expanded>true</Expanded>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral64_CLKEnablePowerMode_0_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral64_CLKEnablePowerMode_1_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral64_CLKEnablePowerMode_2_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral64_CLKEnablePowerMode_3_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral64_CLKEnablePowerMode_4_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral64_CLKEnablePowerMode_5_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral64_CLKEnablePowerMode_6_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral64_CLKEnablePowerMode_7_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral64_CLKEnablePowerMode_8_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>1</Index>
-        <EnumSymbVal>Disabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral64_CLKEnablePowerMode_9_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral64_CLKEnablePowerMode_10_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral64_CLKEnablePowerMode__0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Value>true</Value>
-        <Expanded>true</Expanded>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral64_CLOCK_NAME0</ItemSymbol>
-        <Value>eMIOS0_CLK</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral64_MODULE_NAME0</ItemSymbol>
-        <Value>eMIOS</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral64_INTERFACE_CLOCK0</ItemSymbol>
-        <Value>FS80</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral64_INTERFACE_AUX_CLOCK0</ItemSymbol>
-        <Value />
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral64_CLOCK_SEL_20</ItemSymbol>
-        <Value>FS80</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral64_PROTOCOL_AUX_CLOCK0</ItemSymbol>
-        <Value />
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral64_FRAC_DIVIDER0</ItemSymbol>
-        <Value>/1</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral64_FRACTIONAL_DIVIDER_AUX0</ItemSymbol>
-        <Value />
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral64_CLK0</ItemSymbol>
-        <Value>80 MHz</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral65_CLK_Grp0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Expanded>true</Expanded>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral65_CLKEnablePowerMode_0_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral65_CLKEnablePowerMode_1_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral65_CLKEnablePowerMode_2_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral65_CLKEnablePowerMode_3_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral65_CLKEnablePowerMode_4_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral65_CLKEnablePowerMode_5_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral65_CLKEnablePowerMode_6_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral65_CLKEnablePowerMode_7_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral65_CLKEnablePowerMode_8_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>1</Index>
-        <EnumSymbVal>Disabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral65_CLKEnablePowerMode_9_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral65_CLKEnablePowerMode_10_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral65_CLKEnablePowerMode__0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Value>true</Value>
-        <Expanded>true</Expanded>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral65_CLOCK_NAME0</ItemSymbol>
-        <Value>eMIOS1_CLK</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral65_MODULE_NAME0</ItemSymbol>
-        <Value>eMIOS</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral65_INTERFACE_CLOCK0</ItemSymbol>
-        <Value>FS80</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral65_INTERFACE_AUX_CLOCK0</ItemSymbol>
-        <Value />
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral65_CLOCK_SEL_20</ItemSymbol>
-        <Value>FS80</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral65_PROTOCOL_AUX_CLOCK0</ItemSymbol>
-        <Value />
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral65_FRAC_DIVIDER0</ItemSymbol>
-        <Value>/1</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral65_FRACTIONAL_DIVIDER_AUX0</ItemSymbol>
-        <Value />
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral65_CLK0</ItemSymbol>
-        <Value>80 MHz</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral66_CLK_Grp0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Expanded>true</Expanded>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral66_CLKEnablePowerMode_0_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral66_CLKEnablePowerMode_1_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral66_CLKEnablePowerMode_2_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral66_CLKEnablePowerMode_3_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral66_CLKEnablePowerMode_4_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral66_CLKEnablePowerMode_5_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral66_CLKEnablePowerMode_6_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral66_CLKEnablePowerMode_7_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral66_CLKEnablePowerMode_8_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>1</Index>
-        <EnumSymbVal>Disabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral66_CLKEnablePowerMode_9_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral66_CLKEnablePowerMode_10_0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <TypeSpecNameState>typeClockEnaDis</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>Enabled</EnumSymbVal>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral66_CLKEnablePowerMode__0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Value>true</Value>
-        <Expanded>true</Expanded>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral66_CLOCK_NAME0</ItemSymbol>
-        <Value>eMIOS2_CLK</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral66_MODULE_NAME0</ItemSymbol>
-        <Value>eMIOS</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral66_INTERFACE_CLOCK0</ItemSymbol>
-        <Value>FS80</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral66_INTERFACE_AUX_CLOCK0</ItemSymbol>
-        <Value />
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral66_CLOCK_SEL_20</ItemSymbol>
-        <Value>FS80</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral66_PROTOCOL_AUX_CLOCK0</ItemSymbol>
-        <Value />
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral66_FRAC_DIVIDER0</ItemSymbol>
-        <Value>/1</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral66_FRACTIONAL_DIVIDER_AUX0</ItemSymbol>
-        <Value />
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>Peripheral66_CLK0</ItemSymbol>
-        <Value>80 MHz</Value>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>SystemClockGrp0</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -51210,6 +51233,22 @@
         <Value>160000000</Value>
       </ItemState>
       <ItemState>
+        <ItemSymbol>SIRC_undivided_freq0</ItemSymbol>
+        <Value>128000</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>FIRC_undivided_freq0</ItemSymbol>
+        <Value>16000000</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>SXOSC_undivided_freq0</ItemSymbol>
+        <Value>32000</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>FXOSC_undivided_freq0</ItemSymbol>
+        <Value>40000000</Value>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>SystemClocksFreqsGrp0</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -51307,6 +51346,18 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>DSPI3_CLK0</ItemSymbol>
+        <Value>80000000</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>eMIOS0_CLK0</ItemSymbol>
+        <Value>80000000</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>eMIOS1_CLK0</ItemSymbol>
+        <Value>80000000</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>eMIOS2_CLK0</ItemSymbol>
         <Value>80000000</Value>
       </ItemState>
       <ItemState>
@@ -51474,18 +51525,6 @@
         <Value>40000000</Value>
       </ItemState>
       <ItemState>
-        <ItemSymbol>eMIOS0_CLK0</ItemSymbol>
-        <Value>80000000</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>eMIOS1_CLK0</ItemSymbol>
-        <Value>80000000</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>eMIOS2_CLK0</ItemSymbol>
-        <Value>80000000</Value>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>StaticCallbacksConfigurations</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <ListItemCount>1</ListItemCount>
@@ -51592,16 +51631,10 @@
         <ItemSymbol>ProjectComponentsCountChanged</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
-        <Value>1</Value>
+        <Value>2</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>ModuleName_ADC</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>0</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>ModuleName_BCTU</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>0</Value>
@@ -51667,12 +51700,6 @@
         <Value>0</Value>
       </ItemState>
       <ItemState>
-        <ItemSymbol>ModuleName_FLEXCAN</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>0</Value>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>ModuleName_FLEXIO</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -51697,6 +51724,12 @@
         <Value>0</Value>
       </ItemState>
       <ItemState>
+        <ItemSymbol>ModuleName_I2C</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>0</Value>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>ModuleName_IIC</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -51715,19 +51748,7 @@
         <Value>0</Value>
       </ItemState>
       <ItemState>
-        <ItemSymbol>ModuleName_LPI2C</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>0</Value>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>ModuleName_LPIT</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>0</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>ModuleName_LPSPI</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>0</Value>
@@ -51842,6 +51863,30 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>ModuleName_WKPU</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>0</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>ModuleName_BCTU</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>0</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>ModuleName_FLEXCAN</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>0</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>ModuleName_LPI2C</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>0</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>ModuleName_LPSPI</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>0</Value>

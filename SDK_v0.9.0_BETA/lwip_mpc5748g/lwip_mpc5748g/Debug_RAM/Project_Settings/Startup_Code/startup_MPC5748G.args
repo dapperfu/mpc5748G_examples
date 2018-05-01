@@ -1,0 +1,24 @@
+-I"/opt/NXP/S32DS_Power_v2017.R1/S32DS/S32_SDK_MPC574xx_BETA_0.9.0/platform/devices"
+-I"/opt/NXP/S32DS_Power_v2017.R1/S32DS/S32_SDK_MPC574xx_BETA_0.9.0/platform/devices/MPC5748G/include"
+-I"/opt/NXP/S32DS_Power_v2017.R1/S32DS/S32_SDK_MPC574xx_BETA_0.9.0/platform/devices/MPC5748G/startup"
+-I"/opt/NXP/S32DS_Power_v2017.R1/S32DS/S32_SDK_MPC574xx_BETA_0.9.0/platform/devices/MPC5748G"
+-I"/opt/NXP/S32DS_Power_v2017.R1/S32DS/S32_SDK_MPC574xx_BETA_0.9.0/platform/devices/common"
+-I"/opt/NXP/S32DS_Power_v2017.R1/S32DS/S32_SDK_MPC574xx_BETA_0.9.0/platform/drivers/inc"
+-I"/opt/NXP/S32DS_Power_v2017.R1/S32DS/S32_SDK_MPC574xx_BETA_0.9.0/rtos/osif"
+-I"/opt/NXP/S32DS_Power_v2017.R1/S32DS/S32_SDK_MPC574xx_BETA_0.9.0/rtos/FreeRTOS_C55/Source/portable/GCC/PowerPC_Z4"
+-I"/home/jed/workspaceS32DS.Power.2017.R1/lwip_mpc5748g/lwip_mpc5748g/Generated_Code"
+-I"/home/jed/workspaceS32DS.Power.2017.R1/lwip_mpc5748g/lwip_mpc5748g/Sources"
+-x assembler-with-cpp
+-DTURN_ON_CPU0
+-DI_CACHE
+-DICACHE_ENABLE
+-DUSING_OS_FREERTOS
+-DCPU_MPC5748G
+-O1
+-g3
+-mcpu=e200z4
+-specs=nosys.specs
+-mbig
+-mvle
+-mregnames
+--sysroot="/opt/NXP/S32DS_Power_v2017.R1/Cross_Tools/powerpc-eabivle-4_9/powerpc-eabivle/newlib"

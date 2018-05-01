@@ -61,7 +61,7 @@
 	<variableList>
 		<variable>
 			<name>S32_SDK_PATH</name>
-			<value>file:/${eclipse_home}../S32DS/S32_SDK_MPC574xx_BETA_0.9.0</value>
+			<value>file:/eclipse_home../S32DS/S32_SDK_MPC574xx_BETA_0.9.0</value>
 		</variable>
 	</variableList>
 </projectDescription>

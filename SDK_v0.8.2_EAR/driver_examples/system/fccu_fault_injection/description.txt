@@ -1,2 +1,0 @@
-This is a application created to show configurations for FCCU Module: generation of non critical faults and configuration of EOUT signals behaviour, generation of HW and SW controlled Faults and chip reset. Triggering Intrerruption in case of fault configured for this behaviour.
-The example documentation can be found in the S32 SDK documentation at Examples and Demos section. (<SDK_PATH>/doc/Start_Here.html)

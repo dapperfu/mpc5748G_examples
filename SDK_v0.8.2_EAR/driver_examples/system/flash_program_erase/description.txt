@@ -1,2 +1,0 @@
-This folder contains flash examples and shows the usage of the flash driver how to program or erase the flash memory.
-The example documentation can be found in the S32 SDK documentation at Examples and Demos section. (<SDK_PATH>/doc/Start_Here.html)

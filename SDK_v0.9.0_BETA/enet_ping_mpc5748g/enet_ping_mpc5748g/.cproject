@@ -5,8 +5,11 @@
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.freescale.s32ds.cross.gnu.e200.exe.debug.2047577174" moduleId="org.eclipse.cdt.core.settings" name="Debug_FLASH">
 				<macros>
 					<stringMacro name="S32_SDK_PATH" type="VALUE_TEXT" value="${eclipse_home}../S32DS/S32_SDK_MPC574xx_BETA_0.9.0"/>
+					<stringMacro name="PROJECT_KSDK_PATH" type="VALUE_TEXT" value="${ProcessorExpert_loc}/../../S32DS/S32_SDK_MPC574xx_BETA_0.9.0"/>
 				</macros>
-				<externalSettings/>
+				<externalSettings>
+					<externalSetting/>
+				</externalSettings>
 				<extensions>
 					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 					<extension id="com.freescale.s32ds.cdt.core.errorParsers.IcodeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
@@ -60,6 +63,7 @@
 									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices/MPC5748G/startup&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/src/clock/MPC57xx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/MPC5748G/config/baremetal&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1370504351" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
@@ -133,6 +137,7 @@
 									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices/MPC5748G/startup&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/src/clock/MPC57xx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/MPC5748G/config/baremetal&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.812984492" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 								<inputType id="com.freescale.s32ds.cross.gnu.tool.assembler.inputType.asmfile.958515453" superClass="com.freescale.s32ds.cross.gnu.tool.assembler.inputType.asmfile"/>
@@ -157,6 +162,7 @@
 						</toolChain>
 					</folderInfo>
 					<fileInfo id="com.freescale.s32ds.cross.gnu.e200.exe.debug.2047577174.Debug_Configurations/enet_ping_mpc5748g_debug_flash_pemicro.launch" name="enet_ping_mpc5748g_debug_flash_pemicro.launch" rcbsApplicability="disable" resourcePath="Debug_Configurations/enet_ping_mpc5748g_debug_ram_pemicro.launch" toolsToInvoke=""/>
+					<fileInfo id="com.freescale.s32ds.cross.gnu.e200.exe.debug.2047577174.1868033300" name="ProcessorExpert.pe" rcbsApplicability="disable" resourcePath="ProcessorExpert.pe" toolsToInvoke=""/>
 					<sourceEntries>
 						<entry excluding="Project_Settings/Linker_Files/MPC5748G_ram.ld" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Project_Settings/Linker_Files"/>
 						<entry excluding="Project_Settings/Linker_Files/MPC5748G_flash.ld" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Project_Settings/Linker_Files"/>
@@ -175,6 +181,7 @@
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.freescale.s32ds.cross.gnu.e200.exe.Debug_RAM" moduleId="org.eclipse.cdt.core.settings" name="Debug_RAM">
 				<macros>
 					<stringMacro name="S32_SDK_PATH" type="VALUE_TEXT" value="${eclipse_home}../S32DS/S32_SDK_MPC574xx_BETA_0.9.0"/>
+					<stringMacro name="PROJECT_KSDK_PATH" type="VALUE_TEXT" value="${ProcessorExpert_loc}/../../S32DS/S32_SDK_MPC574xx_BETA_0.9.0"/>
 				</macros>
 				<externalSettings/>
 				<extensions>
@@ -229,6 +236,7 @@
 									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices/MPC5748G/startup&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/src/clock/MPC57xx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/MPC5748G/config/baremetal&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.2145765700" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
@@ -300,6 +308,7 @@
 									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/devices/MPC5748G/startup&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/drivers/src/clock/MPC57xx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${S32_SDK_PATH}/platform/MPC5748G/config/baremetal&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.409878143" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 								<inputType id="com.freescale.s32ds.cross.gnu.tool.assembler.inputType.asmfile.1477311079" superClass="com.freescale.s32ds.cross.gnu.tool.assembler.inputType.asmfile"/>
@@ -342,23 +351,26 @@
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 		<project id="enet_ping_mpc5748g.com.freescale.s32ds.cross.gnu.e200.exe.1239594830" name="E200 Executable" projectType="com.freescale.s32ds.cross.gnu.e200.exe"/>
 	</storageModule>
-	<storageModule moduleId="scannerConfiguration">
-		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		<scannerConfigBuildInfo instanceId="com.freescale.s32ds.cross.gnu.e200.exe.release.1221922700;com.freescale.s32ds.cross.gnu.e200.exe.release.1221922700.;com.freescale.s32ds.cross.gnu.e200.tool.c.compiler.734656442;cdt.managedbuild.tool.gnu.c.compiler.input.58841454">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="com.freescale.s32ds.cross.gnu.e200.exe.debug.2047577174;com.freescale.s32ds.cross.gnu.e200.exe.debug.2047577174.;com.freescale.s32ds.cross.gnu.e200.tool.c.compiler.551693937;cdt.managedbuild.tool.gnu.c.compiler.input.1370504351">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="org.eclipse.embsys" parent_project="true" register_architecture="e200" register_board="--- none ---" register_chip="MPC5748G" register_core="e200z4204n3" register_vendor="Freescale"/>
-	<storageModule moduleId="refreshScope">
-		<configuration configurationName="Debug_RAM">
-			<resource resourceType="PROJECT" workspacePath="/enet_ping_mpc5748g"/>
-		</configuration>
+	<storageModule moduleId="refreshScope" versionNumber="2">
 		<configuration configurationName="Debug_FLASH">
 			<resource resourceType="PROJECT" workspacePath="/enet_ping_mpc5748g"/>
 		</configuration>
+		<configuration configurationName="Debug_RAM">
+			<resource resourceType="PROJECT" workspacePath="/enet_ping_mpc5748g"/>
+		</configuration>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="com.freescale.s32ds.cross.gnu.e200.exe.debug.2047577174;com.freescale.s32ds.cross.gnu.e200.exe.debug.2047577174.;com.freescale.s32ds.cross.gnu.e200.tool.c.compiler.551693937;cdt.managedbuild.tool.gnu.c.compiler.input.1370504351">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.freescale.s32ds.cross.gnu.e200.exe.release.1221922700;com.freescale.s32ds.cross.gnu.e200.exe.release.1221922700.;com.freescale.s32ds.cross.gnu.e200.tool.c.compiler.734656442;cdt.managedbuild.tool.gnu.c.compiler.input.58841454">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.freescale.s32ds.cross.gnu.e200.exe.Debug_RAM;com.freescale.s32ds.cross.gnu.e200.exe.Debug_RAM.;com.freescale.s32ds.cross.gnu.e200.tool.c.compiler.1580652948;cdt.managedbuild.tool.gnu.c.compiler.input.2145765700">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
 	</storageModule>
 </cproject>

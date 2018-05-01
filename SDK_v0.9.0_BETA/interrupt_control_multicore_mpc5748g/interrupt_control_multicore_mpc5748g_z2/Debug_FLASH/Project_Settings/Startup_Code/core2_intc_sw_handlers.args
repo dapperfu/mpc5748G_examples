@@ -1,0 +1,13 @@
+-I"/opt/NXP/S32DS_Power_v2017.R1/S32DS/e200_ewl2/EWL_C/include"
+-I"/opt/NXP/S32DS_Power_v2017.R1/S32DS/e200_ewl2/EWL_C/include/pa"
+-x assembler-with-cpp
+-DSTART_FROM_FLASH
+-DTURN_ON_CPU2
+-O0
+-g3
+-mcpu=e200z2
+-specs=ewl_c9x.specs
+-mbig
+-mvle
+-mregnames
+--sysroot="/opt/NXP/S32DS_Power_v2017.R1/S32DS/e200_ewl2"

@@ -6,7 +6,7 @@
     <ModificationStamp>1</ModificationStamp>
     <Date>2017-03-07</Date>
     <IDE>Eclipse IDE</IDE>
-    <PEversion>1.12.0.RT7_b1640-0653</PEversion>
+    <PEversion>1.12.2.RT7_b1743-0713</PEversion>
   </Header>
   <Options>
     <ProjectMainModule>main</ProjectMainModule>
@@ -29,7 +29,7 @@
     <UseExistingModules>true</UseExistingModules>
     <RenamePeripheries>false</RenamePeripheries>
     <Autodependency>true</Autodependency>
-    <ProjectCompNumb>3</ProjectCompNumb>
+    <ProjectCompNumb>4</ProjectCompNumb>
     <DelUnusedPreviouslyGenFiles>true</DelUnusedPreviouslyGenFiles>
     <GeneratedCodeFrozen>false</GeneratedCodeFrozen>
     <AssignInitComponentNameToPrph>true</AssignInitComponentNameToPrph>
@@ -581,9 +581,11 @@
       <Count>0</Count>
     </BoolList_FpgaConfig>
     <BoolList_BeanConfig>
-      <Count>1</Count>
+      <Count>2</Count>
       <ItemId0>2</ItemId0>
       <Value0>true</Value0>
+      <ItemId1>3</ItemId1>
+      <Value1>true</Value1>
     </BoolList_BeanConfig>
     <BoolList_TaskConfig>
       <Count>0</Count>
@@ -742,11 +744,15 @@
         <ItemSymbol>ADC_0_adc_s_0</ItemSymbol>
         <Value>PB[8]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>ADC_0_adc_s_1</ItemSymbol>
         <Value>PB[9]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>ADC_0_adc_s_2</ItemSymbol>
@@ -981,6 +987,8 @@
         <ItemSymbol>ADC_1_adc_p_0</ItemSymbol>
         <Value>PB[4]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>ADC_1_adc_p_1</ItemSymbol>
@@ -1007,46 +1015,64 @@
         <ItemSymbol>ADC_1_adc_p_4</ItemSymbol>
         <Value>PD[0]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>ADC_1_adc_p_5</ItemSymbol>
         <Value>PD[1]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>ADC_1_adc_p_6</ItemSymbol>
         <Value>PD[2]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>ADC_1_adc_p_7</ItemSymbol>
         <Value>PD[3]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>ADC_1_adc_p_8</ItemSymbol>
         <Value>PD[4]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>ADC_1_adc_p_9</ItemSymbol>
         <Value>PD[5]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>ADC_1_adc_p_10</ItemSymbol>
         <Value>PD[6]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>ADC_1_adc_p_11</ItemSymbol>
         <Value>PD[7]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>ADC_1_adc_p_12</ItemSymbol>
         <Value>PD[8]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>ADC_1_adc_p_13</ItemSymbol>
@@ -4205,11 +4231,25 @@
         <SharedPrphMode>false</SharedPrphMode>
       </ItemState>
       <ItemState>
+        <ItemSymbol>SIUL2_eirq_0_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>SIUL2_eirq_1</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
         <SharedPrphMode>false</SharedPrphMode>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>SIUL2_eirq_1_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
       </ItemState>
       <ItemState>
         <ItemSymbol>SIUL2_eirq_2</ItemSymbol>
@@ -4219,11 +4259,25 @@
         <SharedPrphMode>false</SharedPrphMode>
       </ItemState>
       <ItemState>
+        <ItemSymbol>SIUL2_eirq_2_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>SIUL2_eirq_3</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
         <SharedPrphMode>false</SharedPrphMode>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>SIUL2_eirq_3_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
       </ItemState>
       <ItemState>
         <ItemSymbol>SIUL2_eirq_4</ItemSymbol>
@@ -4233,11 +4287,25 @@
         <SharedPrphMode>false</SharedPrphMode>
       </ItemState>
       <ItemState>
+        <ItemSymbol>SIUL2_eirq_4_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>SIUL2_eirq_5</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
         <SharedPrphMode>false</SharedPrphMode>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>SIUL2_eirq_5_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
       </ItemState>
       <ItemState>
         <ItemSymbol>SIUL2_eirq_6</ItemSymbol>
@@ -4247,11 +4315,25 @@
         <SharedPrphMode>false</SharedPrphMode>
       </ItemState>
       <ItemState>
+        <ItemSymbol>SIUL2_eirq_6_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>SIUL2_eirq_7</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
         <SharedPrphMode>false</SharedPrphMode>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>SIUL2_eirq_7_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
       </ItemState>
       <ItemState>
         <ItemSymbol>SIUL2_eirq_8</ItemSymbol>
@@ -4261,11 +4343,25 @@
         <SharedPrphMode>false</SharedPrphMode>
       </ItemState>
       <ItemState>
+        <ItemSymbol>SIUL2_eirq_8_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>SIUL2_eirq_9</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
         <SharedPrphMode>false</SharedPrphMode>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>SIUL2_eirq_9_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
       </ItemState>
       <ItemState>
         <ItemSymbol>SIUL2_eirq_10</ItemSymbol>
@@ -4275,11 +4371,25 @@
         <SharedPrphMode>false</SharedPrphMode>
       </ItemState>
       <ItemState>
+        <ItemSymbol>SIUL2_eirq_10_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>SIUL2_eirq_11</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
         <SharedPrphMode>false</SharedPrphMode>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>SIUL2_eirq_11_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
       </ItemState>
       <ItemState>
         <ItemSymbol>SIUL2_eirq_12</ItemSymbol>
@@ -4289,11 +4399,25 @@
         <SharedPrphMode>false</SharedPrphMode>
       </ItemState>
       <ItemState>
+        <ItemSymbol>SIUL2_eirq_12_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>SIUL2_eirq_13</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
         <SharedPrphMode>false</SharedPrphMode>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>SIUL2_eirq_13_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
       </ItemState>
       <ItemState>
         <ItemSymbol>SIUL2_eirq_14</ItemSymbol>
@@ -4303,11 +4427,25 @@
         <SharedPrphMode>false</SharedPrphMode>
       </ItemState>
       <ItemState>
+        <ItemSymbol>SIUL2_eirq_14_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>SIUL2_eirq_15</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
         <SharedPrphMode>false</SharedPrphMode>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>SIUL2_eirq_15_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
       </ItemState>
       <ItemState>
         <ItemSymbol>SIUL2_eirq_16</ItemSymbol>
@@ -4317,11 +4455,25 @@
         <SharedPrphMode>false</SharedPrphMode>
       </ItemState>
       <ItemState>
+        <ItemSymbol>SIUL2_eirq_16_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>SIUL2_eirq_17</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
         <SharedPrphMode>false</SharedPrphMode>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>SIUL2_eirq_17_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
       </ItemState>
       <ItemState>
         <ItemSymbol>SIUL2_eirq_18</ItemSymbol>
@@ -4331,11 +4483,25 @@
         <SharedPrphMode>false</SharedPrphMode>
       </ItemState>
       <ItemState>
+        <ItemSymbol>SIUL2_eirq_18_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>SIUL2_eirq_19</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
         <SharedPrphMode>false</SharedPrphMode>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>SIUL2_eirq_19_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
       </ItemState>
       <ItemState>
         <ItemSymbol>SIUL2_eirq_20</ItemSymbol>
@@ -4345,11 +4511,25 @@
         <SharedPrphMode>false</SharedPrphMode>
       </ItemState>
       <ItemState>
+        <ItemSymbol>SIUL2_eirq_20_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>SIUL2_eirq_21</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
         <SharedPrphMode>false</SharedPrphMode>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>SIUL2_eirq_21_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
       </ItemState>
       <ItemState>
         <ItemSymbol>SIUL2_eirq_22</ItemSymbol>
@@ -4359,6 +4539,13 @@
         <SharedPrphMode>false</SharedPrphMode>
       </ItemState>
       <ItemState>
+        <ItemSymbol>SIUL2_eirq_22_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>SIUL2_eirq_23</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -4366,9 +4553,18 @@
         <SharedPrphMode>false</SharedPrphMode>
       </ItemState>
       <ItemState>
+        <ItemSymbol>SIUL2_eirq_23_Input_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>true</PropertyModelIsAutomatic>
+        <Index>0</Index>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>SIUL2_gpi_20</ItemSymbol>
         <Value>PB[4]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>SIUL2_gpi_21</ItemSymbol>
@@ -4395,56 +4591,78 @@
         <ItemSymbol>SIUL2_gpi_24</ItemSymbol>
         <Value>PB[8]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>SIUL2_gpi_25</ItemSymbol>
         <Value>PB[9]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>SIUL2_gpi_48</ItemSymbol>
         <Value>PD[0]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>SIUL2_gpi_49</ItemSymbol>
         <Value>PD[1]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>SIUL2_gpi_50</ItemSymbol>
         <Value>PD[2]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>SIUL2_gpi_51</ItemSymbol>
         <Value>PD[3]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>SIUL2_gpi_52</ItemSymbol>
         <Value>PD[4]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>SIUL2_gpi_53</ItemSymbol>
         <Value>PD[5]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>SIUL2_gpi_54</ItemSymbol>
         <Value>PD[6]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>SIUL2_gpi_55</ItemSymbol>
         <Value>PD[7]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>SIUL2_gpi_56</ItemSymbol>
         <Value>PD[8]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>SIUL2_gpi_57</ItemSymbol>
@@ -7418,21 +7636,29 @@
         <ItemSymbol>WKPU_wkpu_25</ItemSymbol>
         <Value>PB[8]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>WKPU_wkpu_26</ItemSymbol>
         <Value>PB[9]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>WKPU_wkpu_27</ItemSymbol>
         <Value>PD[0]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>WKPU_wkpu_28</ItemSymbol>
         <Value>PD[1]</Value>
         <SharedPrphMode>false</SharedPrphMode>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
       </ItemState>
       <ItemState>
         <ItemSymbol>WKPU_wkpu_29</ItemSymbol>
@@ -9694,13 +9920,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PB_3__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PB_3__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -9730,6 +9949,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PB_3__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_3__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -9776,13 +10002,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PC_9__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PC_9__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -9812,6 +10031,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PC_9__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_9__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -9858,13 +10084,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PC_14__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PC_14__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -9894,6 +10113,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PC_14__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_14__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -9947,13 +10173,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PC_15__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PC_15__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -9983,6 +10202,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PC_15__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_15__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -10036,13 +10262,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PJ_4__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PJ_4__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -10072,6 +10291,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PJ_4__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PJ_4__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -10118,13 +10344,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PH_15__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PH_15__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -10154,6 +10373,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PH_15__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_15__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -10200,13 +10426,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PH_13__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PH_13__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -10236,6 +10455,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PH_13__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_13__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -10282,13 +10508,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PH_14__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PH_14__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -10318,6 +10537,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PH_14__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_14__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -10364,13 +10590,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PI_6__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PI_6__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -10400,6 +10619,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PI_6__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PI_6__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -10446,13 +10672,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PI_7__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PI_7__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -10482,6 +10701,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PI_7__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PI_7__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -10528,13 +10754,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PG_5__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PG_5__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -10564,6 +10783,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PG_5__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_5__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -10610,13 +10836,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PG_4__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PG_4__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -10646,6 +10865,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PG_4__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_4__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -10692,13 +10918,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PG_3__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PG_3__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -10728,6 +10947,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PG_3__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_3__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -10774,13 +11000,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PG_2__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PG_2__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -10810,6 +11029,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PG_2__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_2__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -10856,13 +11082,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PA_2__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PA_2__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -10892,6 +11111,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PA_2__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PA_2__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -10938,13 +11164,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PE_0__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PE_0__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -10974,6 +11193,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PE_0__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_0__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -11020,13 +11246,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PA_1__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PA_1__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -11056,6 +11275,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PA_1__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PA_1__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -11102,13 +11328,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PE_1__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PE_1__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -11138,6 +11357,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PE_1__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_1__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -11184,13 +11410,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PE_8__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PE_8__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -11220,6 +11439,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PE_8__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_8__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -11266,13 +11492,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PE_9__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PE_9__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -11302,6 +11521,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PE_9__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_9__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -11348,13 +11574,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PE_10__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PE_10__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -11384,6 +11603,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PE_10__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_10__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -11437,13 +11663,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PA_0__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PA_0__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -11473,6 +11692,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PA_0__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PA_0__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -11519,13 +11745,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PE_11__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PE_11__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -11555,6 +11774,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PE_11__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_11__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -11625,13 +11851,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PG_9__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PG_9__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -11661,6 +11880,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PG_9__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_9__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -11707,13 +11933,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PG_8__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PG_8__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -11743,6 +11962,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PG_8__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_8__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -11796,13 +12022,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PC_11__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PC_11__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -11832,6 +12051,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PC_11__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_11__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -11878,13 +12104,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PC_10__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PC_10__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -11914,6 +12133,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PC_10__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_10__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -11960,13 +12186,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PG_7__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PG_7__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -11996,6 +12215,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PG_7__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_7__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -12042,13 +12268,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PG_6__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PG_6__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -12078,6 +12297,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PG_6__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_6__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -12124,13 +12350,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PB_0__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PB_0__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -12160,6 +12379,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PB_0__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_0__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -12206,13 +12432,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PB_1__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PB_1__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -12242,6 +12461,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PB_1__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_1__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -12288,13 +12514,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PF_9__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PF_9__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -12324,6 +12543,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PF_9__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PF_9__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -12370,13 +12596,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PF_8__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PF_8__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -12406,6 +12625,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PF_8__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PF_8__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -12452,13 +12678,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PF_12__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PF_12__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -12488,6 +12707,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PF_12__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PF_12__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -12534,13 +12760,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PC_6__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PC_6__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -12570,6 +12789,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PC_6__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_6__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -12616,13 +12842,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PC_7__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PC_7__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -12652,6 +12871,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PC_7__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_7__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -12698,13 +12924,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PF_10__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PF_10__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -12734,6 +12953,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PF_10__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PF_10__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -12780,13 +13006,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PF_11__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PF_11__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -12816,6 +13035,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PF_11__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PF_11__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -12862,13 +13088,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PA_15__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PA_15__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -12898,6 +13117,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PA_15__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PA_15__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -12944,13 +13170,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PF_13__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PF_13__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -12980,6 +13199,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PF_13__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PF_13__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -13026,13 +13252,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PA_14__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PA_14__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -13062,6 +13281,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PA_14__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PA_14__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -13115,13 +13341,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PA_4__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PA_4__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -13151,6 +13370,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PA_4__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PA_4__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -13197,13 +13423,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PA_13__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PA_13__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -13233,6 +13452,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PA_13__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PA_13__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -13279,13 +13505,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PA_12__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PA_12__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -13315,6 +13534,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PA_12__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PA_12__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -13364,6 +13590,34 @@
         <Value>PB[9]</Value>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PB_9__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_9__inputBufferEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_9__pullSelect</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_9__pullEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PB_8_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -13374,6 +13628,34 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>PB[8]</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_8__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_8__inputBufferEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_8__pullSelect</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_8__pullEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
         <ItemSymbol>PB_10_</ItemSymbol>
@@ -13452,6 +13734,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PB_10__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_10__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -13540,6 +13829,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PF_0__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PF_1_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -13616,6 +13912,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PF_1__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PF_1__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -13704,6 +14007,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PF_2__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PF_3_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -13780,6 +14090,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PF_3__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PF_3__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -13868,6 +14185,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PF_4__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PF_5_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -13944,6 +14268,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PF_5__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PF_5__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -14032,6 +14363,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PF_6__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PF_7_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -14108,6 +14446,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PF_7__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PF_7__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -14196,6 +14541,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PJ_3__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PJ_2_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -14272,6 +14624,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PJ_2__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PJ_2__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -14360,6 +14719,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PJ_1__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PJ_0_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -14436,6 +14802,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PJ_0__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PJ_0__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -14524,6 +14897,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PI_15__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PI_14_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -14606,6 +14986,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PI_14__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PD_0_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -14616,6 +15003,34 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>PD[0]</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_0__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_0__inputBufferEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_0__pullSelect</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_0__pullEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
         <ItemSymbol>PD_1_</ItemSymbol>
@@ -14630,6 +15045,34 @@
         <Value>PD[1]</Value>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PD_1__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_1__inputBufferEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_1__pullSelect</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_1__pullEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PD_2_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -14640,6 +15083,34 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>PD[2]</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_2__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_2__inputBufferEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_2__pullSelect</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_2__pullEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
         <ItemSymbol>PD_3_</ItemSymbol>
@@ -14654,6 +15125,34 @@
         <Value>PD[3]</Value>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PD_3__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_3__inputBufferEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_3__pullSelect</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_3__pullEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PD_4_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -14664,6 +15163,34 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>PD[4]</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_4__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_4__inputBufferEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_4__pullSelect</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_4__pullEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
         <ItemSymbol>PD_5_</ItemSymbol>
@@ -14678,6 +15205,34 @@
         <Value>PD[5]</Value>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PD_5__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_5__inputBufferEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_5__pullSelect</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_5__pullEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PD_6_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -14688,6 +15243,34 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>PD[6]</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_6__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_6__inputBufferEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_6__pullSelect</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_6__pullEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
         <ItemSymbol>PD_7_</ItemSymbol>
@@ -14702,6 +15285,34 @@
         <Value>PD[7]</Value>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PD_7__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_7__inputBufferEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_7__pullSelect</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_7__pullEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PD_8_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -14712,6 +15323,34 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>PD[8]</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_8__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_8__inputBufferEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_8__pullSelect</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_8__pullEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
         <ItemSymbol>PB_4_</ItemSymbol>
@@ -14726,6 +15365,34 @@
         <Value>PB[4]</Value>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PB_4__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_4__inputBufferEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_4__pullSelect</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_4__pullEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PB_5_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -14736,6 +15403,34 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>PB[5]</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_5__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_5__inputBufferEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_5__pullSelect</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_5__pullEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
         <ItemSymbol>PB_6_</ItemSymbol>
@@ -14750,6 +15445,34 @@
         <Value>PB[6]</Value>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PB_6__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_6__inputBufferEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_6__pullSelect</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_6__pullEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PB_7_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -14760,6 +15483,34 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>PB[7]</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_7__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_7__inputBufferEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_7__pullSelect</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_7__pullEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
         <ItemSymbol>PD_9_</ItemSymbol>
@@ -14774,6 +15525,34 @@
         <Value>PD[9]</Value>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PD_9__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_9__inputBufferEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_9__pullSelect</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_9__pullEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PD_10_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -14784,6 +15563,34 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>PD[10]</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_10__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_10__inputBufferEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_10__pullSelect</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PD_10__pullEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
         <ItemSymbol>PB_11_</ItemSymbol>
@@ -14862,6 +15669,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PB_11__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_11__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -14962,6 +15776,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PD_12__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PB_12_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -15038,6 +15859,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PB_12__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_12__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -15126,6 +15954,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PD_13__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PB_13_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -15202,6 +16037,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PB_13__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_13__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -15290,6 +16132,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PD_14__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PB_14_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -15366,6 +16215,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PB_14__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_14__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -15454,6 +16310,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PD_15__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PB_15_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -15530,6 +16393,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PB_15__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_15__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -15618,6 +16488,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PI_8__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PI_11_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -15694,6 +16571,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PI_11__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PI_11__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -15782,6 +16666,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PI_12__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PI_13_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -15864,6 +16755,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PI_13__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PA_3_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -15940,6 +16838,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PA_3__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PA_3__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -16035,6 +16940,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PG_13__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PG_12_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -16111,6 +17023,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PG_12__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_12__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -16199,6 +17118,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PH_0__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PH_1_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -16275,6 +17201,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PH_1__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_1__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -16363,6 +17296,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PH_2__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PH_3_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -16445,6 +17385,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PH_3__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PG_1_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -16521,6 +17468,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PG_1__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_1__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -16616,6 +17570,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PG_0__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PF_15_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -16692,6 +17653,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PF_15__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PF_15__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -16787,6 +17755,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PF_14__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PE_13_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -16869,6 +17844,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PE_13__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PA_7_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -16945,6 +17927,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PA_7__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PA_7__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -17040,6 +18029,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PA_8__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PA_8__Interrupt_Edge</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -17129,6 +18125,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PA_9__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PA_10_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -17211,6 +18214,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PA_10__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PA_11_</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -17287,6 +18297,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PA_11__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PA_11__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -17382,6 +18399,13 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
+        <ItemSymbol>PE_12__InitValue</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
         <ItemSymbol>PE_12__Interrupt_Edge</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -17429,13 +18453,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PG_14__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PG_14__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -17465,6 +18482,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PG_14__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_14__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -17511,13 +18535,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PG_15__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PG_15__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -17547,6 +18564,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PG_15__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_15__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -17593,13 +18617,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PE_14__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PE_14__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -17629,6 +18646,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PE_14__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_14__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -17682,13 +18706,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PE_15__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PE_15__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -17718,6 +18735,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PE_15__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_15__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -17764,13 +18788,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PG_10__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PG_10__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -17800,6 +18817,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PG_10__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_10__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -17846,13 +18870,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PG_11__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PG_11__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -17882,6 +18899,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PG_11__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_11__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -17928,13 +18952,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PH_11__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PH_11__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -17964,6 +18981,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PH_11__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_11__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -18010,13 +19034,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PH_12__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PH_12__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -18046,6 +19063,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PH_12__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_12__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -18092,13 +19116,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PI_5__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PI_5__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -18128,6 +19145,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PI_5__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PI_5__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -18174,13 +19198,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PI_4__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PI_4__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -18210,6 +19227,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PI_4__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PI_4__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -18256,13 +19280,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PC_3__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PC_3__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -18292,6 +19309,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PC_3__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_3__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -18345,13 +19369,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PC_2__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PC_2__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -18381,6 +19398,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PC_2__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_2__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -18434,13 +19458,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PA_5__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PA_5__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -18470,6 +19487,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PA_5__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PA_5__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -18516,13 +19540,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PA_6__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PA_6__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -18552,6 +19569,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PA_6__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PA_6__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -18605,13 +19629,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PH_10__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PH_10__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -18641,6 +19658,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PH_10__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_10__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -18687,13 +19711,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PC_1__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PC_1__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -18723,6 +19740,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PC_1__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_1__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -18781,13 +19805,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PC_0__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PC_0__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -18817,6 +19834,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PC_0__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_0__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -18863,13 +19887,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PH_9__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PH_9__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -18899,6 +19916,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PH_9__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_9__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -18945,13 +19969,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PE_2__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PE_2__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -18981,6 +19998,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PE_2__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_2__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -19034,13 +20058,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PE_3__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PE_3__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -19070,6 +20087,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PE_3__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_3__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -19116,13 +20140,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PC_5__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PC_5__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -19152,6 +20169,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PC_5__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_5__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -19205,13 +20229,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PC_4__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PC_4__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -19241,6 +20258,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PC_4__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_4__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -19294,13 +20318,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PE_4__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PE_4__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -19330,6 +20347,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PE_4__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_4__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -19383,13 +20407,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PE_5__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PE_5__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -19419,6 +20436,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PE_5__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_5__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -19465,13 +20489,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PH_4__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PH_4__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -19501,6 +20518,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PH_4__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_4__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -19547,13 +20571,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PH_5__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PH_5__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -19583,6 +20600,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PH_5__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_5__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -19629,13 +20653,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PH_6__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PH_6__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -19665,6 +20682,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PH_6__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_6__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -19711,13 +20735,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PH_7__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PH_7__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -19747,6 +20764,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PH_7__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_7__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -19793,13 +20817,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PH_8__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PH_8__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -19829,6 +20846,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PH_8__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_8__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -19875,13 +20899,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PE_6__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PE_6__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -19911,6 +20928,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PE_6__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_6__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -19964,13 +20988,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PE_7__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PE_7__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -20000,6 +21017,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PE_7__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_7__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -20053,13 +21077,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PI_3__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PI_3__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -20089,6 +21106,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PI_3__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PI_3__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -20135,13 +21159,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PI_2__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PI_2__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -20171,6 +21188,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PI_2__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PI_2__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -20217,13 +21241,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PI_1__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PI_1__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -20253,6 +21270,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PI_1__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PI_1__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -20299,13 +21323,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PI_0__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PI_0__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -20335,6 +21352,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PI_0__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PI_0__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -20381,13 +21405,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PC_12__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PC_12__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -20417,6 +21434,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PC_12__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_12__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -20470,13 +21494,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PC_13__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PC_13__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -20506,6 +21523,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PC_13__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_13__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -20552,13 +21576,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PC_8__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PC_8__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -20588,6 +21605,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PC_8__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_8__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -20634,13 +21658,6 @@
         <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
       <ItemState>
-        <ItemSymbol>PB_2__analogPadControl</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
-      </ItemState>
-      <ItemState>
         <ItemSymbol>PB_2__inputBufferEnable</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
@@ -20670,6 +21687,13 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>PB_2__Output_SSS</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_2__InitValue</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>&lt;Automatic&gt;</Value>
@@ -20709,6 +21733,587 @@
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
         <Index>0</Index>
         <EnumSymbVal>default</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_3__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_9__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_14__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_15__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PJ_4__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_15__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_13__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_14__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PI_6__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PI_7__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_5__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_4__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_3__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_2__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PA_2__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_0__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PA_1__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_1__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_8__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_9__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_10__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PA_0__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_11__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_9__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_8__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_11__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_10__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_7__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_6__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_0__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_1__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PF_9__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PF_8__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PF_12__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_6__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_7__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PF_10__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PF_11__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PA_15__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PF_13__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PA_14__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PA_4__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PA_13__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PA_12__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_14__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_15__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_14__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_15__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_10__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PG_11__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_11__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_12__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PI_5__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PI_4__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_3__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_2__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PA_5__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PA_6__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_10__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_1__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_0__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_9__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_2__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_3__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_5__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_4__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_4__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_5__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_4__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_5__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_6__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_7__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PH_8__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_6__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PE_7__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PI_3__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PI_2__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PI_1__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PI_0__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_12__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_13__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PC_8__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PB_2__analogPadControl</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>&lt;Automatic&gt;</Value>
+        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
       </ItemState>
     </Properties>
     <Methods>
@@ -20757,6 +22362,15 @@
         <LastSelection>true</LastSelection>
         <LastUserSel>always</LastUserSel>
         <UsrMethodName>PINS_DRV_SetInputBuffer</UsrMethodName>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PINS_DRV_ConfigIntFilterClock</ItemSymbol>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>0</Index>
+        <Value>true</Value>
+        <LastSelection>true</LastSelection>
+        <LastUserSel>always</LastUserSel>
+        <UsrMethodName>PINS_DRV_ConfigIntFilterClock</UsrMethodName>
       </ItemState>
       <ItemState>
         <ItemSymbol>PINS_DRV_SetExInt</ItemSymbol>
@@ -20873,3 +22487,4 @@
     <EmptySection_DummyValue />
   </ComponentInitializationSequence>
 </PEproject>
+
